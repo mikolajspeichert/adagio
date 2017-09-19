@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Section from '@components/Section'
-import Settings from '@containers/Settings'
-import './style.css'
+import Section from '../../components/Section'
+import Settings from '../Settings'
 
 class App extends Component {
   handleRandomize = () => {}
@@ -9,9 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="app" onKeyPress={this.handleRandomize}>
-        <Section />
-        <Section />
-        <Section />
+        <Section color={['blue', 'green']} />
+        <Section color={['red', 'blue']} />
+        <Section color={['green', 'red']} />
         <Settings />
       </div>
     )

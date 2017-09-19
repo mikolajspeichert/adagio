@@ -1,0 +1,21 @@
+.section{
+  height: 50vh;
+  width: 25vh;
+  margin-top: 25vh;
+  display: inline-block;
+}
+.treble{
+  height: 25vh;
+}
+.bass{
+  height: 25vh;
+}
+.red{
+  background-color: rgb(255, 0, 0);
+}
+.blue{
+  background-color: #007dff;
+}
+.green{
+  background-color: #24ff00
+}
