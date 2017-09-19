@@ -1,9 +1,22 @@
 import React, { Component } from 'react'
+import assets from '../../assets'
 import './style.css'
 
 class Settings extends Component {
   render() {
-    return <div className="settings" />
+    var { hidden } = this.props
+    return (
+      <div className="settings">
+        <div className="handle">
+          <img src={assets.icons.settings} alt="settings" />
+        </div>
+        {!hidden && (
+          <div className="drawer">
+            <p>tekst</p>
+          </div>
+        )}
+      </div>
+    )
   }
 }
 
