@@ -3,7 +3,7 @@ import './style.css'
 
 class Section extends Component {
   render() {
-    const { color, urls } = this.props
+    const { color } = this.props
     return (
       <div className="section">
         <div className={`treble ${color[0]}`} />

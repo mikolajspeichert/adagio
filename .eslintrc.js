@@ -62,6 +62,8 @@ module.exports = {
 
     "no-unused-vars": ["error", { varsIgnorePattern: "styles" }],
 
+    "jsx-a11y/no-static-element-interactions": "off",
+
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
 
     "react/prefer-stateless-function": "off",
