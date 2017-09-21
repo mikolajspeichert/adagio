@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Section from '../../components/Section'
+import Display from '../Display'
 import Settings from '../Settings'
 
 class App extends Component {
@@ -7,14 +7,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app" onKeyPress={this.handleRandomize}>
-        <Section color={['blue', 'green']} />
-        <Section color={['red', 'blue']} />
-        <Section color={['green', 'red']} />
+      <div className="app">
+        <Display />
         <Settings />
       </div>
     )
   }
 }
-
 export default App

@@ -3,13 +3,8 @@ import './style.css'
 
 class Section extends Component {
   render() {
-    const { color } = this.props
-    return (
-      <div className="section">
-        <div className={`treble ${color[0]}`} />
-        <div className={`bass ${color[1]}`} />
-      </div>
-    )
+    const { type, children } = this.props
+    return <div className={`${type} section`}>{children}</div>
   }
 }
 

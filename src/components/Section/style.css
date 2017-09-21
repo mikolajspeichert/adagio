@@ -4,6 +4,9 @@
   margin-top: 25vh;
   display: inline-block;
 }
+.section svg {
+  height: 25vh;
+}
 .treble{
   height: 25vh;
 }
