@@ -7,7 +7,7 @@ class Note extends PureComponent {
     const { clef, type } = this.props
     const asset = clef === 'treble' ? assets.notes.treble : assets.notes.bass
     return (
-      <svg className="note">
+      <svg className={`single-note ${clef}`} viewBox="0 0 100 400">
         <use xlinkHref={`${asset}#${type}`} />
       </svg>
     )

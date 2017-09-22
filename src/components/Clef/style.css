@@ -1,4 +1,5 @@
-.clef{
-  width: 100px;
-  height: 400px;
+.single-clef{
+  width: 100%;
+  height: 50%;
+  display: block;
 }

@@ -1,24 +1,12 @@
 .section{
-  height: 50vh;
-  width: 25vh;
-  margin-top: 25vh;
+  height: 140vh;
+  width: 17.5vh;
   display: inline-block;
-}
-.section svg {
-  height: 25vh;
+  margin: -12vh -0.1px;
 }
 .treble{
-  height: 25vh;
+  margin-bottom: -100%;
 }
 .bass{
-  height: 25vh;
-}
-.red{
-  background-color: rgb(255, 0, 0);
-}
-.blue{
-  background-color: #007dff;
-}
-.green{
-  background-color: #24ff00
+  margin-top: -100%;
 }

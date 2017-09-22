@@ -7,8 +7,8 @@ class Staff extends PureComponent {
     const { clef } = this.props
     const asset = clef === 'treble' ? assets.notes.treble : assets.notes.bass
     return (
-      <svg className="staff">
-        <use xlinkHref={`${asset}#clef}`} />
+      <svg className={`single-staff ${clef}`} viewBox="0 0 100 400">
+        <use xlinkHref={`${asset}#staff`} />
       </svg>
     )
   }

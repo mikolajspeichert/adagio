@@ -10,12 +10,19 @@ class Display extends Component {
     const { clefs, notes } = this.props
     return (
       <div>
-        <Section type="clef">{clefs.map(clef => <Clef type={clef} />)}</Section>
+        <Section type="clef">
+          {clefs.map(clef => <Clef key={clef} type={clef} />)}
+        </Section>
         <Section type="staff">
-          {clefs.map(clef => <Staff clef={clef} />)}
+          {clefs.map(clef => <Staff key={clef} clef={clef} />)}
         </Section>
         <Section type="note">
-          {clefs.map(clef => <Note clef={clef} type={notes[clef]} />)}
+          {clefs.map(clef => (
+            <Note key={clef} clef={clef} type={notes[clef]} />
+          ))}
+        </Section>
+        <Section type="staff">
+          {clefs.map(clef => <Staff key={clef} clef={clef} />)}
         </Section>
       </div>
     )
