@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import assets from '../../assets'
-import { draw, randomizeBass } from '../../store/actions'
+import { draw } from '../../store/actions'
 import Cell from '../../components/Cell'
 import './style.css'
 
@@ -31,11 +32,17 @@ class Settings extends Component {
   }
 }
 
+Settings.propTypes = {
+  hidden: PropTypes.bool.isRequired,
+  onDraw: PropTypes.func.isRequired,
+}
+
 const mapStateToProps = state => ({
   hidden: state.hidden,
 })
 
 const mapDispatchToProps = dispatch => ({
-  onDraw: () => dispatch(randomizeBass()),
+  onDraw: () => dispatch(draw()),
 })
+
 export default connect(mapStateToProps, mapDispatchToProps)(Settings)

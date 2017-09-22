@@ -6,3 +6,6 @@ body{
 body div{
   display: inline;
 }
+.app>div{
+  display: inline-block;
+}

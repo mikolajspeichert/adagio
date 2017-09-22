@@ -4,8 +4,8 @@ var initialState = {
   hidden: true,
   clefs: ['treble', 'bass'],
   notes: {
-    treble: 26,
-    bass: 26,
+    treble: 30,
+    bass: 28,
   },
 }
 const notes = (state = initialState.notes, action) => {

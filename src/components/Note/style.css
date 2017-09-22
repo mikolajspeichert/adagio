@@ -1,5 +1,4 @@
-.single-note{
-  width: 100%;
-  height: 50%;
-  display: block;
+.note{
+  height: inherit;
+  width: 15vw;
 }

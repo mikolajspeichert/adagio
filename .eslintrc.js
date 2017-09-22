@@ -70,6 +70,8 @@ module.exports = {
 
     "react/prop-types": "warn",
 
+    "react/forbid-prop-types": "off",
+
     eqeqeq: "warn",
 
     "prettier/prettier": [

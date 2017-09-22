@@ -1,5 +1,4 @@
-.single-clef{
-  width: 100%;
-  height: 50%;
-  display: block;
+.clef{
+  height: inherit;
+  width: 10vw;
 }
