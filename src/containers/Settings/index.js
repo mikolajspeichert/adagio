@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import assets from '../../assets'
-import { draw } from '../../store/actions'
+import { draw, randomizeBass } from '../../store/actions'
 import Cell from '../../components/Cell'
 import './style.css'
 
@@ -36,6 +36,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  onDraw: () => dispatch(draw()),
+  onDraw: () => dispatch(randomizeBass()),
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Settings)
