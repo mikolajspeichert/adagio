@@ -2,12 +2,17 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { randomizeTreble, randomizeBass } from '../../store/actions'
+import analyseAudio from '../../util/audio'
 import Section from '../Section'
 import Settings from '../Settings'
 
 class App extends Component {
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown)
+    if (navigator.getUserMedia)
+      navigator.getUserMedia({ audio: true }, this.handleAudioInput, e =>
+        console.log(e)
+      )
   }
 
   componentWillUnmount() {
@@ -19,6 +24,12 @@ class App extends Component {
       this.props.dispatch(randomizeTreble())
       this.props.dispatch(randomizeBass())
     }
+  }
+
+  handleAudioInput = stream => {
+    analyseAudio(stream, pitch => {
+      console.log(pitch)
+    })
   }
 
   render() {
