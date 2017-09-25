@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { randomizeTreble, randomizeBass } from '../../store/actions'
+import {
+  randomizeTreble,
+  randomizeBass,
+  translateKey,
+} from '../../store/actions'
 import analyseAudio from '../../util/audio'
 import Section from '../Section'
 import Settings from '../Settings'
@@ -23,6 +27,7 @@ class App extends Component {
     if (e.key === ' ') {
       this.props.dispatch(randomizeTreble())
       this.props.dispatch(randomizeBass())
+      this.props.dispatch(translateKey())
     }
   }
 

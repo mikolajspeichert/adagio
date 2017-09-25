@@ -7,6 +7,10 @@ var initialState = {
     treble: 30,
     bass: 28,
   },
+  audio: {
+    treble: undefined,
+    bass: undefined,
+  },
 }
 const notes = (state = initialState.notes, action) => {
   switch (action.type) {

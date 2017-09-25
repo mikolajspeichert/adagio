@@ -39,11 +39,10 @@ export default (stream, callback) => {
   const data = new Uint8Array(analyser.frequencyBinCount)
 
   setInterval(() => {
-    console.log(analyser)
     analyser.getByteTimeDomainData(data)
-    console.log('Data recording', data)
-    analyser.getByteFrequencyData(data)
-    console.log('Data recording', data)
+  //  console.log('Data recording', data)
+    // analyser.getByteFrequencyData(data)
+    // console.log('Data recording', data)
     callback(recordPitch(data))
   }, 250)
 }
