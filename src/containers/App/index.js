@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { generateNotes, generateNoteFor } from '../../store/actions'
-import analyseAudio from '../../util/audio'
+import analyseAudio, { isCloseEnough } from '../../util/audio'
 import Section from '../Section'
 import Settings from '../Settings'
 
@@ -14,6 +14,7 @@ class App extends Component {
       navigator.getUserMedia({ audio: true }, this.handleAudioInput, e =>
         console.log(e)
       )
+    this.success = ''
   }
 
   componentWillUnmount() {
@@ -26,6 +27,7 @@ class App extends Component {
     }
     if (e.key === 'Enter') {
       this.props.dispatch(generateNoteFor('treble'))
+      this.success = 'success'
     }
     if (e.key === 'Tab') {
       this.props.dispatch(generateNoteFor('bass'))
@@ -34,13 +36,18 @@ class App extends Component {
 
   handleAudioInput = stream => {
     analyseAudio(stream, pitch => {
-      console.log(pitch)
+      console.log(pitch / 10)
+      console.log('Current normal frequencies: ', this.props.frequencies)
+      this.props.clefs.forEach(clef => {
+        let { flat, natural, sharp } = this.props.frequencies[clef]
+        if (isCloseEnough(pitch, natural, sharp, flat)) generateNoteFor(clef)
+      })
     })
   }
 
   render() {
     return (
-      <div className="app">
+      <div className={`app ${this.success}`}>
         <div>
           {this.props.clefs.map(clef => <Section key={clef} clef={clef} />)}
         </div>
@@ -52,11 +59,16 @@ class App extends Component {
 
 App.propTypes = {
   clefs: PropTypes.array.isRequired,
+  frequencies: PropTypes.shape({
+    treble: PropTypes.object,
+    bass: PropTypes.object,
+  }).isRequired,
   dispatch: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
   clefs: state.clefs,
+  frequencies: state.audio,
 })
 
 export default connect(mapStateToProps)(App)

@@ -29,6 +29,15 @@ const recordPitch = data => {
   return array.mode(pitchArray)
 }
 
+export const isCloseEnough = (pitch, perfectPitch, higherPitch, lowerPitch) => {
+  if (pitch > perfectPitch) {
+    let difference = (higherPitch - perfectPitch) / 2
+    return pitch - perfectPitch < difference
+  }
+  let difference = (perfectPitch - lowerPitch) / 2
+  return perfectPitch - pitch < difference
+}
+
 export default (stream, callback) => {
   const context = new (window.AudioContext || window.webkitAudioContext)()
   const analyser = context.createAnalyser()
@@ -40,7 +49,7 @@ export default (stream, callback) => {
 
   setInterval(() => {
     analyser.getByteTimeDomainData(data)
-  //  console.log('Data recording', data)
+    //  console.log('Data recording', data)
     // analyser.getByteFrequencyData(data)
     // console.log('Data recording', data)
     callback(recordPitch(data))

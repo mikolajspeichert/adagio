@@ -9,3 +9,16 @@ body div{
 .app>div{
   display: inline-block;
 }
+
+.success{
+  animation: success 1s linear;
+}
+
+@keyframes success {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
