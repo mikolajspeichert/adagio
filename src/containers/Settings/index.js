@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import assets from '../../assets'
 import { draw } from '../../store/actions'
 import Cell from '../../components/Cell'
+import Picker from '../../components/Picker'
 import './style.css'
 
 class Settings extends Component {
@@ -17,10 +18,13 @@ class Settings extends Component {
         {!hidden && (
           <div className="drawer">
             <Cell color="red">
-              <p>chuj</p>
+              <p>a</p>
             </Cell>
             <Cell color="blue">
-              <p>pizda</p>
+              <Picker
+                options={['treble', 'bass']}
+                onAction={() => console.log('xd')}
+              />
             </Cell>
             <Cell color="green">
               <p>xd</p>

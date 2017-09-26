@@ -1,0 +1,36 @@
+.picker{
+  border-radius: 10px;
+  border: 4px solid #000000;
+  padding: 0.5em 0;
+  background-color: #ffffff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+
+.picker .picker-item{
+  display: inline;
+  padding: 0.5em 1em;
+  margin: 0 0.1em;
+}
+
+.picker .picker-item.selected{
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.picker .picker-item:first-child{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 0;
+}
+.picker .picker-item:last-child{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 0;
+}
