@@ -245,5 +245,4 @@ export default {
     natural: 3135.96,
     sharp: 3322.44,
   },
-  calculate: i => 2 ** (i - 49) / 12 * 440,
 }

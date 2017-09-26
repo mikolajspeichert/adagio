@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import {
-  randomizeTreble,
-  randomizeBass,
-  translateKey,
-} from '../../store/actions'
+import { generateNotes, generateNoteFor } from '../../store/actions'
 import analyseAudio from '../../util/audio'
 import Section from '../Section'
 import Settings from '../Settings'
@@ -13,6 +9,7 @@ import Settings from '../Settings'
 class App extends Component {
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown)
+    this.props.dispatch(generateNotes())
     if (navigator.getUserMedia)
       navigator.getUserMedia({ audio: true }, this.handleAudioInput, e =>
         console.log(e)
@@ -25,9 +22,13 @@ class App extends Component {
 
   handleKeyDown = e => {
     if (e.key === ' ') {
-      this.props.dispatch(randomizeTreble())
-      this.props.dispatch(randomizeBass())
-      this.props.dispatch(translateKey())
+      this.props.dispatch(generateNotes())
+    }
+    if (e.key === 'Enter') {
+      this.props.dispatch(generateNoteFor('treble'))
+    }
+    if (e.key === 'Tab') {
+      this.props.dispatch(generateNoteFor('bass'))
     }
   }
 
