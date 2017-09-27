@@ -12,6 +12,7 @@ var initialState = {
     treble: undefined,
     bass: undefined,
   },
+  noteTypes: ['normal', 'sharps', 'flats'],
 }
 
 const notes = (state = initialState.notes, action) => {

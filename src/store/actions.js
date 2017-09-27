@@ -10,17 +10,29 @@ export const draw = () => ({
   type: ON_DRAW,
 })
 
-export const randomize = (clef, notesSize) => {
+export const randomize = (clef, notesSize, noteTypes) => {
+  if (noteTypes.length === 0) return
   let value = {}
   let borderValue = {
     treble: 30,
     bass: 28,
   }
+  let magicNumber = random(0, noteTypes.length - 1)
   value[clef] =
     random(0, 100) > 90 && notesSize === 'all notes'
       ? random(23, borderValue[clef])
       : random(1, 22)
 
+  switch (noteTypes[magicNumber]) {
+    case 'sharps':
+      value[clef] += borderValue[clef]
+      break
+    case 'flats':
+      value[clef] += 2 * borderValue[clef]
+      break
+    default:
+      break
+  }
   return {
     type: RANDOM_NOTES,
     value,
@@ -37,7 +49,7 @@ export const generateNotes = () => (dispatch, getState) => {
   let state = getState()
   let value = {}
   state.clefs.forEach(clef => {
-    dispatch(randomize(clef, state.notesSize))
+    dispatch(randomize(clef, state.notesSize, state.noteTypes))
     let frequency = keyTranslator[clef][state.notes[clef]]
     value[clef] = frequency
   })
@@ -49,7 +61,7 @@ export const generateNotes = () => (dispatch, getState) => {
 
 export const generateNoteFor = clef => (dispatch, getState) => {
   let state = getState()
-  dispatch(randomize(clef, state.notesSize))
+  dispatch(randomize(clef, state.notesSize, state.noteTypes))
   let frequency = keyTranslator[clef][state.notes[clef]]
   console.log(clef, frequency)
   return dispatch({

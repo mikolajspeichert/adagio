@@ -9,7 +9,14 @@ import './style.css'
 
 class Settings extends Component {
   render() {
-    var { hidden, clefs, notesSize, handleDraw, handleAction } = this.props
+    var {
+      hidden,
+      clefs,
+      notesSize,
+      noteTypes,
+      handleDraw,
+      handleAction,
+    } = this.props
     return (
       <div className="settings">
         <div className="handle" onClick={handleDraw}>
@@ -33,7 +40,12 @@ class Settings extends Component {
               />
             </Cell>
             <Cell>
-              <p>xd</p>
+              <Picker
+                options={['normal', 'sharps', 'flats']}
+                selected={noteTypes}
+                multipleChoice
+                onAction={selected => handleAction('noteTypes', selected)}
+              />
             </Cell>
           </div>
         )}
@@ -48,12 +60,14 @@ Settings.propTypes = {
   handleDraw: PropTypes.func.isRequired,
   handleAction: PropTypes.func.isRequired,
   notesSize: PropTypes.string.isRequired,
+  noteTypes: PropTypes.array.isRequired,
 }
 
 const mapStateToProps = state => ({
   hidden: state.hidden,
   clefs: state.clefs,
   notesSize: state.notesSize,
+  noteTypes: state.noteTypes,
 })
 
 const mapDispatchToProps = dispatch => ({
