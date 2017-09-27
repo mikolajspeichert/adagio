@@ -1,6 +1,7 @@
 .picker{
+  font-family: Helvetica, Calibri, sans-serif;
   border-radius: 10px;
-  border: 4px solid #000000;
+  border: 3px solid #000000;
   padding: 0.5em 0;
   background-color: #ffffff;
   -webkit-touch-callout: none;
@@ -16,7 +17,15 @@
 .picker .picker-item{
   display: inline;
   padding: 0.5em 1em;
-  margin: 0 0.1em;
+  margin: 0 0.05em;
+}
+
+.picker .picker-item:hover{
+  background: linear-gradient(#ffffff, #e1e1e1);
+}
+
+.picker .picker-item.selected:hover{
+  background: linear-gradient(#5a5a5a, #000000);
 }
 
 .picker .picker-item.selected{

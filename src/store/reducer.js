@@ -2,6 +2,7 @@ import { actions } from './actions'
 
 var initialState = {
   hidden: true,
+  notesSize: 'all notes',
   clefs: ['treble', 'bass'],
   notes: {
     treble: 30,
@@ -40,6 +41,10 @@ export default (state = initialState, action) => {
     case actions.AUDIO_PATTERNS:
       return Object.assign({}, state, {
         audio: audio(state.audio, action),
+      })
+    case actions.SETTINGS_CHANGE:
+      return Object.assign({}, state, {
+        [action.key]: action.value,
       })
     default:
       return state

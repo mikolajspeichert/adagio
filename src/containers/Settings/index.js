@@ -2,31 +2,37 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import assets from '../../assets'
-import { draw } from '../../store/actions'
+import { draw, changeSettings } from '../../store/actions'
 import Cell from '../../components/Cell'
 import Picker from '../../components/Picker'
 import './style.css'
 
 class Settings extends Component {
   render() {
-    var { hidden, onDraw } = this.props
+    var { hidden, clefs, notesSize, handleDraw, handleAction } = this.props
     return (
       <div className="settings">
-        <div className="handle" onClick={onDraw}>
+        <div className="handle" onClick={handleDraw}>
           <img src={assets.icons.settings} alt="settings" />
         </div>
         {!hidden && (
           <div className="drawer">
-            <Cell color="red">
-              <p>a</p>
-            </Cell>
-            <Cell color="blue">
+            <Cell>
               <Picker
-                options={['treble', 'bass']}
-                onAction={() => console.log('xd')}
+                options={['small notes', 'all notes']}
+                selected={[notesSize]}
+                onAction={selected => handleAction('notesSize', selected)}
               />
             </Cell>
-            <Cell color="green">
+            <Cell>
+              <Picker
+                options={['treble', 'bass']}
+                selected={clefs}
+                multipleChoice
+                onAction={selected => handleAction('clefs', selected)}
+              />
+            </Cell>
+            <Cell>
               <p>xd</p>
             </Cell>
           </div>
@@ -38,15 +44,21 @@ class Settings extends Component {
 
 Settings.propTypes = {
   hidden: PropTypes.bool.isRequired,
-  onDraw: PropTypes.func.isRequired,
+  clefs: PropTypes.array.isRequired,
+  handleDraw: PropTypes.func.isRequired,
+  handleAction: PropTypes.func.isRequired,
+  notesSize: PropTypes.string.isRequired,
 }
 
 const mapStateToProps = state => ({
   hidden: state.hidden,
+  clefs: state.clefs,
+  notesSize: state.notesSize,
 })
 
 const mapDispatchToProps = dispatch => ({
-  onDraw: () => dispatch(draw()),
+  handleDraw: () => dispatch(draw()),
+  handleAction: (key, value) => dispatch(changeSettings(key, value)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Settings)

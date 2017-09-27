@@ -5,11 +5,16 @@ import './style.css'
 class Picker extends Component {
   handleClick(option) {
     let { selected, multipleChoice, onAction } = this.props
-    if (selected.includes(option)) {
-      if (multipleChoice) selected.splice(selected.indexOf(option), 1)
-    } else if (multipleChoice) selected.push(option)
-    else selected = [option]
-    onAction(selected)
+    if (multipleChoice) {
+      if (selected.includes(option))
+        selected.splice(selected.indexOf(option), 1)
+      else selected.push(option)
+      selected.sort()
+      selected.reverse()
+      onAction(selected.splice(0))
+    } else {
+      onAction(option)
+    }
   }
 
   render() {
@@ -22,6 +27,7 @@ class Picker extends Component {
             : 'picker-item'
           return (
             <div
+              key={option}
               className={isSelected}
               onClick={() => this.handleClick(option)}>
               {option}
