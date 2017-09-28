@@ -19,5 +19,5 @@
 .settings .drawer{
   display: inline-block;
   width: 23em;
-  vertical-align: top;
+  vertical-align: middle;
 }

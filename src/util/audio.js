@@ -1,8 +1,8 @@
 import array from '../util/array'
 
 const SAMPLE_RATE = 44100
-const FFT_SIZE = 256 // ??
-const MIN_VOLUME = 5
+const FFT_SIZE = 2048 // ??
+const MIN_VOLUME = 0
 
 const detectVolume = data => {
   let volume = 0

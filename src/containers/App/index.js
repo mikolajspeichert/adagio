@@ -36,11 +36,12 @@ class App extends Component {
 
   handleAudioInput = stream => {
     analyseAudio(stream, pitch => {
-      //  console.log(pitch / 10)
-      //  console.log('Current normal frequencies: ', this.props.frequencies)
+      console.log(pitch)
+      console.log('Current normal frequencies: ', this.props.frequencies)
       this.props.clefs.forEach(clef => {
         let { flat, natural, sharp } = this.props.frequencies[clef]
-        if (isCloseEnough(pitch, natural, sharp, flat)) generateNoteFor(clef)
+        if (isCloseEnough(pitch, natural, sharp, flat))
+          this.props.dispatch(generateNoteFor(clef))
       })
     })
   }
