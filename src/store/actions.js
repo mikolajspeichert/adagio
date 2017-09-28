@@ -1,5 +1,5 @@
 import random from '../util/rand'
-import keyTranslator from '../util/keytranslator'
+import translate from '../util/keytranslator'
 
 const ON_DRAW = 'ON_DRAW'
 const RANDOM_NOTES = 'RANDOM_NOTES'
@@ -50,7 +50,7 @@ export const generateNotes = () => (dispatch, getState) => {
   let value = {}
   state.clefs.forEach(clef => {
     dispatch(randomize(clef, state.notesSize, state.noteTypes))
-    let frequency = keyTranslator[clef][state.notes[clef]]
+    let frequency = translate(getState().notes[clef], clef)
     value[clef] = frequency
   })
   return dispatch({
@@ -62,8 +62,7 @@ export const generateNotes = () => (dispatch, getState) => {
 export const generateNoteFor = clef => (dispatch, getState) => {
   let state = getState()
   dispatch(randomize(clef, state.notesSize, state.noteTypes))
-  let frequency = keyTranslator[clef][state.notes[clef]]
-  console.log(clef, frequency)
+  let frequency = translate(getState().notes[clef], clef)
   return dispatch({
     type: AUDIO_PATTERNS,
     value: {
