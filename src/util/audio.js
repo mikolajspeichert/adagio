@@ -4,6 +4,21 @@ const SAMPLE_RATE = 44100
 const FFT_SIZE = 2048 // ??
 const MIN_VOLUME = 0
 
+// if (navigator.getUserMedia)
+//   navigator.getUserMedia({ audio: true }, this.handleAudioInput, e =>
+//     console.log(e)
+//   )
+
+// handleAudioInput = stream => {
+//   analyseAudio(stream, pitch => {
+//     console.log(pitch)
+//     this.props.clefs.forEach(clef => {
+//       if (isCloseEnough(pitch, ...this.props.frequencies[clef]))
+//         this.props.dispatch(generateNoteFor(clef))
+//     })
+//   })
+// }
+
 const detectVolume = data => {
   let volume = 0
   data.forEach(i => {

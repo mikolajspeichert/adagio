@@ -1,9 +1,10 @@
 import random from '../util/rand'
-import translate from '../util/keytranslator'
+import Translator from '../util/Translator'
 
 const ON_DRAW = 'ON_DRAW'
 const RANDOM_NOTES = 'RANDOM_NOTES'
 const AUDIO_PATTERNS = 'AUDIO_PATTERNS'
+const MIDI_TARGETS = 'MIDI_TARGETS'
 const SETTINGS_CHANGE = 'SETTINGS_CHANGE'
 
 export const draw = () => ({
@@ -45,29 +46,21 @@ export const changeSettings = (key, value) => ({
   value,
 })
 
-export const generateNotes = () => (dispatch, getState) => {
-  let state = getState()
-  let value = {}
-  state.clefs.forEach(clef => {
-    dispatch(randomize(clef, state.notesSize, state.noteTypes))
-    let frequency = translate(getState().notes[clef], clef)
-    value[clef] = frequency
-  })
-  return dispatch({
-    type: AUDIO_PATTERNS,
-    value,
-  })
-}
-
 export const generateNoteFor = clef => (dispatch, getState) => {
   let state = getState()
   dispatch(randomize(clef, state.notesSize, state.noteTypes))
-  let frequency = translate(getState().notes[clef], clef)
+  let target = Translator.midi(getState().notes[clef], clef)
   return dispatch({
-    type: AUDIO_PATTERNS,
+    type: MIDI_TARGETS,
     value: {
-      [clef]: frequency,
+      [clef]: target,
     },
+  })
+}
+
+export const generateNotes = () => (dispatch, getState) => {
+  getState().clefs.forEach(clef => {
+    dispatch(generateNoteFor(clef))
   })
 }
 
@@ -76,4 +69,5 @@ export const actions = {
   RANDOM_NOTES,
   AUDIO_PATTERNS,
   SETTINGS_CHANGE,
+  MIDI_TARGETS,
 }

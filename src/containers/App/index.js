@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import Midi from '../../util/Midi'
 import { generateNotes, generateNoteFor } from '../../store/actions'
-import analyseAudio, { isCloseEnough } from '../../util/audio'
 import Section from '../Section'
 import Settings from '../Settings'
 
@@ -10,16 +10,24 @@ class App extends Component {
   componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown)
     this.props.dispatch(generateNotes())
-    if (navigator.getUserMedia)
-      navigator.getUserMedia({ audio: true }, this.handleAudioInput, e =>
-        console.log(e)
-      )
-    this.success = ''
+    if (navigator.requestMIDIAccess)
+      navigator
+        .requestMIDIAccess()
+        .then(this.handleMidiInput, e => console.error(e))
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown)
   }
+
+  handleMidiInput = midi =>
+    Midi(midi, note => {
+      this.props.clefs.map(
+        clef =>
+          this.props.midi[clef] === note &&
+          this.props.dispatch(generateNoteFor(clef))
+      )
+    }).analyseInputs()
 
   handleKeyDown = e => {
     if (e.key === ' ') {
@@ -27,28 +35,15 @@ class App extends Component {
     }
     if (e.key === 'Enter') {
       this.props.dispatch(generateNoteFor('treble'))
-      this.success = 'success'
     }
     if (e.key === 'Tab') {
       this.props.dispatch(generateNoteFor('bass'))
     }
   }
 
-  handleAudioInput = stream => {
-    analyseAudio(stream, pitch => {
-      console.log(pitch)
-      console.log('Current normal frequencies: ', this.props.frequencies)
-      this.props.clefs.forEach(clef => {
-        let { flat, natural, sharp } = this.props.frequencies[clef]
-        if (isCloseEnough(pitch, natural, sharp, flat))
-          this.props.dispatch(generateNoteFor(clef))
-      })
-    })
-  }
-
   render() {
     return (
-      <div className={`app ${this.success}`}>
+      <div className={`app`}>
         <div>
           {this.props.clefs.map(clef => <Section key={clef} clef={clef} />)}
         </div>
@@ -60,16 +55,17 @@ class App extends Component {
 
 App.propTypes = {
   clefs: PropTypes.array.isRequired,
-  frequencies: PropTypes.shape({
-    treble: PropTypes.object,
-    bass: PropTypes.object,
-  }).isRequired,
+  // frequencies: PropTypes.shape({
+  //   treble: PropTypes.object,
+  //   bass: PropTypes.object,
+  // }).isRequired,
+  midi: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
   clefs: state.clefs,
-  frequencies: state.audio,
+  midi: state.midi,
 })
 
 export default connect(mapStateToProps)(App)
