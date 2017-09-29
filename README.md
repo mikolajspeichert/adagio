@@ -3,7 +3,7 @@ A small react webapp for learning notes. Displays notes and waits until it doesn
 Yes, you need a digital instrument that is capable of generating MIDI events. And a cable.
 
 ### Install
-Via `npm`. Not rocket science.
+Via `npm`. No rocket science.
 
 ### Details
 - Uses `svg` format to display notes, clefs and staff.
