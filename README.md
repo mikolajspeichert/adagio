@@ -14,3 +14,4 @@ Via `npm`. Not rocket science.
 - All written in es6/es7 syntax.
 
 > Still in development. And probably won't get out of it.
+> Licensed under DWYW License 2017. No rights reserved.
