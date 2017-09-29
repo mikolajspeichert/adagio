@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   handleMidiInput = midi =>
-    Midi(midi, note => {
+    new Midi(midi, note => {
       this.props.clefs.map(
         clef =>
           this.props.midi[clef] === note &&

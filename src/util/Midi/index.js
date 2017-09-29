@@ -23,7 +23,7 @@ export default class Midi {
     for (var i = 0; i < event.data.length; i++) {
       log += `0x${event.data[i].toString(16)} `
     }
-    console.log(log)
+     console.log(log)
     if (event.data[0] === 0x90) this.onEvent(event.data[1])
   }
 
