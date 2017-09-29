@@ -1,11 +1,11 @@
-### Note... something
+## Note... something
 A small react webapp for learning notes. Displays notes and waits until it doesn't gets them as a MIDI input.
 Yes, you need a digital instrument that is capable of generating MIDI events. And a cable.
 
-## Install
+### Install
 Via `npm`. Not rocket science.
 
-## Details
+### Details
 - Uses `svg` format to display notes, clefs and staff.
 - You can customize - in the settings panel you can choose whether you want sharps, flats, difficulty, aaand not much more.
 - Adding keys is in plans, I have prepared svgs.
