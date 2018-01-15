@@ -55,10 +55,6 @@ class App extends Component {
 
 App.propTypes = {
   clefs: PropTypes.array.isRequired,
-  // frequencies: PropTypes.shape({
-  //   treble: PropTypes.object,
-  //   bass: PropTypes.object,
-  // }).isRequired,
   midi: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
 }

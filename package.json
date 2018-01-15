@@ -3,91 +3,49 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-loader": "7.1.1",
-    "chalk": "1.1.3",
     "dotenv": "4.0.0",
-    "express": "^4.15.4",
-    "file-loader": "0.11.2",
-    "html-webpack-plugin": "2.29.0",
-    "ip": "^1.1.5",
     "minimist": "^1.2.0",
     "promise": "8.0.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
+    "redux-create-reducer": "^1.1.1",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0",
-    "url-loader": "^0.5.9",
-    "webpack": "3.5.1",
-    "webpack-dev-middleware": "^1.12.0",
-    "webpack-hot-middleware": "^2.19.1",
-    "webpack-manifest-plugin": "1.2.1"
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-eslint": "^7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-polyfill": "^6.5.0",
-    "babel-preset-env": "^1.6.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "css-loader": "^0.28.7",
-    "eslint": "4.5.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-import-resolver-node": "^0.3.1",
-    "eslint-loader": "^1.8.0",
-    "eslint-plugin-css-modules": "^2.7.3",
-    "eslint-plugin-import": "^2.6.1",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-react": "^7.3.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "jest": "20.0.4",
-    "prettier": "^1.5.3",
-    "style-loader": "^0.18.2"
+    "eslint": "4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-node": "^0.3.2",
+    "eslint-plugin-css-modules": "^2.7.5",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "prettier": "^1.10.2"
   },
   "scripts": {
-    "start": "node config/start.js"
+    "start": "parcel index.html"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
+  "description": "A small react webapp for learning notes. Displays notes and waits until it doesn't gets them as a MIDI input. Yes, you need a digital instrument that is capable of generating MIDI events. And a cable.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikolajspeichert/noteify.git"
   },
-  "babel": {
-    "presets": [
-      "react",
-      "stage-0"
-    ]
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikolajspeichert/noteify/issues"
+  },
+  "homepage": "https://github.com/mikolajspeichert/noteify#readme"
 }

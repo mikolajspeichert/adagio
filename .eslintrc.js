@@ -1,9 +1,9 @@
 module.exports = {
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
 
-  extends: ["airbnb", "prettier", "prettier/react"],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
 
-  plugins: ["prettier"],
+  plugins: ['prettier'],
 
   globals: {
     __DEV__: true,
@@ -14,72 +14,72 @@ module.exports = {
   },
 
   rules: {
-    "import/extensions": "off",
+    'import/extensions': 'off',
 
-    "import/no-unresolved": "off",
+    'import/no-unresolved': 'off',
 
-    "import/no-extraneous-dependencies": "off",
+    'import/no-extraneous-dependencies': 'off',
 
-    "import/prefer-default-export": "off",
+    'import/prefer-default-export': 'off',
 
-    "import/no-dynamic-require": "off",
+    'import/no-dynamic-require': 'off',
 
-    "consistent-return": "off",
+    'consistent-return': 'off',
 
-    "vars-on-top": "off",
+    'vars-on-top': 'off',
 
-    "no-console": "off",
+    'no-console': 'off',
 
-    "no-var": "off",
+    'no-var': 'off',
 
-    "no-shadow": "warn",
+    'no-shadow': 'warn',
 
-    "no-restricted-syntax": "warn",
+    'no-restricted-syntax': 'warn',
 
-    "no-param-reassign": "off",
+    'no-param-reassign': 'off',
 
-    "no-underscore-dangle": ["error", { allow: ["_id"] }],
+    'no-underscore-dangle': ['error', { allow: ['_id'] }],
 
-    "no-dynamic-require": "off",
+    'no-dynamic-require': 'off',
 
-    "no-return-assign": "off",
+    'no-return-assign': 'off',
 
-    "arrow-body-style": "warn",
+    'arrow-body-style': 'warn',
 
-    "new-cap": "warn",
+    'new-cap': 'warn',
 
-    "prefer-const": "off",
+    'prefer-const': 'off',
 
-    "global-require": "off",
+    'global-require': 'off',
 
-    "no-bitwise": "off",
+    'no-bitwise': 'off',
 
-    "no-continue": "off",
+    'no-continue': 'off',
 
-    "no-plusplus": "off",
+    'no-plusplus': 'off',
 
-    "no-redeclare": "off",
+    'no-redeclare': 'off',
 
-    "no-unused-vars": ["error", { varsIgnorePattern: "styles" }],
+    'no-unused-vars': ['error', { varsIgnorePattern: 'styles' }],
 
-    "jsx-a11y/no-static-element-interactions": "off",
+    'jsx-a11y/no-static-element-interactions': 'off',
 
-    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
 
-    "react/prefer-stateless-function": "off",
+    'react/prefer-stateless-function': 'off',
 
-    "react/prop-types": "warn",
+    'react/prop-types': 'warn',
 
-    "react/forbid-prop-types": "off",
+    'react/forbid-prop-types': 'off',
 
-    eqeqeq: "warn",
+    eqeqeq: 'warn',
 
-    "prettier/prettier": [
-      "warn",
+    'prettier/prettier': [
+      'warn',
       {
         singleQuote: true,
 
-        trailingComma: "es5",
+        trailingComma: 'es5',
 
         semi: false,
 
@@ -89,10 +89,10 @@ module.exports = {
   },
 
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        moduleDirectory: ["node_modules", "src"],
+        moduleDirectory: ['node_modules', 'src'],
       },
     },
   },
-};
+}
