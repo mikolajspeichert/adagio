@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import Midi from '../../util/Midi'
-import { generateNotes, generateNoteFor } from '../../store/actions'
-import Section from '../Section'
-import Settings from '../Settings'
 
 class App extends Component {
   componentDidMount() {
@@ -20,14 +16,14 @@ class App extends Component {
     document.removeEventListener('keydown', this.handleKeyDown)
   }
 
-  handleMidiInput = midi =>
-    new Midi(midi, note => {
-      this.props.clefs.map(
-        clef =>
-          this.props.midi[clef] === note &&
-          this.props.dispatch(generateNoteFor(clef))
-      )
-    }).analyseInputs()
+  handleMidiInput = midi => {}
+  // new Midi(midi, note => {
+  //   this.props.clefs.map(
+  //     clef =>
+  //       this.props.midi[clef] === note &&
+  //       this.props.dispatch(generateNoteFor(clef))
+  //   )
+  // }).analyseInputs()
 
   handleKeyDown = e => {
     if (e.key === ' ') {
@@ -43,9 +39,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className={`app`}>
+      <div className="app">
         <div>
-          {this.props.clefs.map(clef => <Section key={clef} clef={clef} />)}
+          {/* {this.props.clefs.map(clef => <Section key={clef} clef={clef} />)} */}
         </div>
         <Settings />
       </div>

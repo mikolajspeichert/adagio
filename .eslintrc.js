@@ -1,9 +1,9 @@
 module.exports = {
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
 
-  extends: ["airbnb", "prettier", "prettier/react"],
+  plugins: ['prettier', 'react'],
 
-  plugins: ["prettier"],
+  extends: [ 'airbnb', 'prettier', 'prettier/react', 'plugin:react/recommended'],
 
   globals: {
     __DEV__: true,
@@ -14,72 +14,90 @@ module.exports = {
   },
 
   rules: {
-    "import/extensions": "off",
+    'import/extensions': 'off',
 
-    "import/no-unresolved": "off",
+    'import/no-unresolved': 'off',
 
-    "import/no-extraneous-dependencies": "off",
+    'import/no-extraneous-dependencies': 'off',
 
-    "import/prefer-default-export": "off",
+    'import/prefer-default-export': 'off',
 
-    "import/no-dynamic-require": "off",
+    'import/no-dynamic-require': 'off',
 
-    "consistent-return": "off",
+    'consistent-return': 'off',
 
-    "vars-on-top": "off",
+    'vars-on-top': 'off',
 
-    "no-console": "off",
+    'no-console': 'off',
 
-    "no-var": "off",
+    'no-var': 'off',
 
-    "no-shadow": "warn",
+    'no-shadow': 'warn',
 
-    "no-restricted-syntax": "warn",
+    'no-unused-expressions': 'warn',
 
-    "no-param-reassign": "off",
+    'no-restricted-syntax': 'warn',
 
-    "no-underscore-dangle": ["error", { allow: ["_id"] }],
+    'no-param-reassign': 'off',
 
-    "no-dynamic-require": "off",
+    'no-underscore-dangle': ['error', { allow: ['_id'] }],
 
-    "no-return-assign": "off",
+    'no-dynamic-require': 'off',
 
-    "arrow-body-style": "warn",
+    'no-return-assign': 'off',
 
-    "new-cap": "warn",
+    'arrow-body-style': 'warn',
 
-    "prefer-const": "off",
+    'new-cap': 'warn',
 
-    "global-require": "off",
+    'prefer-const': 'off',
 
-    "no-bitwise": "off",
+    'global-require': 'off',
 
-    "no-continue": "off",
+    'no-bitwise': 'off',
 
-    "no-plusplus": "off",
+    'no-continue': 'off',
 
-    "no-redeclare": "off",
+    'no-plusplus': 'off',
 
-    "no-unused-vars": ["error", { varsIgnorePattern: "styles" }],
+    'no-redeclare': 'off',
 
-    "jsx-a11y/no-static-element-interactions": "off",
+    'no-unused-vars': 'off',
 
-    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
+    'react/jsx-uses-react': 'warn',
 
-    "react/prefer-stateless-function": "off",
+    'react/jsx-uses-vars': 'warn',
 
-    "react/prop-types": "warn",
+    'jsx-a11y/no-static-element-interactions': 'off',
 
-    "react/forbid-prop-types": "off",
+    'jsx-a11y/click-events-have-key-events': 'off',
 
-    eqeqeq: "warn",
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
 
-    "prettier/prettier": [
-      "warn",
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+
+    'react/prefer-stateless-function': 'off',
+
+    'react/prop-types': 'off',
+
+    'react/forbid-prop-types': 'off',
+
+    'react/no-unused-prop-types': 'warn',
+
+    'react/self-closing-comp': 'warn',
+
+    'react/jsx-one-expression-per-line': 'off',
+
+    'import/no-absolute-path': 'off',
+
+    eqeqeq: 'warn',
+
+    'prettier/prettier': [
+      'warn',
       {
         singleQuote: true,
 
-        trailingComma: "es5",
+        trailingComma: 'es5',
 
         semi: false,
 
@@ -89,10 +107,10 @@ module.exports = {
   },
 
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        moduleDirectory: ["node_modules", "src"],
+        moduleDirectory: ['node_modules', 'src'],
       },
     },
   },
-};
+}

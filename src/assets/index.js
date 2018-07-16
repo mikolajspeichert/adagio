@@ -6,4 +6,7 @@ export default {
     treble: require('./notes/treble.svg'),
     bass: require('./notes/bass.svg'),
   },
+  tracks: {
+    test: require('./tracks/test'),
+  },
 }
