@@ -20,13 +20,14 @@ export default class Midi {
   /* eslint-enable no-restricted-syntax */
 
   onMessage = event => {
-    let log = `MIDI message received at timestamp ${event.timestamp}[${
-      event.data.length
-    } bytes]: `
-    for (let i = 0; i < event.data.length; i++) {
-      log += `0x${event.data[i].toString(16)} `
-    }
-    console.log(log)
+    console.log(event)
+    // let log = `MIDI message received at timestamp ${event.timestamp}[${
+    //   event.data.length
+    // } bytes]: `
+    // for (let i = 0; i < event.data.length; i++) {
+    //   log += `0x${event.data[i].toString(16)} `
+    // }
+    // console.log(log)
     if (event.data[0] === 0x90) this.onEvent(event.data[1])
   }
 

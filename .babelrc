@@ -10,6 +10,9 @@
     ],
     [
       "transform-class-properties"
-    ]
+    ],
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
   ]
 }

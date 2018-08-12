@@ -1,7 +1,7 @@
 {
   "name": "adagio",
   "version": "0.2.0",
-  "private": true,
+  "main": "src/index.js",
   "dependencies": {
     "immutable": "^3.8.2",
     "react": "^16.4.1",
@@ -15,11 +15,13 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.1",
-    "styled-components": "^3.3.2"
+    "styled-components": "^3.3.2",
+    "parcel-bundler": "^1.6.2"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^8.2.6",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-polyfill": "^6.5.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
@@ -33,7 +35,6 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.10.0",
-    "parcel-bundler": "^1.6.2",
     "prettier": "^1.5.3",
     "redux-devtools-extension": "^2.13.2"
   },
