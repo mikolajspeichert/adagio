@@ -5,6 +5,7 @@ import Midi from 'util/Midi'
 
 import Staff from 'components/Staff'
 import BaseNote from 'components/BaseNote'
+import Paper, { Scaled } from 'components/Paper'
 
 class HomePage extends Component {
   componentDidMount() {
@@ -20,9 +21,9 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <Staff>
-          <BaseNote />
-        </Staff>
+        <Paper>
+          <Scaled>{({ scale }) => console.log(scale)}</Scaled>
+        </Paper>
       </div>
     )
   }

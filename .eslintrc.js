@@ -14,6 +14,18 @@ module.exports = {
   },
 
   rules: {
+    'prettier/prettier': [
+      'warn', {
+        singleQuote: true,
+
+        trailingComma: 'es5',
+
+        semi: false,
+
+        jsxBracketSameLine: true,
+      },
+    ],
+
     'import/extensions': 'off',
 
     'import/no-unresolved': 'off',
@@ -92,18 +104,6 @@ module.exports = {
 
     eqeqeq: 'warn',
 
-    'prettier/prettier': [
-      'warn',
-      {
-        singleQuote: true,
-
-        trailingComma: 'es5',
-
-        semi: false,
-
-        jsxBracketSameLine: true,
-      },
-    ],
   },
 
   settings: {
