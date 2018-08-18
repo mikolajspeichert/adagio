@@ -1,9 +1,10 @@
 import React from 'react'
 
+import { BASE_HEIGHT } from 'util/constants'
 import { Background, Container, StaffLine } from './styles'
 
-const Note = ({ children }) => (
-  <Background>
+const Staff = ({ children, scale }) => (
+  <Background height={Math.floor((BASE_HEIGHT / 2) * scale)}>
     <Container>
       <StaffLine />
       <StaffLine />
@@ -15,4 +16,4 @@ const Note = ({ children }) => (
   </Background>
 )
 
-export default Note
+export default Staff

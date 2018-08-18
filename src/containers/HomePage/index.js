@@ -20,11 +20,10 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div>
-        <Paper>
-          <Scaled>{({ scale }) => console.log(scale)}</Scaled>
-        </Paper>
-      </div>
+      <Paper>
+        <Scaled>{({ scale }) => <Staff scale={scale} />}</Scaled>
+        <Scaled>{({ scale }) => <Staff scale={scale} />}</Scaled>
+      </Paper>
     )
   }
 }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import store from './store'
+import 'styled/utils/global-styles'
 import HomePage from './containers/HomePage'
 
 class App extends React.Component {

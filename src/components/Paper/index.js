@@ -9,6 +9,7 @@ import {
 } from 'recompose'
 import PropTypes from 'prop-types'
 import { ScreenWrapper, PaperStage } from './styles'
+import { BASE_HEIGHT, BASE_WIDTH } from 'util/constants'
 
 const ScaleProvider = React.createContext({ scale: 1.0 })
 
@@ -78,8 +79,8 @@ Paper.propTypes = {
 }
 
 Paper.defaultProps = {
-  width: 1024,
-  height: 576,
+  width: BASE_WIDTH,
+  height: BASE_HEIGHT,
 }
 
 export const Scaled = ScaleProvider.Consumer

@@ -3,8 +3,8 @@ import StaffLine from 'assets/svgs/components/staffLine'
 
 const Background = styled.div`
   width: 100%;
-  height: 300px;
-  background-color: red;
+  height: ${({ height }) => height}px;
+  position: relative;
 `
 
 const Container = styled.div`
