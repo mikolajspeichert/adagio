@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Midi from 'util/Midi'
 
 import Staff from 'components/Staff'
-import BaseNote from 'components/BaseNote'
+import Note from 'components/Note'
 import Paper, { Scaled } from 'components/Paper'
 
 class HomePage extends Component {
@@ -21,7 +21,13 @@ class HomePage extends Component {
   render() {
     return (
       <Paper>
-        <Scaled>{({ scale }) => <Staff scale={scale} />}</Scaled>
+        <Scaled>
+          {({ scale }) => (
+            <Staff scale={scale}>
+              <Note scale={scale} />
+            </Staff>
+          )}
+        </Scaled>
         <Scaled>{({ scale }) => <Staff scale={scale} />}</Scaled>
       </Paper>
     )

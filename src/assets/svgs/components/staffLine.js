@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StaffLine = props => (
+const getMargin = scale =>
+  Math.floor(scale * 10) % 2 === 1
+    ? Math.floor(scale * 10) + 1
+    : Math.floor(scale * 10)
+
+const StaffLineSvg = props => (
   <svg viewBox="0 0 200 1" preserveAspectRatio="none" {...props}>
     <path
       d="M0 2h200"
@@ -13,11 +18,11 @@ const StaffLine = props => (
   </svg>
 )
 
-const AltStaffLine = styled.div`
+const StaffLine = styled.div`
   width: 100%;
-  height: 2px;
+  height: ${({ scale }) => Math.ceil(scale)}px;
   background-color: black;
-  margin: 10px 0;
+  margin: ${({ scale }) => getMargin(scale)}px 0;
 `
 
-export default AltStaffLine
+export default StaffLine

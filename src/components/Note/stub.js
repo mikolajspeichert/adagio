@@ -1,7 +1,12 @@
-const effect = {
+const c = {
   clef: 'treble',
-  position: 0, // index from middle-c
-  size: 8,
+  data: [
+    {
+      position: 5, // index from middle-c
+      size: 8,
+    },
+  ],
+
   // beam: {
   //   from: -1,
   //   to: 6,
@@ -12,3 +17,5 @@ const effect = {
   //   startsAt: 12.0,
   // }
 }
+
+export { c }
