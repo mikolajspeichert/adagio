@@ -5,6 +5,10 @@ const c = {
       position: 5, // index from middle-c
       size: 8,
     },
+    {
+      position: 4, // index from middle-c
+      size: 8,
+    },
   ],
 
   // beam: {

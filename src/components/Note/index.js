@@ -30,22 +30,32 @@ const generateNote = (notes, scale) => {
   let result = []
   const { clef, data } = notes
   const middleCLocation = getMiddleC(clef, scale)
-  data.forEach(noteData => {
+  data.forEach(({ position, size }) => {
     const Note = {}
-    Note.core = styledNote(getCore(noteData.size))
-    Note.offset =
+    Note.core = styledNote(getCore(size))
+    Note.offsetY =
       middleCLocation -
-      noteData.position * getMargin(scale) -
-      Math.floor(noteData.position / 2) * Math.ceil(scale)
+      position * getMargin(scale) -
+      Math.floor(position / 2) * Math.ceil(scale)
+    if (
+      position % 2 === 0 &&
+      data.some(
+        otherNote =>
+          otherNote.position - 1 === position ||
+          otherNote.position + 1 === position
+      )
+    ) {
+      Note.offsetX = 25
+    }
     result.push(Note)
   })
   return (
     <Fragment>
       {result.map(Note => (
         <Note.core
-          key={Note.offset}
-          x={0}
-          y={Note.offset}
+          key={Note.offsetY}
+          x={Note.offsetX || 0}
+          y={Note.offsetY}
           height={makeEven(10 * scale) * 2}
         />
       ))}
