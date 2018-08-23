@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NoteLine = props => (
-  <svg width={2} height={20} {...props}>
+  <svg viewBox="0 0 2 20" preserveAspectRatio="none" {...props}>
     <path
       d="M1 20V0"
       stroke="#000"

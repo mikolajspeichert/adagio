@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import P8 from 'assets/svgs/components/body4'
 
 const Base = styled.div`
   width: ${({ width }) => width}px;
@@ -8,6 +7,12 @@ const Base = styled.div`
   justify-content: center;
 `
 
-const Pause8 = styled(P8)`transform: translateY(107px);`
+const styledItem = svg => styled(svg).attrs({
+  style: ({ x, y }) => ({
+    transform: `translate(${x}px, ${y}px)`,
+  }),
+})`
+  position: absolute;
+`
 
-export { Base, Pause8 }
+export { Base, styledItem }
