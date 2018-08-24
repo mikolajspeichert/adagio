@@ -8,8 +8,8 @@ const Base = styled.div`
 `
 
 const styledItem = svg => styled(svg).attrs({
-  style: ({ x, y }) => ({
-    transform: `translate(${x}px, ${y}px)`,
+  style: ({ x = 0, y = 0, rotate = 0}) => ({
+    transform: `translate(${x}px, ${y}px) rotate(${rotate}deg)`,
   }),
 })`
   position: absolute;

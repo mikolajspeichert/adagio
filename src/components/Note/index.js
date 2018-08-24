@@ -8,15 +8,17 @@ import { c } from './stub'
 import {
   getMiddleC,
   getCore,
+  getHook,
   getCoreOffset,
   makeEven,
   shouldBeFacingBottom,
   getNoteWidth,
+  getHookHeight,
 } from './utils'
 import { Base, styledItem } from './styles'
 
 const BASE_NOTE_WIDTH = 60
-const BASE_LINE_HEIGHT = 100
+const BASE_LINE_HEIGHT = 70
 
 const enhance = compose(
   withProps(({ data: note, scale }) => {
@@ -41,8 +43,13 @@ const enhance = compose(
       cores.push(Core)
     })
     const Line = {}
-    Line.svg = styledItem(NoteLine)
-    Line.height = BASE_LINE_HEIGHT * scale
+    Line.svg = size > 1 && styledItem(NoteLine)
+    Line.hook = size > 4 && styledItem(getHook(size))
+    const proposedHeight = bottomCoreOffset - topCoreOffset + 50 * scale
+    const baseHeight = BASE_LINE_HEIGHT * scale
+    Line.height =
+      (proposedHeight > baseHeight ? proposedHeight : baseHeight) +
+      (size / 2) * scale
     if (
       shouldBeFacingBottom({
         clef,
@@ -51,10 +58,16 @@ const enhance = compose(
       })
     ) {
       Line.offsetY = topCoreOffset + 11 * scale
-      Line.offsetX = -Math.floor(getNoteWidth(size) / 2 - 2)
+      Line.offsetX = -Math.floor(getNoteWidth(size) / 2 - 1) * scale
+      Line.hookX = Line.offsetX - 7 * scale
+      Line.hookRotate = 180
+      Line.hookY = Line.offsetY + Line.height - getHookHeight(size) * scale
     } else {
-      Line.offsetY = bottomCoreOffset + (10 - BASE_LINE_HEIGHT) * scale
-      Line.offsetX = Math.floor(getNoteWidth(size) / 2 - 1)
+      Line.offsetY = bottomCoreOffset + 10 * scale - Line.height
+      Line.offsetX = Math.floor(getNoteWidth(size) / 2 - 2) * scale
+      Line.hookX = Line.offsetX + 8 * scale
+      Line.hookRotate = 0
+      Line.hookY = Line.offsetY
     }
     return {
       cores,
@@ -75,12 +88,22 @@ const Note = enhance(({ scale, cores, Line }) => (
         height={makeEven(10 * scale) * 2}
       />
     ))}
-    <Line.svg
-      y={Line.offsetY}
-      x={Line.offsetX}
-      height={Line.height}
-      width={4 * scale}
-    />
+    {Line.svg && (
+      <Line.svg
+        y={Line.offsetY}
+        x={Line.offsetX}
+        height={Line.height}
+        width={3 * scale}
+      />
+    )}
+    {Line.hook && (
+      <Line.hook
+        y={Line.hookY}
+        x={Line.hookX}
+        width={16 * scale}
+        rotate={Line.hookRotate}
+      />
+    )}
   </Base>
 ))
 

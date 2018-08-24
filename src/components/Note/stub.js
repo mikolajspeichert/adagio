@@ -1,12 +1,12 @@
 const c = {
-  clef: 'bass',
+  clef: 'treble',
   size: 8,
   data: [
     {
-      position: -11, // index from middle-c
+      position: 6, // index from middle-c
     },
     {
-      position: -6, // index from middle-c
+      position: 11, // index from middle-c
       // if mulitple sizes, set inside
     },
   ],

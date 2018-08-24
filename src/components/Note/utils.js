@@ -1,4 +1,4 @@
-import { Body1, Body2, Body4 } from 'assets/svgs'
+import { Body1, Body2, Body4, hooks } from 'assets/svgs'
 import { BASE_HEIGHT } from 'util/constants'
 
 const makeEven = number =>
@@ -16,10 +16,6 @@ const shouldBeFacingBottom = ({ clef, offsets, scale }) => {
     return topDifference > -bottomDifference
   }
   return bottomDifference < -topDifference
-  //
-  // return isTreble(clef)
-  //   ? offsets.topCoreOffset < middle - 10 * scale
-  //   : offsets.bottomCoreOffset > middle + 10 * scale
 }
 
 const getMiddleC = (clef, scale) => {
@@ -40,6 +36,8 @@ const getMiddleC = (clef, scale) => {
   )
 }
 
+const getHook = size => (size < 8 ? null : hooks[`Hook${size}`])
+
 const getCore = size => (size === 1 ? Body1 : size === 2 ? Body2 : Body4) // eslint-disable-line no-nested-ternary
 
 const getCoreOffset = ({ middleC, position, scale }) =>
@@ -49,9 +47,21 @@ const getCoreOffset = ({ middleC, position, scale }) =>
 
 const getNoteWidth = size => (size === 1 ? 36 : 25)
 
+const hooksHeights = {
+  8: 50,
+  16: 59,
+  32: 72,
+  64: 89,
+  128: 113,
+}
+
+const getHookHeight = size => hooksHeights[size]
+
 export {
   getMiddleC,
   getCore,
+  getHook,
+  getHookHeight,
   getCoreOffset,
   makeEven,
   isTreble,
