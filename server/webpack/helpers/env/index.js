@@ -14,27 +14,27 @@ let envPath = ENV_PATH
 let envTestingPath = ENV_TESTING_PATH
 
 class Env {
-  static isTest () {
+  static isTest() {
     return this.isEnvironment(TEST_ENV) || this.isEnvironment(ADONIS_TEST_ENV)
   }
 
-  static isProduction () {
+  static isProduction() {
     return this.isEnvironment(PRODUCTION_ENV)
   }
 
-  static isEnvironment (name) {
+  static isEnvironment(name) {
     return (process.env.NODE_ENV || '').toLowerCase() === name
   }
 
-  static isCi () {
+  static isCi() {
     return process.env.CI === TRUE_STRING
   }
 
-  static getCiBranch () {
+  static getCiBranch() {
     return process.env.BITBUCKET_BRANCH
   }
 
-  static getAppUrl () {
+  static getAppUrl() {
     let appUrl
     if (Env.isProduction()) {
       appUrl = process.env.APP_URL
@@ -62,37 +62,18 @@ class Env {
     return appUrl
   }
 
-  static getAppUrlFromEnv () {
+  static getAppUrlFromEnv() {
     const host = process.env.HOST
     const port = process.env.PORT
     return `http://${host}:${port}/`
   }
 
-  static setEnvPath (path) {
+  static setEnvPath(path) {
     envPath = path
   }
 
-  static setEnvTestingPath (path) {
+  static setEnvTestingPath(path) {
     Env.envTestingPath = path
-  }
-
-  static loadEnvAsNode ({ withTest = false }) {
-    const pathsToAdonisEnv = [envPath]
-    if (withTest) {
-      pathsToAdonisEnv.unshift(envTestingPath)
-    }
-    let result = {}
-
-    pathsToAdonisEnv.forEach(itemPath => {
-      const envPath = path.resolve(path.join(__dirname, itemPath))
-      result = dotenv.load({
-        path: envPath
-      })
-    })
-
-    if (result.error) {
-      throw result.error
-    }
   }
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Midi from 'util/Midi'
+import withTrack from 'enhancers/withTrack'
 
 import Staff from 'components/Staff'
 import Note from 'components/Note'
@@ -9,13 +10,14 @@ import Paper, { Scaled } from 'components/Paper'
 
 class HomePage extends Component {
   componentDidMount() {
-    navigator.requestMIDIAccess &&
-      navigator.requestMIDIAccess().then(
-        input => {
-          // new Midi(input, note => {}).analyseInputs()
-        },
-        e => console.error(e)
-      )
+    this.props.fetchTrack('moonlight')
+    // navigator.requestMIDIAccess &&
+    //   navigator.requestMIDIAccess().then(
+    //     input => {
+    //       // new Midi(input, note => {}).analyseInputs()
+    //     },
+    //     e => console.error(e)
+    //   )
   }
 
   render() {
@@ -24,7 +26,7 @@ class HomePage extends Component {
         <Scaled>
           {({ scale }) => (
             <Staff scale={scale}>
-              <Note scale={scale} />
+              <Note scale={scale}/>
             </Staff>
           )}
         </Scaled>
@@ -34,4 +36,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage
+export default withTrack(HomePage)

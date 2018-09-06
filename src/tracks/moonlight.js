@@ -2,12 +2,12 @@ const track = {
   name: 'Moonlight sonata',
   author: 'Ludwig van Beethoven',
   tempo: 77,
-  key: 'e-major', // or sth like that
+  key: 'E', // or sth like that
   time: '2/2',
   treble: [
     [
       {
-        midi: 0x12,
+        midi: 60,
         size: 8,
         accidental: null,
         dot: null,
@@ -18,7 +18,7 @@ const track = {
   bass: [
     [
       {
-        midi: 0x12,
+        midi: 41,
         size: 1,
       },
       {

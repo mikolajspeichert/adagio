@@ -19,6 +19,7 @@ process.noDeprecation = true
 module.exports = {
   mode: 'development',
   entry: {
+    babel: '@babel/polyfill',
     wmr: 'webpack-hot-middleware/client?reload=true',
     app: './src/index.js',
   },
@@ -79,7 +80,7 @@ module.exports = {
     }),
     new webpack.NamedModulesPlugin(),
     new Dotenv({
-      path: '../../.env',
+      path: '.env',
     }),
   ],
   resolve: {

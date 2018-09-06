@@ -1,4 +1,4 @@
-import { compose, withProps, withHandlers } from 'recompose'
+import { compose, withProps, withHandlers, setDisplayName } from 'recompose'
 import { connect } from 'react-redux'
 import { loadTrack } from './actions'
 import { selectTrack } from './selectors'
@@ -8,9 +8,10 @@ const withConnect = connect(state => ({
 }))
 
 const withTrack = compose(
+  setDisplayName('withTrack'),
   withConnect,
   withHandlers({
-    fetchTrack: trackName => dispatch => {
+    fetchTrack: ({ dispatch }) => trackName => {
       dispatch(loadTrack(trackName))
     },
   }),

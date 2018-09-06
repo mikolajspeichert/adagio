@@ -17,8 +17,8 @@ const createAction = (type, payload) => ({ type, payload })
 const loadTrack = trackName => async dispatch => {
   dispatch(createAction(PURGE_CURRENT))
   dispatch(createAction(START_LOADING))
-  // const track = await tracks[trackName]
-  // dispatch(createAction(ADD_TRACK, track))
+  const track = (await tracks[trackName]).default
+  dispatch(createAction(ADD_TRACK, track))
   dispatch(createAction(FINISH_LOADING))
 }
 
