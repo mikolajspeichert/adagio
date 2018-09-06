@@ -7,6 +7,18 @@ module.exports = {
 
   globals: {
     __DEV__: true,
+    jest: true,
+    it: true,
+    expect: true,
+    describe: true,
+    beforeEach: true,
+    beforeAll: true,
+    after: true,
+    afterEach: true,
+    afterAll: true,
+    before: true,
+    fetch: true,
+    use: true,
   },
 
   env: {

@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 import { fromJS } from 'immutable'
 import reducer from './reducer'
 
-const middlewares = []
-
+const middlewares = [thunk]
 const enhancers = [applyMiddleware(...middlewares)]
 
 /* eslint-disable no-underscore-dangle */
@@ -19,4 +19,4 @@ const composeEnhancers =
     : compose
 /* eslint-enable */
 
-export default createStore(reducer, fromJS({}), composeEnhancers(...enhancers))
+export default createStore(reducer, {}, composeEnhancers(...enhancers))
