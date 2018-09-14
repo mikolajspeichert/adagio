@@ -10,7 +10,7 @@ import Paper, { Scaled } from 'components/Paper'
 
 class HomePage extends Component {
   componentDidMount() {
-    this.props.fetchTrack('moonlight')
+    this.props.fetchTrack('prelude')
     // navigator.requestMIDIAccess &&
     //   navigator.requestMIDIAccess().then(
     //     input => {

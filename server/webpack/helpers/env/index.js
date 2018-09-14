@@ -49,13 +49,11 @@ class Env {
       }
     } else if (Env.isTest()) {
       try {
-        Env.loadEnvAsNode({ withTest: true })
         appUrl = Env.getAppUrlFromEnv()
       } catch (e) {
         throw e
       }
     } else {
-      Env.loadEnvAsNode({ withTest: false })
       appUrl = Env.getAppUrlFromEnv()
     }
 
