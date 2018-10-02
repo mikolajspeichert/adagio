@@ -21,6 +21,7 @@ const BASE_LINE_HEIGHT = 70
 
 const enhance = compose(
   withProps(({ data: note, scale }) => {
+    if (!note || note.type === 'pause') return
     const { clef, size, data } = note
     const middleC = getMiddleC(clef, scale)
     let topCoreOffset = BASE_HEIGHT
@@ -75,7 +76,7 @@ const enhance = compose(
   })
 )
 
-const Note = enhance(({ offset, scale, cores, Line }) => (
+const Note = enhance(({ offset, scale, cores = [], Line = {} }) => (
   <Base
     offset={offset}
     width={Math.floor(BASE_NOTE_WIDTH * scale)}
@@ -108,6 +109,6 @@ const Note = enhance(({ offset, scale, cores, Line }) => (
 ))
 
 Note.defaultProps = {
-  data: c,
+  // data: c,
 }
 export default Note

@@ -7,3285 +7,3285 @@ export default {
   treble: [
     [
       {
-        size: '8',
+        size: 8,
         type: 'pause',
       },
     ],
     [
       {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '77',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '77',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '77',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '77',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '77',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '77',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '77',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '77',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '81',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '81',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '81',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '76',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '81',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '66',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '66',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '66',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '66',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '79',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '79',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '79',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '79',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '66',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '66',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '66',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '66',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '71',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '71',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '71',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '71',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '73',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '73',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '73',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '73',
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '69',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '74',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '71',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '71',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '71',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '71',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '67',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '72',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '65',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '58',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '58',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '58',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '58',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '63',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '63',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '63',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '63',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '59',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '62',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '55',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '60',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: '64',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 71,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 71,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 71,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 71,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 69,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 66,
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 69,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 66,
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 69,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 66,
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 69,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 66,
-        accidental: 'sharp',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
+        size: 16,
         type: 'note',
         midi: 67,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 55,
+        midi: 72,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 60,
+        midi: 76,
       },
     ],
     [
       {
-        size: '16',
-        type: 'note',
-        midi: 67,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
+        size: 16,
         type: 'note',
         midi: 67,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 55,
+        midi: 72,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 60,
+        midi: 76,
       },
     ],
     [
       {
-        size: '16',
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
         type: 'note',
         midi: 67,
       },
     ],
     [
       {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 55,
+        midi: 72,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 60,
+        midi: 76,
       },
     ],
     [
       {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 71,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 71,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 71,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 71,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 70,
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 70,
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 70,
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 70,
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 53,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 69,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 65,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 69,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 69,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 53,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 69,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 53,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 50,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 53,
-      },
-    ],
-    [
-      {
-        size: '16',
-        type: 'note',
-        midi: 50,
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'pause',
-      },
-    ],
-    [
-      {
-        size: '16',
+        size: 16,
         type: 'note',
         midi: 67,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 83,
+        midi: 72,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
+        type: 'note',
+        midi: 76,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
         type: 'note',
         midi: 74,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
         midi: 77,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
         type: 'note',
         midi: 74,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 83,
+        midi: 77,
       },
     ],
     [
       {
-        size: '16',
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
         type: 'note',
         midi: 74,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 83,
+        midi: 77,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 77,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
         type: 'note',
         midi: 67,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 83,
+        midi: 74,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 62,
+        midi: 77,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
         type: 'note',
-        midi: 65,
+        midi: 67,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 77,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 77,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 77,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 76,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 76,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 76,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 81,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 76,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 81,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 76,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 81,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 76,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 81,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 79,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 79,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 79,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 79,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
         type: 'note',
         midi: 64,
       },
     ],
     [
       {
-        size: '16',
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
         type: 'note',
         midi: 62,
       },
     ],
     [
       {
-        size: '1',
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 73,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 73,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 73,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 73,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 72,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 58,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 58,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 58,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 58,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 63,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 63,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 63,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 63,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 66,
+        accidental: 'sharp',
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 71,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 70,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 70,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 70,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 70,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 69,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 50,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 50,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'pause',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 83,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 77,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 83,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 74,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 83,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 67,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 83,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 65,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 1,
         type: 'note',
         midi: 72,
         accidental: null,
       },
       {
-        size: '1',
+        size: 1,
         type: 'note',
         midi: 67,
         accidental: null,
       },
       {
-        size: '1',
+        size: 1,
         type: 'note',
         midi: 64,
       },
@@ -3294,1172 +3294,1126 @@ export default {
   bass: [
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '64',
+        midi: 64,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '64',
+        midi: 64,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '64',
+        midi: 64,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '64',
+        midi: 64,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '62',
+        midi: 62,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '62',
+        midi: 62,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '62',
+        midi: 62,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '62',
+        midi: 62,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '59',
+        midi: 59,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '62',
+        midi: 62,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '62',
+        midi: 62,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '59',
+        midi: 59,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '62',
+        midi: 62,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '62',
+        midi: 62,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '64',
+        midi: 64,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '64',
+        midi: 64,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '64',
+        midi: 64,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '64',
+        midi: 64,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '64',
+        midi: 64,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '64',
+        midi: 64,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '64',
+        midi: 64,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '64',
+        midi: 64,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '62',
+        midi: 62,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '62',
+        midi: 62,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '62',
+        midi: 62,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '62',
+        midi: 62,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '59',
+        midi: 59,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '62',
+        midi: 62,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '62',
+        midi: 62,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '59',
+        midi: 59,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '62',
+        midi: 62,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '62',
+        midi: 62,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '59',
+        midi: 59,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '60',
+        midi: 60,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '59',
+        midi: 59,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '60',
+        midi: 60,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '57',
+        midi: 57,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '60',
+        midi: 60,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '57',
+        midi: 57,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '60',
+        midi: 60,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '60',
+        midi: 60,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '50',
+        midi: 50,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '57',
+        midi: 57,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '57',
+        midi: 57,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '50',
+        midi: 50,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '57',
+        midi: 57,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '57',
+        midi: 57,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '55',
+        midi: 55,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '59',
+        midi: 59,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '59',
+        midi: 59,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '55',
+        midi: 55,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '59',
+        midi: 59,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '59',
+        midi: 59,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '55',
+        midi: 55,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '58',
+        midi: 58,
         accidental: 'flat',
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '58',
+        midi: 58,
         accidental: 'flat',
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '55',
+        midi: 55,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '58',
-        accidental: 'flat',
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: '4',
-        type: 'note',
-        midi: '58',
-        accidental: 'flat',
-      },
-    ],
-    [
-      {
-        size: '2',
-        type: 'note',
-        midi: '53',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'note',
-        midi: '57',
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: '4',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '2',
-        type: 'note',
-        midi: '53',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'note',
-        midi: '57',
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: '4',
-        type: 'note',
-        midi: '57',
-      },
-    ],
-    [
-      {
-        size: '2',
-        type: 'note',
-        midi: '53',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'note',
-        midi: '56',
+        midi: 58,
         accidental: 'flat',
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '56',
+        midi: 58,
         accidental: 'flat',
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '56',
+        midi: 57,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 2,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 57,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 2,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 56,
         accidental: 'flat',
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '56',
+        midi: 56,
         accidental: 'flat',
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '52',
+        midi: 53,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '55',
+        midi: 56,
+        accidental: 'flat',
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 56,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 2,
+        type: 'note',
+        midi: 52,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 55,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '55',
+        midi: 55,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '52',
+        midi: 52,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '55',
+        midi: 55,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '55',
+        midi: 55,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '52',
+        midi: 52,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '53',
+        midi: 53,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '52',
+        midi: 52,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '53',
+        midi: 53,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '50',
+        midi: 50,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '53',
+        midi: 53,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '50',
+        midi: 50,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '53',
+        midi: 53,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '43',
+        midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '50',
+        midi: 50,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '50',
+        midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '43',
+        midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '50',
+        midi: 50,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '50',
+        midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '48',
+        midi: 48,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '52',
+        midi: 52,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '52',
+        midi: 52,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '48',
+        midi: 48,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '52',
+        midi: 52,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '52',
+        midi: 52,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '48',
+        midi: 48,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '55',
+        midi: 55,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '55',
+        midi: 55,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '48',
+        midi: 48,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '55',
+        midi: 55,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '55',
+        midi: 55,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '41',
+        midi: 41,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '53',
+        midi: 53,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '41',
+        midi: 41,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '53',
+        midi: 53,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '42',
+        midi: 42,
         accidental: 'sharp',
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '48',
+        midi: 48,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '48',
+        midi: 48,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '42',
+        midi: 42,
         accidental: 'sharp',
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '48',
+        midi: 48,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '48',
+        midi: 48,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '44',
+        midi: 44,
         accidental: 'flat',
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '53',
+        midi: 53,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
-        midi: '44',
+        midi: 44,
         accidental: 'flat',
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
-        midi: '53',
+        midi: 53,
         accidental: null,
         dot: 'single',
       },
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
-        midi: '53',
+        midi: 53,
       },
     ],
     [
       {
-        size: '2',
-        type: 'note',
-        midi: '43',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'note',
-        midi: '53',
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: '4',
-        type: 'note',
-        midi: '53',
-      },
-    ],
-    [
-      {
-        size: '2',
-        type: 'note',
-        midi: '43',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'note',
-        midi: '53',
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: '4',
-        type: 'note',
-        midi: '53',
-      },
-    ],
-    [
-      {
-        size: '2',
-        type: 'note',
-        midi: '43',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'note',
-        midi: '50',
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: '4',
-        type: 'note',
-        midi: '50',
-      },
-    ],
-    [
-      {
-        size: '2',
-        type: 'note',
-        midi: '43',
-      },
-    ],
-    [
-      {
-        size: '8',
-        type: 'note',
-        midi: '50',
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: '4',
-        type: 'note',
-        midi: '50',
-      },
-    ],
-    [
-      {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
+        type: 'note',
+        midi: 53,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 53,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
         type: 'note',
         midi: 50,
         accidental: null,
@@ -4468,21 +4422,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 50,
         accidental: null,
@@ -4491,21 +4445,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 50,
         accidental: null,
@@ -4514,21 +4468,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 50,
         accidental: null,
@@ -4537,21 +4491,67 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
+        type: 'note',
+        midi: 50,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 50,
+      },
+    ],
+    [
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 50,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 50,
+      },
+    ],
+    [
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
         type: 'note',
         midi: 51,
         accidental: 'flat',
@@ -4560,7 +4560,7 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 51,
         accidental: 'flat',
@@ -4568,14 +4568,14 @@ export default {
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 51,
         accidental: 'flat',
@@ -4584,7 +4584,7 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 51,
         accidental: 'flat',
@@ -4592,14 +4592,14 @@ export default {
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 52,
         accidental: 'normal',
@@ -4608,7 +4608,7 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 52,
         accidental: 'normal',
@@ -4616,14 +4616,14 @@ export default {
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 52,
         accidental: 'normal',
@@ -4632,7 +4632,7 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 52,
         accidental: 'normal',
@@ -4640,14 +4640,14 @@ export default {
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 50,
         accidental: null,
@@ -4656,21 +4656,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 50,
         accidental: null,
@@ -4679,21 +4679,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 50,
         accidental: null,
@@ -4702,21 +4702,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 43,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 50,
         accidental: null,
@@ -4725,21 +4725,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 50,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 36,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 48,
         accidental: null,
@@ -4748,21 +4748,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 48,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 36,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 48,
         accidental: null,
@@ -4771,21 +4771,21 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 48,
       },
     ],
     [
       {
-        size: '1',
+        size: 1,
         type: 'note',
         midi: 36,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 48,
         accidental: null,
@@ -4794,28 +4794,28 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 48,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 48,
       },
     ],
     [
       {
-        size: '1',
+        size: 1,
         type: 'note',
         midi: 36,
       },
     ],
     [
       {
-        size: '8',
+        size: 8,
         type: 'note',
         midi: 47,
         accidental: null,
@@ -4824,27 +4824,27 @@ export default {
     ],
     [
       {
-        size: '4',
+        size: 4,
         type: 'note',
         midi: 47,
       },
     ],
     [
       {
-        size: '2',
+        size: 2,
         type: 'note',
         midi: 47,
       },
     ],
     [
       {
-        size: '1',
+        size: 1,
         type: 'note',
         midi: 36,
         accidental: null,
       },
       {
-        size: '1',
+        size: 1,
         type: 'note',
         midi: 48,
       },

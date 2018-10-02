@@ -11,11 +11,13 @@ const transformClefData = (data, clef, key) =>
   data.map(step => {
     const accumulator = {
       clef,
+      type: 'note',
       size: step[0].size,
       data: [],
     }
     return step.reduce((acc, note) => {
       if (note.type === 'pause') {
+        acc.type = 'pause'
         acc.data.push(note)
       } else {
         acc.data.push({

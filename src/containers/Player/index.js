@@ -7,15 +7,23 @@ import { Scaled } from 'components/Paper'
 
 const enhance = compose(withPlayer)
 
-const Player = enhance(({ notes }) => (
+const Player = enhance(({ notes, indexes, offsets }) => (
   <Scaled>
     {({ scale }) => (
       <Fragment>
         <Staff scale={scale}>
-          <Displayer data={notes?.treble} />
+          <Displayer
+            data={notes?.treble}
+            index={indexes.treble}
+            offset={offsets.treble}
+          />
         </Staff>
         <Staff scale={scale}>
-          <Displayer data={notes?.bass} />
+          <Displayer
+            data={notes?.bass}
+            index={indexes.bass}
+            offset={offsets.bass}
+          />
         </Staff>
       </Fragment>
     )}
