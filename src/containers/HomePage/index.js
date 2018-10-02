@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Midi from 'util/Midi'
 import withTrack from 'enhancers/withTrack'
 
-import Staff from 'components/Staff'
-import Note from 'components/Note'
-import Paper, { Scaled } from 'components/Paper'
+import Paper from 'components/Paper'
+import Title from 'components/Title'
+import Player from 'containers/Player'
 
 class HomePage extends Component {
   componentDidMount() {
@@ -21,17 +21,14 @@ class HomePage extends Component {
   }
 
   render() {
+    const { track } = this.props
     return (
-      <Paper>
-        <Scaled>
-          {({ scale }) => (
-            <Staff scale={scale}>
-              <Note scale={scale}/>
-            </Staff>
-          )}
-        </Scaled>
-        <Scaled>{({ scale }) => <Staff scale={scale} />}</Scaled>
-      </Paper>
+      <Fragment>
+        <Title>{track.meta.name}</Title>
+        <Paper>
+          <Player />
+        </Paper>
+      </Fragment>
     )
   }
 }

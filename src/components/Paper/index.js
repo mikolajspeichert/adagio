@@ -8,8 +8,8 @@ import {
   setDisplayName,
 } from 'recompose'
 import PropTypes from 'prop-types'
-import { ScreenWrapper, PaperStage } from './styles'
 import { BASE_HEIGHT, BASE_WIDTH } from 'util/constants'
+import { ScreenWrapper, PaperStage } from './styles'
 
 const ScaleProvider = React.createContext({ scale: 1.0 })
 

@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-const Base = styled.div`
+const Base = styled.div.attrs({
+  style: ({ offset = 0 }) => ({
+    transform: `translate(${offset}px, 0px)`,
+  }),
+})`
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
   display: flex;

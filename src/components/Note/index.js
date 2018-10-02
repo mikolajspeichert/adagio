@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { compose, withState, withProps, withHandlers } from 'recompose'
 
-import { BASE_HEIGHT } from 'util/constants'
+import { BASE_NOTE_WIDTH, BASE_HEIGHT } from 'util/constants'
 import { NoteLine } from 'assets/svgs'
 import { c } from './stub'
 import {
@@ -17,7 +17,6 @@ import {
 } from './utils'
 import { Base, styledItem } from './styles'
 
-const BASE_NOTE_WIDTH = 60
 const BASE_LINE_HEIGHT = 70
 
 const enhance = compose(
@@ -76,8 +75,9 @@ const enhance = compose(
   })
 )
 
-const Note = enhance(({ scale, cores, Line }) => (
+const Note = enhance(({ offset, scale, cores, Line }) => (
   <Base
+    offset={offset}
     width={Math.floor(BASE_NOTE_WIDTH * scale)}
     height={Math.floor((BASE_HEIGHT / 2) * scale)}>
     {cores.map(Core => (

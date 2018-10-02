@@ -4,6 +4,7 @@ import { actions } from './actions'
 
 const initialState = {
   isLoading: false,
+  isLoaded: false,
   meta: {},
   data: null,
 }
@@ -18,6 +19,7 @@ const track = createReducer(initialState, {
   [actions.FINISH_LOADING](state) {
     return {
       ...state,
+      isLoaded: true,
       isLoading: false,
     }
   },

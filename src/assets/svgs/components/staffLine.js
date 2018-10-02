@@ -6,21 +6,9 @@ const getMargin = scale =>
     ? Math.floor(scale * 10) + 1
     : Math.floor(scale * 10)
 
-const StaffLineSvg = props => (
-  <svg viewBox="0 0 200 1" preserveAspectRatio="none" {...props}>
-    <path
-      d="M0 2h200"
-      stroke="#000"
-      fill="none"
-      fillRule="evenodd"
-      strokeLinejoin="bevel"
-    />
-  </svg>
-)
-
 const StaffLine = styled.div`
   width: 100%;
-  height: ${({ scale }) => Math.ceil(scale)}px;
+  height: ${({ scale }) => Math.ceil((scale * 2 + 1) / 2)}px;
   background-color: black;
   margin: ${({ scale }) => getMargin(scale)}px 0;
 `

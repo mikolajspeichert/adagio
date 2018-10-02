@@ -3,10 +3,10 @@ const c = {
   size: 8,
   data: [
     {
-      position: 6, // index from middle-c
+      position: 0, // index from middle-c
     },
     {
-      position: 11, // index from middle-c
+      position: 2, // index from middle-c
       // if mulitple sizes, set inside
     },
   ],

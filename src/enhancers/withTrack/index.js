@@ -14,9 +14,6 @@ const withTrack = compose(
     fetchTrack: ({ dispatch }) => trackName => {
       dispatch(loadTrack(trackName))
     },
-  }),
-  withProps(({ track }) => {
-    console.log(track)
   })
 )
 
