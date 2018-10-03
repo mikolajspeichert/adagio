@@ -1,6 +1,7 @@
+import React from 'react'
 import styled from 'styled-components'
 
-const Base = styled.div.attrs({
+const Base = styled(({ offset, ...props }) => <div {...props} />).attrs({
   style: ({ offset = 0 }) => ({
     transform: `translate(${offset}px, 0px)`,
   }),
@@ -11,12 +12,4 @@ const Base = styled.div.attrs({
   justify-content: center;
 `
 
-const styledItem = svg => styled(svg).attrs({
-  style: ({ x = 0, y = 0, rotate = 0}) => ({
-    transform: `translate(${x}px, ${y}px) rotate(${rotate}deg)`,
-  }),
-})`
-  position: absolute;
-`
-
-export { Base, styledItem }
+export { Base }

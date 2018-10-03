@@ -1,17 +1,18 @@
 import React from 'react'
+import { Svg } from '../styles'
 
-const NoteLine = props => (
-  <svg viewBox="0 0 2 20" preserveAspectRatio="none" {...props}>
+const StepLine = props => (
+  <Svg width={3} height={20} {...props}>
     <path
       d="M1 20V0"
       stroke="#000"
-      strokeWidth={2}
+      strokeWidth={4}
       fill="#000"
       fillRule="nonzero"
       strokeLinecap="round"
       strokeLinejoin="bevel"
     />
-  </svg>
+  </Svg>
 )
 
-export default NoteLine
+export default StepLine

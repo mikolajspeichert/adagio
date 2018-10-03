@@ -18,11 +18,16 @@ process.noDeprecation = true
 
 module.exports = {
   mode: 'development',
-  entry: {
-    babel: '@babel/polyfill',
-    wmr: 'webpack-hot-middleware/client?reload=true',
-    app: './src/index.js',
-  },
+  // entry: {
+  //   babel: '@babel/polyfill',
+  //   wmr: 'webpack-hot-middleware/client',
+  //   app: './src/index.js',
+  // },
+  entry: [
+    '@babel/polyfill',
+    'webpack-hot-middleware/client?reload=true',
+    path.join(process.cwd(), 'index.js'),
+  ],
   output: {
     filename: '[name].main.js',
     chunkFilename: '[name].chunk.js',

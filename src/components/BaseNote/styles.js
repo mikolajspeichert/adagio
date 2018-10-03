@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import P8 from 'assets/svgs/components/body4'
+import P8 from 'assets/notes/components/body4'
 
 const Base = styled.div`
   width: 60px;
@@ -8,6 +8,8 @@ const Base = styled.div`
   justify-content: center;
 `
 
-const Pause8 = styled(P8)`transform: translateY(72px);`
+const Pause8 = styled(P8)`
+  transform: translateY(72px);
+`
 
 export { Base, Pause8 }

@@ -25,6 +25,7 @@ const middleware = webpackDevMiddleware(compiler, {
 })
 app.use(middleware)
 app.use(webpackHotMiddleware(compiler))
+
 const fs = middleware.fileSystem
 app.get('*', (req, res) => {
   fs.readFile(join(compiler.outputPath, 'index.html'), (err, file) => {

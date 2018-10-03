@@ -1,10 +1,8 @@
-import React, { Fragment } from 'react'
-import styled from 'styled-components'
-import { compose, withState, withProps, withHandlers } from 'recompose'
+import React from 'react'
+import { compose, withPropsOnChange } from 'recompose'
 
 import { BASE_NOTE_WIDTH, BASE_HEIGHT } from 'util/constants'
-import { NoteLine } from 'assets/svgs'
-import { c } from './stub'
+import { NoteLine } from 'assets/notes'
 import {
   getMiddleC,
   getCore,
@@ -15,12 +13,12 @@ import {
   getNoteWidth,
   getHookHeight,
 } from './utils'
-import { Base, styledItem } from './styles'
+import { Base } from './styles'
 
 const BASE_LINE_HEIGHT = 70
 
 const enhance = compose(
-  withProps(({ data: note, scale }) => {
+  withPropsOnChange(['scale'], ({ data: note, scale }) => {
     if (!note || note.type === 'pause') return
     const { clef, size, data } = note
     const middleC = getMiddleC(clef, scale)
@@ -29,7 +27,7 @@ const enhance = compose(
     let cores = []
     data.forEach(({ position }) => {
       const Core = {}
-      Core.svg = styledItem(getCore(size))
+      Core.svg = getCore(size)
       Core.offsetY = getCoreOffset({ middleC, position, scale })
       if (Core.offsetY > bottomCoreOffset) bottomCoreOffset = Core.offsetY
       if (Core.offsetY < topCoreOffset) topCoreOffset = Core.offsetY
@@ -40,11 +38,12 @@ const enhance = compose(
         let width = getNoteWidth(size) - 1
         Core.offsetX = width * scale
       }
+      Core.height = makeEven(10 * scale) * 2
       cores.push(Core)
     })
     const Line = {}
-    Line.svg = size > 1 && styledItem(NoteLine)
-    Line.hook = size > 4 && styledItem(getHook(size))
+    Line.svg = size > 1 && NoteLine
+    Line.hook = size > 4 && getHook(size)
     const proposedHeight = bottomCoreOffset - topCoreOffset + 50 * scale
     const baseHeight = BASE_LINE_HEIGHT * scale
     Line.height =
@@ -86,7 +85,7 @@ const Note = enhance(({ offset, scale, cores = [], Line = {} }) => (
         key={Core.offsetY}
         x={Core.offsetX || 0}
         y={Core.offsetY}
-        height={makeEven(10 * scale) * 2}
+        height={Core.height}
       />
     ))}
     {Line.svg && (
@@ -108,7 +107,4 @@ const Note = enhance(({ offset, scale, cores = [], Line = {} }) => (
   </Base>
 ))
 
-Note.defaultProps = {
-  // data: c,
-}
 export default Note

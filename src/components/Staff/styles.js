@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import StaffLine from 'assets/svgs/components/staffLine'
+import StaffLine from 'assets/notes/components/staffLine'
 
 const Background = styled.div`
   width: 100%;

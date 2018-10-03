@@ -1,4 +1,4 @@
-import { Body1, Body2, Body4, hooks } from 'assets/svgs'
+import { Body1, Body2, Body4, hooks } from 'assets/notes'
 import { BASE_HEIGHT } from 'util/constants'
 
 const makeEven = number =>

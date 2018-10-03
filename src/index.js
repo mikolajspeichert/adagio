@@ -1,23 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
+import App from '/containers/App'
+
 import store from './store'
 import 'styled/utils/global-styles'
-import HomePage from './containers/HomePage'
-
-class App extends React.Component {
-  render() {
-    return (
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        {/* <Route path="/settings" component={Settings} /> */}
-        {/* <Route path="/track/:name" component={Player} /> */}
-        {/* <Route path="/practice" component={Player} /> */}
-      </Switch>
-    )
-  }
-}
 
 ReactDOM.render(
   <Provider store={store}>

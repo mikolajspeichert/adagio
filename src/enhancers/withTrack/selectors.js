@@ -4,7 +4,7 @@ import { getDistanceFromMiddleC } from './utils'
 
 const createTrackSelector = createSelectorCreator(
   defaultMemoize,
-  (currentVal, previousVal) => currentVal.meta.name === previousVal.meta.name
+  (currentVal, previousVal) => currentVal.isLoaded === previousVal.isLoaded
 )
 
 const transformClefData = (data, clef, key) =>
