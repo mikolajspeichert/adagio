@@ -7,6 +7,18 @@ module.exports = {
 
   globals: {
     __DEV__: true,
+    jest: true,
+    it: true,
+    expect: true,
+    describe: true,
+    beforeEach: true,
+    beforeAll: true,
+    after: true,
+    afterEach: true,
+    afterAll: true,
+    before: true,
+    fetch: true,
+    use: true,
   },
 
   env: {
@@ -14,6 +26,18 @@ module.exports = {
   },
 
   rules: {
+    'prettier/prettier': [
+      'warn', {
+        singleQuote: true,
+
+        trailingComma: 'es5',
+
+        semi: false,
+
+        jsxBracketSameLine: true,
+      },
+    ],
+
     'import/extensions': 'off',
 
     'import/no-unresolved': 'off',
@@ -92,18 +116,6 @@ module.exports = {
 
     eqeqeq: 'warn',
 
-    'prettier/prettier': [
-      'warn',
-      {
-        singleQuote: true,
-
-        trailingComma: 'es5',
-
-        semi: false,
-
-        jsxBracketSameLine: true,
-      },
-    ],
   },
 
   settings: {

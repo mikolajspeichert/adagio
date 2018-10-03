@@ -1,63 +1,18 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import HomePage from '../HomePage'
 
-class App extends Component {
-  componentDidMount() {
-    document.addEventListener('keydown', this.handleKeyDown)
-    this.props.dispatch(generateNotes())
-    if (navigator.requestMIDIAccess)
-      navigator
-        .requestMIDIAccess()
-        .then(this.handleMidiInput, e => console.error(e))
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.handleKeyDown)
-  }
-
-  handleMidiInput = midi => {}
-  // new Midi(midi, note => {
-  //   this.props.clefs.map(
-  //     clef =>
-  //       this.props.midi[clef] === note &&
-  //       this.props.dispatch(generateNoteFor(clef))
-  //   )
-  // }).analyseInputs()
-
-  handleKeyDown = e => {
-    if (e.key === ' ') {
-      this.props.dispatch(generateNotes())
-    }
-    if (e.key === 'Enter') {
-      this.props.dispatch(generateNoteFor('treble'))
-    }
-    if (e.key === 'Tab') {
-      this.props.dispatch(generateNoteFor('bass'))
-    }
-  }
-
+class App extends React.Component {
   render() {
     return (
-      <div className="app">
-        <div>
-          {/* {this.props.clefs.map(clef => <Section key={clef} clef={clef} />)} */}
-        </div>
-        <Settings />
-      </div>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        {/* <Route path="/settings" component={Settings} /> */}
+        {/* <Route path="/track/:name" component={Player} /> */}
+        {/* <Route path="/practice" component={Player} /> */}
+      </Switch>
     )
   }
 }
 
-App.propTypes = {
-  clefs: PropTypes.array.isRequired,
-  midi: PropTypes.object.isRequired,
-  dispatch: PropTypes.func.isRequired,
-}
-
-const mapStateToProps = state => ({
-  clefs: state.clefs,
-  midi: state.midi,
-})
-
-export default connect(mapStateToProps)(App)
+export default App
