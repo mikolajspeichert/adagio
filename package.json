@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "@inlet/react-pixi": "^0.2.0",
     "assets": "^3.0.0",
     "fast-memoize": "^2.5.1",
     "immutable": "^3.8.2",
