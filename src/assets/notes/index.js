@@ -1,17 +1,12 @@
-import Hook8 from './components/hook8'
-import Hook16 from './components/hook16'
-import Hook32 from './components/hook32'
-import Hook64 from './components/hook64'
-import Hook128 from './components/hook128'
+export const Body1 = require('./svgs/whole_body.svg')
+export const Body2 = require('./svgs/half_body.svg')
+export const Body4 = require('./svgs/body4.svg')
+export const NoteLine = require('./svgs/note_line.svg')
 
-export { default as Body1 } from './components/body1'
-export { default as Body2 } from './components/body2'
-export { default as Body4 } from './components/body4'
-export { default as NoteLine } from './components/noteLine'
 export const hooks = {
-  Hook8,
-  Hook16,
-  Hook32,
-  Hook64,
-  Hook128,
+  Hook8: require('./svgs/eight_hook.svg'),
+  Hook16: require('./svgs/sixteen_hook.svg'),
+  Hook32: require('./svgs/thirty_two_hook.svg'),
+  Hook64: require('./svgs/sixty_four_hook.svg'),
+  Hook128: require('./svgs/one_hundred_twenty_eight_hook.svg'),
 }

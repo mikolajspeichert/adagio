@@ -4,13 +4,15 @@ export default class Animator {
     this.loopID = null
   }
 
-  loop = () => {
-    this.subscriber.call()
+  loop = timestamp => {
+    this.subscriber(timestamp - this.counter)
+    this.counter = timestamp
     this.loopID = window.requestAnimationFrame(this.loop)
   }
 
   start() {
     if (!this.loopID) {
+    this.counter = 0
       this.loop()
     }
   }

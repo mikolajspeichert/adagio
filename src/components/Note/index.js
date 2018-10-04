@@ -1,19 +1,26 @@
 import React from 'react'
 import { compose, withPropsOnChange } from 'recompose'
+import { Sprite, Container } from 'react-pixi-fiber'
+import * as PIXI from 'pixi.js'
 
-import { BASE_NOTE_WIDTH, BASE_HEIGHT } from 'util/constants'
+import {
+  BASE_NOTE_WIDTH,
+  BASE_HEIGHT,
+  STAFF_LINE_SPACING,
+  STAFF_LINE_THICKNESS,
+} from 'util/constants'
 import { NoteLine } from 'assets/notes'
 import {
+  NoteElement,
   getMiddleC,
   getCore,
   getHook,
   getCoreOffset,
-  makeEven,
   shouldBeFacingBottom,
   getNoteWidth,
-  getHookHeight,
 } from './utils'
-import { Base } from './styles'
+
+import { c } from './stub'
 
 const BASE_LINE_HEIGHT = 70
 
@@ -31,14 +38,14 @@ const enhance = compose(
       Core.offsetY = getCoreOffset({ middleC, position, scale })
       if (Core.offsetY > bottomCoreOffset) bottomCoreOffset = Core.offsetY
       if (Core.offsetY < topCoreOffset) topCoreOffset = Core.offsetY
+      Core.width = getNoteWidth(size) * scale
       if (
         data.some(otherNote => otherNote.position + 1 === position) &&
         !data.some(otherNote => otherNote.position - 1 === position)
       ) {
-        let width = getNoteWidth(size) - 1
-        Core.offsetX = width * scale
+        Core.offsetX = Core.width
       }
-      Core.height = makeEven(10 * scale) * 2
+      Core.height = STAFF_LINE_SPACING * scale
       cores.push(Core)
     })
     const Line = {}
@@ -49,6 +56,7 @@ const enhance = compose(
     Line.height =
       (proposedHeight > baseHeight ? proposedHeight : baseHeight) +
       (size / 2) * scale
+    Line.width = STAFF_LINE_THICKNESS(scale) + 1
     if (
       shouldBeFacingBottom({
         clef,
@@ -57,14 +65,14 @@ const enhance = compose(
       })
     ) {
       Line.offsetY = topCoreOffset + 11 * scale
-      Line.offsetX = -Math.floor(getNoteWidth(size) / 2 - 1) * scale
-      Line.hookX = Line.offsetX - 7 * scale
-      Line.hookRotate = 180
-      Line.hookY = Line.offsetY + Line.height - getHookHeight(size) * scale
+      Line.offsetX = 0
+      Line.hookX = Line.offsetX + Line.width
+      Line.hookRotate = 3.14
+      Line.hookY = Line.offsetY + Line.height
     } else {
       Line.offsetY = bottomCoreOffset + 10 * scale - Line.height
-      Line.offsetX = Math.floor(getNoteWidth(size) / 2 - 2) * scale
-      Line.hookX = Line.offsetX + 8 * scale
+      Line.offsetX = Math.floor(getNoteWidth(size) * scale) - Line.width
+      Line.hookX = Line.offsetX
       Line.hookRotate = 0
       Line.hookY = Line.offsetY
     }
@@ -76,35 +84,36 @@ const enhance = compose(
 )
 
 const Note = enhance(({ offset, scale, cores = [], Line = {} }) => (
-  <Base
-    offset={offset}
-    width={Math.floor(BASE_NOTE_WIDTH * scale)}
-    height={Math.floor((BASE_HEIGHT / 2) * scale)}>
+  <Container x={offset}>
     {cores.map(Core => (
-      <Core.svg
+      <NoteElement
+        svg={Core.svg}
         key={Core.offsetY}
         x={Core.offsetX || 0}
         y={Core.offsetY}
         height={Core.height}
+        width={Core.width}
       />
     ))}
     {Line.svg && (
-      <Line.svg
+      <NoteElement
+        svg={Line.svg}
         y={Line.offsetY}
         x={Line.offsetX}
         height={Line.height}
-        width={3 * scale}
+        width={Line.width}
       />
     )}
     {Line.hook && (
-      <Line.hook
+      <NoteElement
+        svg={Line.hook}
         y={Line.hookY}
         x={Line.hookX}
         width={16 * scale}
-        rotate={Line.hookRotate}
+        skew={new PIXI.Point(Line.hookRotate, Line.hookRotate)}
       />
     )}
-  </Base>
+  </Container>
 ))
 
 export default Note

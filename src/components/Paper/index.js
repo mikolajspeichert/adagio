@@ -4,14 +4,20 @@ import {
   withState,
   lifecycle,
   withHandlers,
-  withProps,
+  withPropsOnChange,
   setDisplayName,
 } from 'recompose'
 import PropTypes from 'prop-types'
+
+import { colors } from 'styled/themes'
 import { BASE_HEIGHT, BASE_WIDTH } from 'util/constants'
 import { ScreenWrapper, PaperStage } from './styles'
 
-const ScaleProvider = React.createContext({ scale: 1.0 })
+const ScaleProvider = React.createContext({
+  scale: 1.0,
+  width: BASE_WIDTH,
+  height: BASE_HEIGHT,
+})
 
 const enhance = compose(
   setDisplayName('Paper'),
@@ -24,13 +30,12 @@ const enhance = compose(
       setDimensions([window.innerWidth, window.innerHeight])
     },
   }),
-  withProps(({ dimensions, width, height }) => {
+  withPropsOnChange(['dimensions'], ({ dimensions, width, height }) => {
     const [windowWidth, windowHeight] = dimensions
 
     let targetWidth
     let targetHeight
     let targetScale
-
     if (height / width > windowHeight / windowWidth) {
       targetHeight = windowHeight
       targetWidth = (targetHeight * width) / height
@@ -65,8 +70,8 @@ const enhance = compose(
 
 const Paper = enhance(({ height, width, scale, offsets, children }) => (
   <ScreenWrapper>
-    <PaperStage width={width} height={height} offsets={offsets}>
-      <ScaleProvider.Provider value={{ scale }}>
+    <PaperStage height={height} offsets={offsets}>
+      <ScaleProvider.Provider value={{ scale, width, height }}>
         {children}
       </ScaleProvider.Provider>
     </PaperStage>

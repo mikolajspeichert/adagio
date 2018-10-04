@@ -1,10 +1,18 @@
 import { Body1, Body2, Body4, hooks } from 'assets/notes'
-import { BASE_HEIGHT } from 'util/constants'
+import {
+  BASE_HEIGHT,
+  STAFF_LINE_SPACING,
+  STAFF_LINE_THICKNESS,
+} from 'util/constants'
+import { Sprite } from 'react-pixi-fiber'
+import * as PIXI from 'pixi.js'
+import React from 'react'
 
-const makeEven = number =>
-  Math.floor(number) % 2 === 1 ? Math.floor(number) + 1 : Math.floor(number)
+const NoteElement = ({ svg, ...props }) => (
+  <Sprite texture={PIXI.Texture.fromImage(svg)} {...props} />
+)
 
-const getMargin = scale => makeEven(scale * 10)
+const getStaffSpacing = scale => STAFF_LINE_SPACING * scale
 
 const isTreble = clef => clef === 'treble'
 
@@ -19,21 +27,19 @@ const shouldBeFacingBottom = ({ clef, offsets, scale }) => {
 }
 
 const getMiddleC = (clef, scale) => {
-  const lineThickness = Math.ceil(scale)
-  const startingPoint = Math.floor((BASE_HEIGHT * scale) / 4) + lineThickness
-  const margin = getMargin(scale)
+  const lineThickness = STAFF_LINE_THICKNESS(scale)
+  const startingPoint = Math.floor((BASE_HEIGHT * scale) / 4)
+  const spacing = getStaffSpacing(scale)
   let moveByRatio
   let linesQuantity
   if (isTreble(clef)) {
     moveByRatio = 2.5
-    linesQuantity = 2
+    linesQuantity = 3
   } else {
     moveByRatio = -3.5
     linesQuantity = -3
   }
-  return (
-    startingPoint + moveByRatio * margin * 2 + linesQuantity * lineThickness
-  )
+  return startingPoint + moveByRatio * spacing + linesQuantity * lineThickness
 }
 
 const getHook = size => (size < 8 ? null : hooks[`Hook${size}`])
@@ -42,10 +48,10 @@ const getCore = size => (size === 1 ? Body1 : size === 2 ? Body2 : Body4) // esl
 
 const getCoreOffset = ({ middleC, position, scale }) =>
   middleC -
-  position * getMargin(scale) -
-  Math.floor(position / 2) * Math.ceil(scale)
+  (position * getStaffSpacing(scale)) / 2 -
+  Math.floor(position / 2) * STAFF_LINE_THICKNESS(scale)
 
-const getNoteWidth = size => (size === 1 ? 36 : 25)
+const getNoteWidth = size => (size === 1 ? 35 : 24)
 
 const hooksHeights = {
   8: 50,
@@ -55,15 +61,12 @@ const hooksHeights = {
   128: 113,
 }
 
-const getHookHeight = size => hooksHeights[size]
-
 export {
+  NoteElement,
   getMiddleC,
   getCore,
   getHook,
-  getHookHeight,
   getCoreOffset,
-  makeEven,
   isTreble,
   getNoteWidth,
   shouldBeFacingBottom,

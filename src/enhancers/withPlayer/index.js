@@ -27,7 +27,7 @@ const memoizeNotes = () => {
     cacheIndex[clef] = index
     let previousOffsets = 0
     cacheValue[clef] = raw
-      .slice(index, index + 10)
+      .slice(index, index + 30)
       .map(note => {
         const multiplier = 16 / note.size
         note.offset = multiplier * BASE_NOTE_WIDTH
@@ -63,11 +63,12 @@ const withPlayer = compose(
         ...indexes,
         [clef]: indexes[clef] + 1,
       }),
-    calculate: ({ offsets, updateOffsets }) => () => {
+    calculate: ({ offsets, updateOffsets }) => interval => {
+      if (isNaN(interval)) interval = 0 // eslint-disable-line
       if (offsets.treble > 0 && offsets.bass > 0) {
         updateOffsets({
-          treble: offsets.treble - 2,
-          bass: offsets.bass - 2,
+          treble: offsets.treble - 0.12 * interval,
+          bass: offsets.bass - 0.12 * interval,
         })
       }
     },
