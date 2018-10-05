@@ -23,7 +23,7 @@ const shouldBeFacingBottom = ({ clef, offsets, scale }) => {
   if (isTreble(clef)) {
     return topDifference > -bottomDifference
   }
-  return bottomDifference < -topDifference
+  return bottomDifference > -topDifference
 }
 
 const getMiddleC = (clef, scale) => {

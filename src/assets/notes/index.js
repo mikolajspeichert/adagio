@@ -1,12 +1,12 @@
-export const Body1 = require('./svgs/whole_body.svg')
-export const Body2 = require('./svgs/half_body.svg')
+export const Body1 = require('./svgs/body1.svg')
+export const Body2 = require('./svgs/body2.svg')
 export const Body4 = require('./svgs/body4.svg')
 export const NoteLine = require('./svgs/note_line.svg')
 
 export const hooks = {
-  Hook8: require('./svgs/eight_hook.svg'),
-  Hook16: require('./svgs/sixteen_hook.svg'),
-  Hook32: require('./svgs/thirty_two_hook.svg'),
-  Hook64: require('./svgs/sixty_four_hook.svg'),
-  Hook128: require('./svgs/one_hundred_twenty_eight_hook.svg'),
+  Hook8: require('./svgs/hook8.svg'),
+  Hook16: require('./svgs/hook16.svg'),
+  Hook32: require('./svgs/hook32.svg'),
+  Hook64: require('./svgs/hook64.svg'),
+  Hook128: require('./svgs/hook128.svg'),
 }

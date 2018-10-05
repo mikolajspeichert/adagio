@@ -32,13 +32,13 @@ const enhance = compose(
     let topCoreOffset = BASE_HEIGHT
     let bottomCoreOffset = 0
     let cores = []
-    data.forEach(({ position }) => {
+    data.forEach(({ position, size: coreSize }) => {
       const Core = {}
-      Core.svg = getCore(size)
+      Core.svg = getCore(coreSize)
       Core.offsetY = getCoreOffset({ middleC, position, scale })
       if (Core.offsetY > bottomCoreOffset) bottomCoreOffset = Core.offsetY
       if (Core.offsetY < topCoreOffset) topCoreOffset = Core.offsetY
-      Core.width = getNoteWidth(size) * scale
+      Core.width = getNoteWidth(coreSize) * scale
       if (
         data.some(otherNote => otherNote.position + 1 === position) &&
         !data.some(otherNote => otherNote.position - 1 === position)
@@ -50,7 +50,12 @@ const enhance = compose(
     })
     const Line = {}
     Line.svg = size > 1 && NoteLine
-    Line.hook = size > 4 && getHook(size)
+    if (note.type === 'mixed') {
+      let hookSize = data.filter(subNote => subNote.type === 'note')[0].size
+      Line.hook = hookSize > 4 && getHook(hookSize)
+    } else {
+      Line.hook = size > 4 && getHook(size)
+    }
     const proposedHeight = bottomCoreOffset - topCoreOffset + 50 * scale
     const baseHeight = BASE_LINE_HEIGHT * scale
     Line.height =

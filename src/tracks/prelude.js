@@ -3294,28 +3294,9 @@ export default {
   bass: [
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 60,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 64,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -3340,6 +3321,37 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 64,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 60,
@@ -3363,6 +3375,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 60,
@@ -3385,6 +3401,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -3409,166 +3429,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 59,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 62,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 62,
-      },
-    ],
-    [
-      {
-        size: 2,
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 64,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
-      {
-        size: 2,
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 64,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
-      {
-        size: 2,
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 64,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
-      {
-        size: 2,
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 64,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 64,
-      },
-    ],
-    [
-      {
-        size: 2,
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 62,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 62,
-      },
-    ],
-    [
-      {
-        size: 2,
-        type: 'note',
-        midi: 60,
-      },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 62,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 62,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -3593,6 +3456,172 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 64,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 64,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 64,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 64,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 64,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 62,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 60,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 62,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 59,
@@ -3616,6 +3645,37 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 62,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 62,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 59,
@@ -3639,6 +3699,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 59,
@@ -3661,6 +3725,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -3685,6 +3753,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 57,
@@ -3707,6 +3779,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -3731,6 +3807,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 50,
@@ -3754,28 +3834,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 55,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 59,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 59,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -3799,6 +3860,37 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 59,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 59,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -3824,6 +3916,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 55,
@@ -3848,28 +3944,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 53,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 57,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 57,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -3893,6 +3970,37 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 57,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 57,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -3918,6 +4026,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 53,
@@ -3942,28 +4054,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 52,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 55,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 55,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -3988,6 +4081,37 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 52,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 55,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 55,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 52,
@@ -4011,6 +4135,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 52,
@@ -4033,6 +4161,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -4057,6 +4189,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 50,
@@ -4079,6 +4215,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -4103,6 +4243,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 43,
@@ -4126,28 +4270,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 48,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 52,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 52,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -4172,6 +4297,37 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 48,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 52,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 52,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 48,
@@ -4195,6 +4351,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 48,
@@ -4217,6 +4377,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -4241,6 +4405,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 41,
@@ -4263,6 +4431,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -4288,6 +4460,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 42,
@@ -4312,29 +4488,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 44,
-        accidental: 'flat',
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 53,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 53,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -4360,6 +4516,38 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 44,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 53,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 43,
@@ -4383,6 +4571,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 43,
@@ -4406,28 +4598,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 43,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 50,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 50,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -4452,28 +4625,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 43,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 50,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 50,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -4498,28 +4652,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 43,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 50,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 50,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -4543,6 +4678,91 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 50,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 50,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 50,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 50,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 50,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 50,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -4568,6 +4788,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 43,
@@ -4592,29 +4816,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 43,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 52,
-        accidental: 'normal',
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 52,
-        accidental: 'normal',
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -4640,6 +4844,38 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 52,
+        accidental: 'normal',
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 52,
+        accidental: 'normal',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 43,
@@ -4663,28 +4899,9 @@ export default {
     ],
     [
       {
-        size: 2,
-        type: 'note',
-        midi: 43,
+        size: 16,
+        type: 'pause',
       },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 50,
-        accidental: null,
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 50,
-      },
-    ],
-    [
       {
         size: 2,
         type: 'note',
@@ -4709,6 +4926,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 43,
@@ -4731,6 +4952,37 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 43,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 50,
+        accidental: null,
+        dot: 'single',
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 50,
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -4754,6 +5006,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',
@@ -4801,6 +5057,10 @@ export default {
     ],
     [
       {
+        size: 16,
+        type: 'pause',
+      },
+      {
         size: 2,
         type: 'note',
         midi: 48,
@@ -4830,6 +5090,10 @@ export default {
       },
     ],
     [
+      {
+        size: 16,
+        type: 'pause',
+      },
       {
         size: 2,
         type: 'note',

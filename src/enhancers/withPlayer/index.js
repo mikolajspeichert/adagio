@@ -79,6 +79,7 @@ const withPlayer = compose(
       treble: prepareNotes(track.treble, indexes.treble, 'treble'),
       bass: prepareNotes(track.bass, indexes.bass, 'bass'),
     }
+    // console.log(notes)
     return {
       notes,
     }
@@ -89,9 +90,9 @@ const withPlayer = compose(
       this.intervals = []
       // this.intervals.push(
       //   setInterval(() => {
-      //     // bumpIndex('treble')
-      //     // bumpIndex('bass')
-      //   }, 5000)
+      //     bumpIndex('treble')
+      //     bumpIndex('bass')
+      // }, 5000)
       // )
       // this.intervals.push(setInterval(calculate, 16.67))
       this.animator = new Animator()
@@ -99,7 +100,7 @@ const withPlayer = compose(
       this.animator.start()
     },
     componentWillUnmount() {
-      // this.intervals.forEach(clearInterval)
+      this.intervals.forEach(clearInterval)
       this.animator.stop()
     },
   })
