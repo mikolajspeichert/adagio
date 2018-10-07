@@ -7,15 +7,17 @@ import { BASE_OFFSET, BASE_NOTE_WIDTH } from 'util/constants'
 
 const enhance = compose(withHandlers({}))
 
-const entryWidth = 70
+const entryWidth = 80
 
-const Displayer = enhance(({ clef, data = [], offset = 0, scale }) => (
+const Displayer = enhance(({ clef, data = [], offset = 0, scale, height }) => (
   /* input clef here */
   <Fragment>
-    {/* <EntryField */}
-    {/* offset={(BASE_OFFSET - (entryWidth - BASE_NOTE_WIDTH) / 2) * scale} */}
-    {/* width={entryWidth * scale} */}
-    {/* /> */}
+    <EntryField
+      x={(BASE_OFFSET - 30) * scale}
+      y={0}
+      width={entryWidth * scale}
+      height={height/2}
+    />
     {data.map(note => (
       <Note
         key={note.offset}

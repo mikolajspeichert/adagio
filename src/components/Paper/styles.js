@@ -11,7 +11,7 @@ const ScreenWrapper = styled.div`
 
 const PaperStage = styled.div`
   background-color: ${colors.paper};
-  height: ${({ height }) => height}px;
+  height: ${({ height: x }) => Math.floor(x)}px;
   position: absolute;
   overflow: hidden;
   transform: translate(${({ offsets: { x, y } }) => `${x}px, ${y}px`});

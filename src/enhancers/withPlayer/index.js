@@ -29,8 +29,10 @@ const memoizeNotes = () => {
     cacheValue[clef] = raw
       .slice(index, index + 30)
       .map(note => {
+        if (!note.dot) note.dot = 0
+        const dotMultiplier = 1 + note.dot * 0.5
         const multiplier = 16 / note.size
-        note.offset = multiplier * BASE_NOTE_WIDTH
+        note.offset = multiplier * BASE_NOTE_WIDTH * dotMultiplier
         return note
       })
       .map(note => {

@@ -3309,7 +3309,7 @@ export default {
         type: 'note',
         midi: 64,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3336,7 +3336,7 @@ export default {
         type: 'note',
         midi: 64,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3363,7 +3363,7 @@ export default {
         type: 'note',
         midi: 62,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3390,7 +3390,7 @@ export default {
         type: 'note',
         midi: 62,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3417,7 +3417,7 @@ export default {
         type: 'note',
         midi: 62,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3444,7 +3444,7 @@ export default {
         type: 'note',
         midi: 62,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3471,7 +3471,7 @@ export default {
         type: 'note',
         midi: 64,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3498,7 +3498,7 @@ export default {
         type: 'note',
         midi: 64,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3525,7 +3525,7 @@ export default {
         type: 'note',
         midi: 64,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3552,7 +3552,7 @@ export default {
         type: 'note',
         midi: 64,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3579,7 +3579,7 @@ export default {
         type: 'note',
         midi: 62,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3606,7 +3606,7 @@ export default {
         type: 'note',
         midi: 62,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3633,7 +3633,7 @@ export default {
         type: 'note',
         midi: 62,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3660,7 +3660,7 @@ export default {
         type: 'note',
         midi: 62,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3687,7 +3687,7 @@ export default {
         type: 'note',
         midi: 60,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3714,7 +3714,7 @@ export default {
         type: 'note',
         midi: 60,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3741,7 +3741,7 @@ export default {
         type: 'note',
         midi: 60,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3768,7 +3768,7 @@ export default {
         type: 'note',
         midi: 60,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3795,7 +3795,7 @@ export default {
         type: 'note',
         midi: 57,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3822,7 +3822,7 @@ export default {
         type: 'note',
         midi: 57,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3849,7 +3849,7 @@ export default {
         type: 'note',
         midi: 59,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3876,7 +3876,7 @@ export default {
         type: 'note',
         midi: 59,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3903,7 +3903,7 @@ export default {
         type: 'note',
         midi: 58,
         accidental: 'flat',
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3931,7 +3931,7 @@ export default {
         type: 'note',
         midi: 58,
         accidental: 'flat',
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3959,7 +3959,7 @@ export default {
         type: 'note',
         midi: 57,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3986,7 +3986,7 @@ export default {
         type: 'note',
         midi: 57,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -3994,34 +3994,6 @@ export default {
         size: 4,
         type: 'note',
         midi: 57,
-      },
-    ],
-    [
-      {
-        size: 16,
-        type: 'pause',
-      },
-      {
-        size: 2,
-        type: 'note',
-        midi: 53,
-      },
-    ],
-    [
-      {
-        size: 8,
-        type: 'note',
-        midi: 56,
-        accidental: 'flat',
-        dot: 'single',
-      },
-    ],
-    [
-      {
-        size: 4,
-        type: 'note',
-        midi: 56,
-        accidental: 'flat',
       },
     ],
     [
@@ -4041,7 +4013,35 @@ export default {
         type: 'note',
         midi: 56,
         accidental: 'flat',
-        dot: 'single',
+        dot: 1,
+      },
+    ],
+    [
+      {
+        size: 4,
+        type: 'note',
+        midi: 56,
+        accidental: 'flat',
+      },
+    ],
+    [
+      {
+        size: 16,
+        type: 'pause',
+      },
+      {
+        size: 2,
+        type: 'note',
+        midi: 53,
+      },
+    ],
+    [
+      {
+        size: 8,
+        type: 'note',
+        midi: 56,
+        accidental: 'flat',
+        dot: 1,
       },
     ],
     [
@@ -4069,7 +4069,7 @@ export default {
         type: 'note',
         midi: 55,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4096,7 +4096,7 @@ export default {
         type: 'note',
         midi: 55,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4123,7 +4123,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4150,7 +4150,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4177,7 +4177,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4204,7 +4204,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4231,7 +4231,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4258,7 +4258,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4285,7 +4285,7 @@ export default {
         type: 'note',
         midi: 52,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4312,7 +4312,7 @@ export default {
         type: 'note',
         midi: 52,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4339,7 +4339,7 @@ export default {
         type: 'note',
         midi: 55,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4366,7 +4366,7 @@ export default {
         type: 'note',
         midi: 55,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4393,7 +4393,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4420,7 +4420,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4448,7 +4448,7 @@ export default {
         type: 'note',
         midi: 48,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4476,7 +4476,7 @@ export default {
         type: 'note',
         midi: 48,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4504,7 +4504,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4532,7 +4532,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4559,7 +4559,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4586,7 +4586,7 @@ export default {
         type: 'note',
         midi: 53,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4613,7 +4613,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4640,7 +4640,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4667,7 +4667,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4694,7 +4694,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4721,7 +4721,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4748,7 +4748,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4775,7 +4775,7 @@ export default {
         type: 'note',
         midi: 51,
         accidental: 'flat',
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4803,7 +4803,7 @@ export default {
         type: 'note',
         midi: 51,
         accidental: 'flat',
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4831,7 +4831,7 @@ export default {
         type: 'note',
         midi: 52,
         accidental: 'normal',
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4859,7 +4859,7 @@ export default {
         type: 'note',
         midi: 52,
         accidental: 'normal',
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4887,7 +4887,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4914,7 +4914,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4941,7 +4941,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4968,7 +4968,7 @@ export default {
         type: 'note',
         midi: 50,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -4995,7 +4995,7 @@ export default {
         type: 'note',
         midi: 48,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -5022,7 +5022,7 @@ export default {
         type: 'note',
         midi: 48,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -5045,7 +5045,7 @@ export default {
         type: 'note',
         midi: 48,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
@@ -5079,7 +5079,7 @@ export default {
         type: 'note',
         midi: 47,
         accidental: null,
-        dot: 'single',
+        dot: 1,
       },
     ],
     [
