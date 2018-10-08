@@ -1,14 +1,11 @@
-const SET_NEW = 'PLAYER/SET_NEW'
-const SET_PASSED = 'PLAYER/SET_PASSED'
+const BUMP_INDEX = 'PLAYER/BUMP_INDEX'
 
 const actions = {
-  SET_NEW,
-  SET_PASSED,
+  BUMP_INDEX,
 }
 
 const createAction = (type, payload) => ({ type, payload })
 
-const setNewNote = clef => createAction(SET_NEW, { clef })
-const setNotePassed = clef => createAction(SET_PASSED, { clef })
+const bumpIndex = clef => createAction(BUMP_INDEX, { clef })
 
-export { actions, setNewNote, setNotePassed }
+export { actions, bumpIndex }

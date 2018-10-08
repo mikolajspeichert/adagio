@@ -3,26 +3,19 @@ import { createReducer } from 'redux-create-reducer'
 import { actions } from './actions'
 
 const initialState = {
-  passed: {
-    bass: false,
-    treble: false,
+  indexes: {
+    bass: 0,
+    treble: 0,
   },
 }
 
 const player = createReducer(initialState, {
-  [actions.SET_NEW]({ payload }, state) {
+  [actions.BUMP_INDEX]({ payload }, state) {
+    const { clef } = payload
     return {
-      passed: {
-        ...state.passed,
-        [payload.clef]: false,
-      },
-    }
-  },
-  [actions.SET_PASSED]({ payload }, state) {
-    return {
-      passed: {
-        ...state.passed,
-        [payload.clef]: true,
+      indexes: {
+        ...state.indexes,
+        [clef]: state.indexes[clef] + 1,
       },
     }
   },

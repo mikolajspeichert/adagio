@@ -1,4 +1,4 @@
-import array from '../util/array'
+import array from './array'
 
 const SAMPLE_RATE = 44100
 const FFT_SIZE = 2048 // ??

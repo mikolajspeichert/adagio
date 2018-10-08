@@ -6,6 +6,7 @@ import {
   withHandlers,
   setDisplayName,
 } from 'recompose'
+import { connect } from 'react-redux'
 
 import Animator from 'util/Animator'
 import { BASE_NOTE_WIDTH } from 'util/constants'
@@ -47,24 +48,23 @@ const memoizeNotes = () => {
 
 const prepareNotes = memoizeNotes()
 
+const withConnect = connect(state => state.player)
+
 const withPlayer = compose(
   setDisplayName('withPlayer'),
   withTrack,
-  withState('indexes', 'updateIndexes', {
-    bass: 0,
-    treble: 0,
-  }),
+  withConnect,
   withState('offsets', 'updateOffsets', {
     bass: 480,
     treble: 480,
   }),
   withState('stop', 'setStop', false),
   withHandlers({
-    bumpIndex: ({ indexes, updateIndexes }) => clef =>
-      updateIndexes({
-        ...indexes,
-        [clef]: indexes[clef] + 1,
-      }),
+    // bumpIndex: ({ indexes, updateIndexes }) => clef =>
+    //   updateIndexes({
+    //     ...indexes,
+    //     [clef]: indexes[clef] + 1,
+    //   }),
     calculate: ({ offsets, updateOffsets }) => interval => {
       if (isNaN(interval)) interval = 0 // eslint-disable-line
       if (offsets.treble > 0 && offsets.bass > 0) {
@@ -88,7 +88,7 @@ const withPlayer = compose(
   }),
   lifecycle({
     componentDidMount() {
-      const { bumpIndex, calculate } = this.props
+      const { calculate } = this.props
       this.intervals = []
       // this.intervals.push(
       //   setInterval(() => {
