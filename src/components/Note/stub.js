@@ -3,12 +3,13 @@ const c = {
   size: 8,
   data: [
     {
-      position: 0, // index from middle-c
+      position: 6, // index from middle-c
     },
     {
-      position: 2, // index from middle-c
+      position: 8, // index from middle-c
       // if mulitple sizes, set inside
     },
+
   ],
 
   // beam: {

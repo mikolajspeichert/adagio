@@ -1,17 +1,27 @@
-import Hook8 from './components/hook8'
-import Hook16 from './components/hook16'
-import Hook32 from './components/hook32'
-import Hook64 from './components/hook64'
-import Hook128 from './components/hook128'
+export const NoteLine = require('./svgs/note_line.svg')
 
-export { default as Body1 } from './components/body1'
-export { default as Body2 } from './components/body2'
-export { default as Body4 } from './components/body4'
-export { default as NoteLine } from './components/noteLine'
-export const hooks = {
-  Hook8,
-  Hook16,
-  Hook32,
-  Hook64,
-  Hook128,
+export const bodies = {
+  1: require('./svgs/body1.svg'),
+  2: require('./svgs/body2.svg'),
+  4: require('./svgs/body4.svg'),
 }
+
+export const hooks = {
+  8: require('./svgs/hook8.svg'),
+  16: require('./svgs/hook16.svg'),
+  32: require('./svgs/hook32.svg'),
+  64: require('./svgs/hook64.svg'),
+  128: require('./svgs/hook128.svg'),
+}
+
+export const pauses = {
+  1: require('./svgs/pause1.svg'),
+  2: require('./svgs/pause2.svg'),
+  4: require('./svgs/pause4.svg'),
+  8: require('./svgs/pause8.svg'),
+  16: require('./svgs/pause16.svg'),
+  32: require('./svgs/pause32.svg'),
+  64: require('./svgs/pause64.svg'),
+  128: require('./svgs/pause128.svg'),
+}
+

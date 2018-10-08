@@ -27,10 +27,12 @@ const memoizeNotes = () => {
     cacheIndex[clef] = index
     let previousOffsets = 0
     cacheValue[clef] = raw
-      .slice(index, index + 10)
+      .slice(index, index + 30)
       .map(note => {
+        if (!note.dot) note.dot = 0
+        const dotMultiplier = 1 + note.dot * 0.5
         const multiplier = 16 / note.size
-        note.offset = multiplier * BASE_NOTE_WIDTH
+        note.offset = multiplier * BASE_NOTE_WIDTH * dotMultiplier
         return note
       })
       .map(note => {
@@ -63,11 +65,12 @@ const withPlayer = compose(
         ...indexes,
         [clef]: indexes[clef] + 1,
       }),
-    calculate: ({ offsets, updateOffsets }) => () => {
+    calculate: ({ offsets, updateOffsets }) => interval => {
+      if (isNaN(interval)) interval = 0 // eslint-disable-line
       if (offsets.treble > 0 && offsets.bass > 0) {
         updateOffsets({
-          treble: offsets.treble - 2,
-          bass: offsets.bass - 2,
+          treble: offsets.treble - 0.12 * interval,
+          bass: offsets.bass - 0.12 * interval,
         })
       }
     },
@@ -78,6 +81,7 @@ const withPlayer = compose(
       treble: prepareNotes(track.treble, indexes.treble, 'treble'),
       bass: prepareNotes(track.bass, indexes.bass, 'bass'),
     }
+    // console.log(notes)
     return {
       notes,
     }
@@ -88,9 +92,9 @@ const withPlayer = compose(
       this.intervals = []
       // this.intervals.push(
       //   setInterval(() => {
-      //     // bumpIndex('treble')
-      //     // bumpIndex('bass')
-      //   }, 5000)
+      //     bumpIndex('treble')
+      //     bumpIndex('bass')
+      // }, 5000)
       // )
       // this.intervals.push(setInterval(calculate, 16.67))
       this.animator = new Animator()
@@ -98,7 +102,7 @@ const withPlayer = compose(
       this.animator.start()
     },
     componentWillUnmount() {
-      // this.intervals.forEach(clearInterval)
+      this.intervals.forEach(clearInterval)
       this.animator.stop()
     },
   })

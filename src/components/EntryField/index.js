@@ -1,13 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
-import { colors } from 'styled/themes'
+// components/Rectangle.js
+import { CustomPIXIComponent } from 'react-pixi-fiber'
+import * as PIXI from 'pixi.js'
 
-const EntryField = styled.div`
-  background-color: ${colors.alphaGray};
-  position: absolute;
-  left: ${({ offset }) => `${offset}px`};
-  height: 100%;
-  width: ${({ width }) => `${width}px`};
-`
-
-export default EntryField
+const TYPE = 'Rectangle'
+export const behavior = {
+  customDisplayObject: props => new PIXI.Graphics(),
+  customApplyProps(instance, oldProps, newProps) {
+    const { x, y, width, height } = newProps
+    instance.clear()
+    instance.beginFill(0x343434, 0.15)
+    instance.drawRect(x, y, width, height)
+    instance.endFill()
+  },
+}
+export default CustomPIXIComponent(behavior, TYPE)

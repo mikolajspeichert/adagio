@@ -26,7 +26,7 @@ module.exports = {
   entry: [
     '@babel/polyfill',
     'webpack-hot-middleware/client?reload=true',
-    path.join(process.cwd(), 'index.js'),
+    path.join(process.cwd(), 'src/index.js'),
   ],
   output: {
     filename: '[name].main.js',
