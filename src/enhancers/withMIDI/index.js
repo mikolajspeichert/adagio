@@ -1,7 +1,10 @@
 import { compose, withHandlers, withState } from 'recompose'
+import { connect } from 'react-redux'
+
+import { awaitingMIDISelector } from './selectors'
 
 const requestAccess = () =>
-  navigator.requestMIDIAccess && navigator.requestMIDIAccess()
+  navigator.requestMIDIAccess ? navigator.requestMIDIAccess() : Promise.reject()
 
 const handleDevicesState = (access, handler) => {
   handler(access.inputs.size > 0)
@@ -10,20 +13,26 @@ const handleDevicesState = (access, handler) => {
   }
 }
 
+const withConnect = connect(awaitingMIDISelector)
+
 const withMIDI = compose(
   withState('deviceConnected', 'setDeviceConnected', false),
+  withConnect,
   withHandlers({
-    handleInputs: ({ setDeviceConnected }) => () =>
+    handleInputs: ({ midis }) => input => {
+      input.onmidimessage = event => {
+        if (event.data[0] === 0x90) console.log(event.data)
+        // data = [event type, note number, volume]
+      }
+    },
+  }),
+  withHandlers({
+    connectMIDI: ({ setDeviceConnected, handleInputs }) => () =>
       new Promise((resolve, reject) => {
         requestAccess()
           .then(access => {
             handleDevicesState(access, setDeviceConnected)
-            access.inputs.forEach(input => {
-              input.onmidimessage = event => {
-                if (event.data[0] === 0x90) console.log(event.data)
-                // data = [event type, note number, volume]
-              }
-            })
+            access.inputs.forEach(handleInputs)
             resolve()
           })
           .catch(() => {
