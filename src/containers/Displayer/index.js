@@ -16,7 +16,7 @@ const Displayer = enhance(({ clef, data = [], offset = 0, scale, height }) => (
       x={(BASE_OFFSET - 30) * scale}
       y={0}
       width={entryWidth * scale}
-      height={height/2}
+      height={height / 2}
     />
     {data.map(note => (
       <Note
