@@ -48,15 +48,22 @@ const memoizeNotes = () => {
 
 const prepareNotes = memoizeNotes()
 
-const withConnect = connect(state => state.player)
 
 const withPlayer = compose(
   setDisplayName('withPlayer'),
   withTrack,
-  withConnect,
+  withState('indexes', 'updateIndexes', {
+    bass: 0,
+    treble: 0,
+  }),
   withState('offsets', 'updateOffsets', {
     bass: 480,
     treble: 480,
+  }),
+  withState('successOffsets', 'updateSuccessOffsets', {
+    active: true,
+    bass: 0,
+    treble: 0,
   }),
   withState('stop', 'setStop', false),
   withHandlers({
@@ -65,7 +72,7 @@ const withPlayer = compose(
     //     ...indexes,
     //     [clef]: indexes[clef] + 1,
     //   }),
-    calculate: ({ offsets, updateOffsets }) => interval => {
+    calculate: ({ offsets, updateOffsets, correctlyPressedIndex }) => interval => {
       if (isNaN(interval)) interval = 0 // eslint-disable-line
       if (offsets.treble > 0 && offsets.bass > 0) {
         updateOffsets({

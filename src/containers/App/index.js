@@ -2,19 +2,18 @@ import React, { Component, Fragment } from 'react'
 import { compose, lifecycle } from 'recompose'
 
 import withTrack from 'enhancers/withTrack'
-import withMIDI from 'enhancers/withMIDI'
 
-import Paper from 'components/Paper'
+import Stage from 'containers/Stage'
 import Title from 'components/Title'
 import Player from 'containers/Player'
+import PianoProvider from 'containers/PianoProvider'
 
 const enhance = compose(
   withTrack,
-  withMIDI,
   lifecycle({
     componentDidMount() {
-      const { connectMIDI, fetchTrack } = this.props
-      connectMIDI().then(() => fetchTrack('prelude'))
+      const { fetchTrack } = this.props
+      fetchTrack('prelude')
     },
     componentWillUnmount() {},
   })
@@ -23,9 +22,7 @@ const enhance = compose(
 const App = enhance(({ track }) => (
   <Fragment>
     <Title>{track.meta.name}</Title>
-    <Paper>
-      <Player />
-    </Paper>
+    <Stage />
   </Fragment>
 ))
 

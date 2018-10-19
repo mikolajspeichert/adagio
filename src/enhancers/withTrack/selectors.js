@@ -49,4 +49,6 @@ const selectTrack = createTrackSelector(
   transformTrackData
 )
 
-export { selectTrack }
+const selectTrackKey = state => ({ trackKey: state.track.meta.key })
+
+export { selectTrack, selectTrackKey }
