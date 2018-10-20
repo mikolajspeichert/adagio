@@ -1,18 +1,29 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import HomePage from '../HomePage'
+import React, { Component, Fragment } from 'react'
+import { compose, lifecycle } from 'recompose'
 
-class App extends React.Component {
-  render() {
-    return (
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        {/* <Route path="/settings" component={Settings} /> */}
-        {/* <Route path="/track/:name" component={Player} /> */}
-        {/* <Route path="/practice" component={Player} /> */}
-      </Switch>
-    )
-  }
-}
+import withTrack from 'enhancers/withTrack'
+
+import Stage from 'containers/Stage'
+import Title from 'components/Title'
+import Player from 'containers/Player'
+import PianoProvider from 'containers/PianoProvider'
+
+const enhance = compose(
+  withTrack,
+  lifecycle({
+    componentDidMount() {
+      const { fetchTrack } = this.props
+      fetchTrack('prelude')
+    },
+    componentWillUnmount() {},
+  })
+)
+
+const App = enhance(({ track }) => (
+  <Fragment>
+    <Title>{track.meta.name}</Title>
+    <Stage />
+  </Fragment>
+))
 
 export default App

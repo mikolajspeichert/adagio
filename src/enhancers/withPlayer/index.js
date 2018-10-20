@@ -6,10 +6,21 @@ import {
   withHandlers,
   setDisplayName,
 } from 'recompose'
-
+import { Map } from 'immutable'
 import Animator from 'util/Animator'
-import { BASE_NOTE_WIDTH } from 'util/constants'
+import {
+  BASE_NOTE_WIDTH,
+  ENTRY_WIDTH,
+  SUCCESS_NOTE_BORDER_VALUE,
+} from 'util/constants'
 import withTrack from '../withTrack'
+
+const extractOffset = note => {
+  if (!note.dot) note.dot = 0
+  const dotMultiplier = 1 + note.dot * 0.5
+  const multiplier = 16 / note.size
+  return multiplier * BASE_NOTE_WIDTH * dotMultiplier
+}
 
 const memoizeNotes = () => {
   let cacheValue = {
@@ -29,10 +40,7 @@ const memoizeNotes = () => {
     cacheValue[clef] = raw
       .slice(index, index + 30)
       .map(note => {
-        if (!note.dot) note.dot = 0
-        const dotMultiplier = 1 + note.dot * 0.5
-        const multiplier = 16 / note.size
-        note.offset = multiplier * BASE_NOTE_WIDTH * dotMultiplier
+        note.offset = extractOffset(note)
         return note
       })
       .map(note => {
@@ -45,64 +53,122 @@ const memoizeNotes = () => {
   }
 }
 
+const initialClefValues = Map({
+  index: 0,
+  offset: 480,
+  successOffset: -SUCCESS_NOTE_BORDER_VALUE,
+})
+
 const prepareNotes = memoizeNotes()
 
 const withPlayer = compose(
   setDisplayName('withPlayer'),
   withTrack,
-  withState('indexes', 'updateIndexes', {
-    bass: 0,
-    treble: 0,
-  }),
-  withState('offsets', 'updateOffsets', {
-    bass: 480,
-    treble: 480,
-  }),
+  withState(
+    'clefs',
+    'updateClefs',
+    Map({
+      bass: initialClefValues,
+      treble: initialClefValues,
+    })
+  ),
   withState('stop', 'setStop', false),
-  withHandlers({
-    bumpIndex: ({ indexes, updateIndexes }) => clef =>
-      updateIndexes({
-        ...indexes,
-        [clef]: indexes[clef] + 1,
-      }),
-    calculate: ({ offsets, updateOffsets }) => interval => {
-      if (isNaN(interval)) interval = 0 // eslint-disable-line
-      if (offsets.treble > 0 && offsets.bass > 0) {
-        updateOffsets({
-          treble: offsets.treble - 0.12 * interval,
-          bass: offsets.bass - 0.12 * interval,
-        })
-      }
-    },
-  }),
-  withProps(({ indexes, track }) => {
+  withState(
+    'successNotes',
+    'setSuccessNote',
+    Map({
+      bass: null,
+      treble: null,
+    })
+  ),
+  withProps(({ clefs, track }) => {
     if (!track.isLoaded) return
     const notes = {
-      treble: prepareNotes(track.treble, indexes.treble, 'treble'),
-      bass: prepareNotes(track.bass, indexes.bass, 'bass'),
+      treble: prepareNotes(
+        track.treble,
+        clefs.getIn(['treble', 'index']),
+        'treble'
+      ),
+      bass: prepareNotes(track.bass, clefs.getIn(['bass', 'index']), 'bass'),
     }
     // console.log(notes)
     return {
       notes,
     }
   }),
+  withHandlers({
+    bumpIndex: ({
+      clefs,
+      updateClefs,
+      notes,
+      successNotes,
+      setSuccessNote,
+    }) => clef => {
+      let currentOffset = clefs.getIn([clef, 'offset'])
+      if (currentOffset > ENTRY_WIDTH) return
+      let successNote = notes[clef][0]
+      setSuccessNote(successNotes.setIn([clef], successNote))
+      const newClefsData = clefs
+        .setIn([clef, 'successOffset'], currentOffset)
+        .updateIn([clef, 'index'], index => index + 1)
+        .updateIn(
+          [clef, 'offset'],
+          offset => offset + extractOffset(successNote)
+        )
+      updateClefs(newClefsData)
+    },
+  }),
+  withHandlers({
+    calculate: ({ clefs, updateClefs, notes, bumpIndex }) => interval => {
+      if (isNaN(interval)) interval = 0 // eslint-disable-line
+      const diff = 0.12 * interval
+      const shouldUpdate =
+        clefs.getIn(['treble', 'offset']) > 0 &&
+        clefs.getIn(['bass', 'offset']) > 0
+
+      updateClefs(
+        clefs
+          .updateIn(
+            ['treble', 'offset'],
+            offset => (shouldUpdate ? offset - diff : offset)
+          )
+          .updateIn(
+            ['bass', 'offset'],
+            offset => (shouldUpdate ? offset - diff : offset)
+          )
+          .updateIn(
+            ['treble', 'successOffset'],
+            offset => (offset > SUCCESS_NOTE_BORDER_VALUE ? offset - diff : 0)
+          )
+          .updateIn(
+            ['bass', 'successOffset'],
+            offset => (offset > SUCCESS_NOTE_BORDER_VALUE ? offset - diff : 0)
+          )
+      )
+      if (!shouldUpdate) {
+        if (
+          notes.treble[clefs.getIn(['treble', 'index'])].type === 'pause' &&
+          clefs.getIn(['treble', 'offset']) <= 0
+        ) {
+          bumpIndex('treble')
+        }
+        if (
+          notes.bass[clefs.getIn(['bass', 'index'])].type === 'pause' &&
+          clefs.getIn(['bass', 'offset']) <= 0
+        ) {
+          bumpIndex('bass')
+        }
+      }
+    },
+  }),
   lifecycle({
     componentDidMount() {
-      const { bumpIndex, calculate } = this.props
-      this.intervals = []
-      // this.intervals.push(
-      //   setInterval(() => {
-      //     bumpIndex('treble')
-      //     bumpIndex('bass')
-      // }, 5000)
-      // )
-      // this.intervals.push(setInterval(calculate, 16.67))
+      const { calculate } = this.props
       this.animator = new Animator()
       this.animator.subscribe(calculate)
       this.animator.start()
     },
     componentWillUnmount() {
-      this.intervals.forEach(clearInterval)
       this.animator.stop()
     },
   })

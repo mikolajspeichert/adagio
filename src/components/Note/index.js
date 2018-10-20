@@ -29,13 +29,11 @@ import { c } from './stub'
 const BASE_LINE_HEIGHT = 70
 
 const enhance = compose(
-  withPropsOnChange(['scale'], ({ data: note, scale }) => {
+  withPropsOnChange(['scale', 'data'], ({ data: note, scale }) => {
     if (!note) return
     const { clef, size, data } = note
     const middleC = getMiddleC(clef, scale)
-
     // Line phase
-
     const offsets = {
       top: BASE_HEIGHT,
       bottom: 0,
