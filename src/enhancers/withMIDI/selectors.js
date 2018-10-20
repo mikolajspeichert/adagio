@@ -5,7 +5,7 @@ const emptyTrackStub = {
   treble: [],
 }
 
-const indexesSelector = state => state.player.indexes
+const indexesSelector = (state, props) => props.clefs
 
 const trackDataSelector = state =>
   state.track.isLoaded ? state.track.data : emptyTrackStub
@@ -13,10 +13,10 @@ const trackDataSelector = state =>
 const awaitingMIDISelector = createSelector(
   indexesSelector,
   trackDataSelector,
-  (indexes, trackData) => ({
+  (clefs, trackData) => ({
     midis: {
-      bass: trackData.bass[indexes.bass],
-      treble: trackData.treble[indexes.treble],
+      bass: trackData.bass[clefs.getIn(['bass', 'index'])],
+      treble: trackData.treble[clefs.getIn(['treble', 'index'])],
     },
   })
 )

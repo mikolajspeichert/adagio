@@ -6,10 +6,13 @@ import {
   withHandlers,
   setDisplayName,
 } from 'recompose'
-import { connect } from 'react-redux'
-
+import { Map } from 'immutable'
 import Animator from 'util/Animator'
-import { BASE_NOTE_WIDTH } from 'util/constants'
+import {
+  BASE_NOTE_WIDTH,
+  ENTRY_WIDTH,
+  SUCCESS_NOTE_BORDER_VALUE,
+} from 'util/constants'
 import withTrack from '../withTrack'
 
 const memoizeNotes = () => {
@@ -46,49 +49,59 @@ const memoizeNotes = () => {
   }
 }
 
-const prepareNotes = memoizeNotes()
+const initialClefValues = Map({
+  index: 0,
+  offset: 480,
+  successOffset: -SUCCESS_NOTE_BORDER_VALUE,
+})
 
+const prepareNotes = memoizeNotes()
 
 const withPlayer = compose(
   setDisplayName('withPlayer'),
   withTrack,
-  withState('indexes', 'updateIndexes', {
-    bass: 0,
-    treble: 0,
-  }),
-  withState('offsets', 'updateOffsets', {
-    bass: 480,
-    treble: 480,
-  }),
-  withState('successOffsets', 'updateSuccessOffsets', {
-    active: true,
-    bass: 0,
-    treble: 0,
-  }),
+  withState(
+    'clefs',
+    'updateClefs',
+    Map({
+      bass: initialClefValues,
+      treble: initialClefValues,
+    })
+  ),
   withState('stop', 'setStop', false),
   withHandlers({
-    // bumpIndex: ({ indexes, updateIndexes }) => clef =>
-    //   updateIndexes({
-    //     ...indexes,
-    //     [clef]: indexes[clef] + 1,
-    //   }),
-    calculate: ({ offsets, updateOffsets, correctlyPressedIndex }) => interval => {
+    bumpIndex: ({ clefs, updateClefs }) => clef => {
+      if (clefs.getIn([clef, 'index']) > ENTRY_WIDTH) return
+      const newClefsData = clefs
+        .setIn([clef, 'successOffset'], clefs.getIn([clef, 'offset']))
+        .updateIn([clef, 'index'], index => index + 1)
+      updateClefs(newClefsData)
+    },
+    calculate: ({ clefs, updateClefs }) => interval => {
       if (isNaN(interval)) interval = 0 // eslint-disable-line
-      if (offsets.treble > 0 && offsets.bass > 0) {
-        updateOffsets({
-          treble: offsets.treble - 0.12 * interval,
-          bass: offsets.bass - 0.12 * interval,
-        })
-      }
+      updateClefs(
+        clefs
+          .updateIn(
+            ['treble', 'offset'],
+            offset => (offset > 0 ? offset - 0.12 * interval : 0)
+          )
+          .updateIn(
+            ['bass', 'offset'],
+            offset => (offset > 0 ? offset - 0.12 * interval : 0)
+          )
+      )
     },
   }),
-  withProps(({ indexes, track }) => {
+  withProps(({ clefs, track }) => {
     if (!track.isLoaded) return
     const notes = {
-      treble: prepareNotes(track.treble, indexes.treble, 'treble'),
-      bass: prepareNotes(track.bass, indexes.bass, 'bass'),
+      treble: prepareNotes(
+        track.treble,
+        clefs.getIn(['treble', 'index']),
+        'treble'
+      ),
+      bass: prepareNotes(track.bass, clefs.getIn(['bass', 'index']), 'bass'),
     }
-    // console.log(notes)
     return {
       notes,
     }
@@ -96,20 +109,11 @@ const withPlayer = compose(
   lifecycle({
     componentDidMount() {
       const { calculate } = this.props
-      this.intervals = []
-      // this.intervals.push(
-      //   setInterval(() => {
-      //     bumpIndex('treble')
-      //     bumpIndex('bass')
-      // }, 5000)
-      // )
-      // this.intervals.push(setInterval(calculate, 16.67))
       this.animator = new Animator()
       this.animator.subscribe(calculate)
       this.animator.start()
     },
     componentWillUnmount() {
-      this.intervals.forEach(clearInterval)
       this.animator.stop()
     },
   })

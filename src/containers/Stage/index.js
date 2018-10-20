@@ -1,21 +1,13 @@
 import React from 'react'
-import {
-  compose,
-  withState,
-  lifecycle,
-  withHandlers,
-  withPropsOnChange,
-  setDisplayName,
-} from 'recompose'
+import { compose } from 'recompose'
 import PropTypes from 'prop-types'
-import { Stage as PixiStage, Container } from 'react-pixi-fiber'
+import { Stage as PixiStage } from 'react-pixi-fiber'
 
-import { colors } from 'styled/themes/index'
 import { BASE_HEIGHT, BASE_WIDTH } from 'util/constants'
-import Staff from 'components/Staff'
-import Displayer from 'containers/Displayer'
-import { ScreenWrapper, Paper, StageOptions } from './styles'
+import withDimensions from 'enhancers/withDimensions'
 import Player from 'containers/Player'
+
+import { ScreenWrapper, Paper, StageOptions } from './styles'
 
 const ScaleProvider = React.createContext({
   scale: 1.0,
@@ -23,9 +15,9 @@ const ScaleProvider = React.createContext({
   height: BASE_HEIGHT,
 })
 
-const enhance = compose()
+const enhance = compose(withDimensions)
 
-const Stage = enhance(({ scaled, offsets, children }) => (
+const Stage = enhance(({ scaled, offsets }) => (
   <ScreenWrapper>
     <Paper height={scaled.height} offsets={offsets}>
       <PixiStage

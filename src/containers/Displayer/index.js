@@ -5,30 +5,28 @@ import { connect } from 'react-redux'
 import Note from 'components/Note'
 import EntryField from 'components/EntryField'
 import { getDistanceFromMiddleC } from 'enhancers/withTrack/utils'
-import { BASE_OFFSET, BASE_NOTE_WIDTH } from 'util/constants'
+import { BASE_OFFSET, ENTRY_WIDTH } from 'util/constants'
 import { selectTrackKey } from 'enhancers/withTrack/selectors'
 
 const enhance = compose(
   connect(selectTrackKey),
-  withProps(({ clef, pressed, trackKey }) => {
-    if (pressed.length === 0) return
-    const isTreble = clef === 'treble'
-    const borderValue = isTreble ? 52 : 69
-    const predicate = ({ value }) =>
-      isTreble ? value > borderValue : value < borderValue
-    const pressedNote = { clef, dot: 0, offset: 0, size: 8 }
-    pressedNote.data = pressed.filter(predicate).map(({ value, correct }) => ({
-      position: getDistanceFromMiddleC(value, trackKey),
-      correct,
-    }))
-    pressedNote.correct = !pressedNote.data.some(({ correct }) => !correct)
-    return {
-      pressedNote,
-    }
-  })
+  // withProps(({ clef, pressed, trackKey }) => {
+  //   if (pressed.length === 0) return
+  //   const isTreble = clef === 'treble'
+  //   const borderValue = isTreble ? 52 : 69
+  //   const predicate = ({ value }) =>
+  //     isTreble ? value > borderValue : value < borderValue
+  //   const pressedNote = { clef, dot: 0, offset: 0, size: 8 }
+  //   pressedNote.data = pressed.filter(predicate).map(({ value, correct }) => ({
+  //     position: getDistanceFromMiddleC(value, trackKey),
+  //     correct,
+  //   }))
+  //   pressedNote.correct = !pressedNote.data.some(({ correct }) => !correct)
+  //   return {
+  //     pressedNote,
+  //   }
+  // })
 )
-
-const entryWidth = 80
 
 const Displayer = enhance(
   ({ clef, data = [], offset = 0, scale, height, pressedNote }) => (
@@ -38,7 +36,7 @@ const Displayer = enhance(
       <EntryField
         x={(BASE_OFFSET - 30) * scale}
         y={0}
-        width={entryWidth * scale}
+        width={ENTRY_WIDTH * scale}
         height={height / 2}
       />
       {data.map(note => (

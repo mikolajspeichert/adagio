@@ -18,7 +18,7 @@ const Paper = styled.div`
 `
 
 const StageOptions = {
-  backgroundColor: parseInt(colors.paper, 16),
+  backgroundColor: 0xf7f4ef,
 }
 
 export { ScreenWrapper, Paper, StageOptions }

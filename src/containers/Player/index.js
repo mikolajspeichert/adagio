@@ -14,16 +14,14 @@ const enhance = compose(
   withMIDI
 )
 
-const Player = enhance(({ notes, indexes, offsets, scaled, pressed }) => (
+const Player = enhance(({ notes, clefs, scaled }) => (
   <Fragment>
     <Container>
       <Staff {...scaled} />
       <Displayer
         clef="treble"
         data={notes?.treble}
-        index={indexes.treble}
-        offset={offsets.treble}
-        pressed={pressed.keys}
+        offset={clefs.getIn(['treble', 'offset'])}
         {...scaled}
       />
     </Container>
@@ -32,9 +30,7 @@ const Player = enhance(({ notes, indexes, offsets, scaled, pressed }) => (
       <Displayer
         clef="bass"
         data={notes?.bass}
-        index={indexes.bass}
-        offset={offsets.bass}
-        pressed={pressed.keys}
+        offset={clefs.getIn(['bass', 'offset'])}
         {...scaled}
       />
     </Container>
