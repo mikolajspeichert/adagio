@@ -32,7 +32,7 @@ const Displayer = enhance(
   ({ clef, data = [], offset = 0, scale, height, pressedNote }) => (
     /* input clef here */
     <Fragment>
-      <Note offset={BASE_OFFSET * scale} scale={scale} data={pressedNote} />
+      {/* <Note offset={BASE_OFFSET * scale} scale={scale} data={pressedNote} /> */}
       <EntryField
         x={(BASE_OFFSET - 30) * scale}
         y={0}
