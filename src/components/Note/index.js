@@ -33,6 +33,7 @@ const enhance = compose(
     if (!note) return
     const { clef, size, data } = note
     const middleC = getMiddleC(clef, scale)
+
     // Line phase
     const offsets = {
       top: BASE_HEIGHT,
@@ -78,7 +79,9 @@ const enhance = compose(
     if (note.type !== 'pause') {
       Line.svg = size > 1 && NoteLine
       if (note.type === 'mixed') {
-        let hookSize = data.filter(subNote => subNote.type === 'note')[0].size
+        let hookSize = data.filter(
+          subNote => subNote.type === 'note' || subNote.type === 'tied'
+        )[0].size
         Line.hook = hookSize > 4 && getHook(hookSize)
       } else {
         Line.hook = size > 4 && getHook(size)

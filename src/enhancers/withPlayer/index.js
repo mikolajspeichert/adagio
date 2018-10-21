@@ -146,18 +146,16 @@ const withPlayer = compose(
           )
       )
       if (!shouldUpdate) {
-        if (
-          notes.treble[clefs.getIn(['treble', 'index'])].type === 'pause' &&
-          clefs.getIn(['treble', 'offset']) <= 0
-        ) {
-          bumpIndex('treble')
-        }
-        if (
-          notes.bass[clefs.getIn(['bass', 'index'])].type === 'pause' &&
-          clefs.getIn(['bass', 'offset']) <= 0
-        ) {
-          bumpIndex('bass')
-        }
+        const clefTypes = ['treble', 'bass']
+        clefTypes.forEach(clef => {
+          const { type } = notes[clef][0]
+          if (
+            (type === 'pause' || type === 'tied') &&
+            clefs.getIn([clef, 'offset']) <= 0
+          ) {
+            bumpIndex(clef)
+          }
+        })
       }
     },
   }),

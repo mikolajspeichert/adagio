@@ -19,8 +19,14 @@ const transformClefData = (data, clef, key) =>
       if (note.type === 'pause') {
         acc.type = 'pause'
         acc.data.push(note)
+      } else if (note.type === 'tied') {
+        acc.type = 'tied'
+        acc.data.push({
+          position: getDistanceFromMiddleC(note.midi, key, note.accidental),
+          ...note,
+        })
       } else {
-        if (acc.type === 'pause') acc.type = 'mixed'
+        if (acc.type === 'pause' || acc.type === 'tied') acc.type = 'mixed'
         if (note.dot) acc.dot = note.dot
         acc.data.push({
           position: getDistanceFromMiddleC(note.midi, key, note.accidental),

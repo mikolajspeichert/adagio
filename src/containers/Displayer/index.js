@@ -29,26 +29,29 @@ const enhance = compose(
 )
 
 const Displayer = enhance(
-  ({ clef, data = [], offset = 0, scale, height, pressedNote }) => (
-    /* input clef here */
-    <Fragment>
-      {/* <Note offset={BASE_OFFSET * scale} scale={scale} data={pressedNote} /> */}
-      <EntryField
-        x={(BASE_OFFSET - 30) * scale}
-        y={0}
-        width={ENTRY_WIDTH * scale}
-        height={height / 2}
-      />
-      {data.map(note => (
-        <Note
-          key={note.offset}
-          offset={(BASE_OFFSET + offset + note.offset) * scale}
-          scale={scale}
-          data={note}
+  ({ clef, data = [], offset = 0, scale, height, pressedNote }) => {
+    console.log(data)
+    return (
+      /* input clef here */
+      <Fragment>
+        {/* <Note offset={BASE_OFFSET * scale} scale={scale} data={pressedNote} /> */}
+        <EntryField
+          x={(BASE_OFFSET - 30) * scale}
+          y={0}
+          width={ENTRY_WIDTH * scale}
+          height={height / 2}
         />
-      ))}
-    </Fragment>
-  )
+        {data.map(note => (
+          <Note
+            key={note.offset}
+            offset={(BASE_OFFSET + offset + note.offset) * scale}
+            scale={scale}
+            data={note}
+          />
+        ))}
+      </Fragment>
+    )
+  }
 )
 
 export default Displayer

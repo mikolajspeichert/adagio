@@ -16,10 +16,10 @@ const requestAccess = () =>
 const extractMIDIs = midis => {
   const result = {}
   result.bass = midis.bass
-    ?.filter(({ type }) => type !== 'pause')
+    ?.filter(({ type }) => type === 'note')
     .map(note => note.midi)
   result.treble = midis.treble
-    ?.filter(({ type }) => type !== 'pause')
+    ?.filter(({ type }) => type === 'note')
     .map(note => note.midi)
   return result
 }
