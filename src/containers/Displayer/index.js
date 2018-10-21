@@ -5,11 +5,15 @@ import { connect } from 'react-redux'
 import Note from 'components/Note'
 import EntryField from 'components/EntryField'
 import { getDistanceFromMiddleC } from 'enhancers/withTrack/utils'
-import { BASE_OFFSET, ENTRY_WIDTH } from 'util/constants'
+import {
+  BASE_OFFSET,
+  ENTRY_WIDTH,
+  SUCCESS_NOTE_BORDER_VALUE,
+} from 'util/constants'
 import { selectTrackKey } from 'enhancers/withTrack/selectors'
 
 const enhance = compose(
-  connect(selectTrackKey),
+  connect(selectTrackKey)
   // withProps(({ clef, pressed, trackKey }) => {
   //   if (pressed.length === 0) return
   //   const isTreble = clef === 'treble'
@@ -29,29 +33,41 @@ const enhance = compose(
 )
 
 const Displayer = enhance(
-  ({ clef, data = [], offset = 0, scale, height, pressedNote }) => {
-    console.log(data)
-    return (
-      /* input clef here */
-      <Fragment>
-        {/* <Note offset={BASE_OFFSET * scale} scale={scale} data={pressedNote} /> */}
-        <EntryField
-          x={(BASE_OFFSET - 30) * scale}
-          y={0}
-          width={ENTRY_WIDTH * scale}
-          height={height / 2}
+  ({
+    clef,
+    data = [],
+    offset = 0,
+    scale,
+    height,
+    successNote,
+    successOffset,
+  }) => (
+    /* input clef here */
+    <Fragment>
+      {successNote && (
+        <Note
+          offset={(BASE_OFFSET + successOffset) * scale}
+          alpha={1 - -successOffset / SUCCESS_NOTE_BORDER_VALUE}
+          scale={scale}
+          data={successNote}
         />
-        {data.map(note => (
-          <Note
-            key={note.offset}
-            offset={(BASE_OFFSET + offset + note.offset) * scale}
-            scale={scale}
-            data={note}
-          />
-        ))}
-      </Fragment>
-    )
-  }
+      )}
+      <EntryField
+        x={(BASE_OFFSET - 30) * scale}
+        y={0}
+        width={ENTRY_WIDTH * scale}
+        height={height / 2}
+      />
+      {data.map(note => (
+        <Note
+          key={note.offset}
+          offset={(BASE_OFFSET + offset + note.offset) * scale}
+          scale={scale}
+          data={note}
+        />
+      ))}
+    </Fragment>
+  )
 )
 
 export default Displayer

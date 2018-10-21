@@ -36,10 +36,6 @@ const withConnect = connect(awaitingMIDISelector)
 const withMIDI = compose(
   withState('deviceConnected', 'setDeviceConnected', false),
   withState('pressedKeys', 'setPressedKeys', []),
-  withState('correctlyPressedIndex', 'updateCorrectlyPressedIndex', {
-    bass: null,
-    treble: null,
-  }),
   withConnect,
   withHandlers({
     handleInput: ({

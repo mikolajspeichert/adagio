@@ -138,11 +138,13 @@ const withPlayer = compose(
           )
           .updateIn(
             ['treble', 'successOffset'],
-            offset => (offset > SUCCESS_NOTE_BORDER_VALUE ? offset - diff : 0)
+            offset =>
+              offset > -SUCCESS_NOTE_BORDER_VALUE ? offset - diff : offset
           )
           .updateIn(
             ['bass', 'successOffset'],
-            offset => (offset > SUCCESS_NOTE_BORDER_VALUE ? offset - diff : 0)
+            offset =>
+              offset > -SUCCESS_NOTE_BORDER_VALUE ? offset - diff : offset
           )
       )
       if (!shouldUpdate) {

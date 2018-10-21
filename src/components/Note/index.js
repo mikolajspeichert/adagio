@@ -119,8 +119,8 @@ const enhance = compose(
   })
 )
 
-const Note = enhance(({ offset, scale, cores = [], Line = {} }) => (
-  <Container x={offset}>
+const Note = enhance(({ offset, scale, cores = [], Line = {}, alpha = 1 }) => (
+  <Container x={offset} alpha={alpha}>
     {cores.map(Core => (
       <NoteElement
         svg={Core.svg}
