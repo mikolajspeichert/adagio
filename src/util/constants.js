@@ -5,5 +5,5 @@ export const BASE_NOTE_WIDTH = 80
 export const STAFF_LINE_SPACING = 20
 export const STAFF_LINE_THICKNESS = scale => Math.ceil((scale * 2 + 1) / 2)
 export const DEFAULT_PAUSE_SPACING = 5
-export const SUCCESS_NOTE_BORDER_VALUE = 250
+export const CORRECT_NOTE_BORDER_VALUE = 250
 export const ENTRY_WIDTH = 80

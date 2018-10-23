@@ -6,8 +6,12 @@ import {
   withProps,
 } from 'recompose'
 import { connect } from 'react-redux'
+import { Map } from 'immutable'
 import keys from 'lodash/keys'
+import difference from 'lodash/difference'
 
+import { getDistanceFromMiddleC } from 'enhancers/withTrack/utils'
+import { selectTrackKey } from 'enhancers/withTrack/selectors'
 import { awaitingMIDISelector } from './selectors'
 
 const requestAccess = () =>
@@ -31,44 +35,62 @@ const handleDevicesState = (access, handler) => {
   }
 }
 
-const withConnect = connect(awaitingMIDISelector)
-
 const withMIDI = compose(
   withState('deviceConnected', 'setDeviceConnected', false),
   withState('pressedKeys', 'setPressedKeys', []),
-  withConnect,
+  withState('wrongNotes', 'setWrongNotes', Map({})),
+  connect(awaitingMIDISelector),
+  connect(selectTrackKey),
   withHandlers({
     handleInput: ({
       midis,
       pressedKeys,
       setPressedKeys,
       bumpIndex,
+      wrongNotes,
+      setWrongNotes,
+      trackKey,
     }) => event => {
-
       const eventType = event.data[0]
       const value = event.data[1]
       const keyVelocity = event.data[2] // === volume
       // data = [event type, note number, volume]
+      if (eventType < 0x80 || eventType > 0x9f) return
       let newKeys = []
+      const required = extractMIDIs(midis)
+
       if (eventType >= 0x90 && eventType <= 0x9f) {
-        const requiredValues = extractMIDIs(midis)
         newKeys = pressedKeys.concat(value)
-        keys(requiredValues).forEach(clef => {
+        keys(required).forEach(clef => {
           if (
             newKeys.length > 0 &&
-            newKeys.every(key => requiredValues[clef].indexOf(key) > -1)
+            newKeys.every(key => required[clef].indexOf(key) > -1)
           ) {
             bumpIndex(clef)
           }
         })
+
         console.log('key start', value)
-      } else if (eventType >= 0x80 && eventType <= 0x8f) {
+      } else {
         newKeys = pressedKeys.filter(parsedKey => parsedKey !== value)
         console.log('key stop', value)
-      } else {
-        // console.log('Unrecognized event. Skipping')
       }
+      let newWrongNotes = Map({})
+      keys(required).forEach(clef => {
+        let predicate
+        if (clef === 'treble') predicate = val => val > 48
+        else predicate = val => val < 72
+        const data = difference(newKeys.filter(predicate), required[clef]).map(
+          val => ({
+            position: getDistanceFromMiddleC(val, trackKey),
+          })
+        )
+        if (!data.length) return
+        const wrongNote = { clef, dot: 0, offset: 0, size: 8, data }
+        newWrongNotes = newWrongNotes.set(clef, wrongNote)
+      })
 
+      setWrongNotes(newWrongNotes)
       setPressedKeys(newKeys)
     },
   }),
@@ -85,14 +107,25 @@ const withMIDI = compose(
             console.log('No MIDI device. Trying again')
           })
       }),
-  }),
-  withProps(({ midis }) => {
-    // console.log(extractMIDIs(midis))
+    handleTestingKey: ({ handleInput }) => event => {
+      switch (event.key) {
+        case 'a':
+          handleInput({ data: [0x90, 40, 60] })
+          break
+        default:
+          handleInput({ data: [0x80, 40, 60] })
+      }
+    },
   }),
   lifecycle({
     componentDidMount() {
-      const { connectMIDI } = this.props
+      const { connectMIDI, handleTestingKey } = this.props
       connectMIDI()
+      document.addEventListener('keydown', handleTestingKey)
+    },
+    componentWillUnmount() {
+      const { handleTestingKey } = this.props
+      document.removeEventListener('keydown', handleTestingKey)
     },
   })
 )

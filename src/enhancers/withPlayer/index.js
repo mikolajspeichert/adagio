@@ -11,7 +11,7 @@ import Animator from 'util/Animator'
 import {
   BASE_NOTE_WIDTH,
   ENTRY_WIDTH,
-  SUCCESS_NOTE_BORDER_VALUE,
+  CORRECT_NOTE_BORDER_VALUE,
 } from 'util/constants'
 import withTrack from '../withTrack'
 
@@ -56,7 +56,7 @@ const memoizeNotes = () => {
 const initialClefValues = Map({
   index: 0,
   offset: 480,
-  successOffset: -SUCCESS_NOTE_BORDER_VALUE,
+  correctOffset: -CORRECT_NOTE_BORDER_VALUE,
 })
 
 const prepareNotes = memoizeNotes()
@@ -74,8 +74,8 @@ const withPlayer = compose(
   ),
   withState('stop', 'setStop', false),
   withState(
-    'successNotes',
-    'setSuccessNote',
+    'correctNotes',
+    'setcorrectNote',
     Map({
       bass: null,
       treble: null,
@@ -101,19 +101,19 @@ const withPlayer = compose(
       clefs,
       updateClefs,
       notes,
-      successNotes,
-      setSuccessNote,
+      correctNotes,
+      setcorrectNote,
     }) => clef => {
       let currentOffset = clefs.getIn([clef, 'offset'])
       if (currentOffset > ENTRY_WIDTH) return
-      let successNote = notes[clef][0]
-      setSuccessNote(successNotes.setIn([clef], successNote))
+      let correctNote = notes[clef][0]
+      setcorrectNote(correctNotes.setIn([clef], correctNote))
       const newClefsData = clefs
-        .setIn([clef, 'successOffset'], currentOffset)
+        .setIn([clef, 'correctOffset'], currentOffset)
         .updateIn([clef, 'index'], index => index + 1)
         .updateIn(
           [clef, 'offset'],
-          offset => offset + extractOffset(successNote)
+          offset => offset + extractOffset(correctNote)
         )
       updateClefs(newClefsData)
     },
@@ -137,14 +137,14 @@ const withPlayer = compose(
             offset => (shouldUpdate ? offset - diff : offset)
           )
           .updateIn(
-            ['treble', 'successOffset'],
+            ['treble', 'correctOffset'],
             offset =>
-              offset > -SUCCESS_NOTE_BORDER_VALUE ? offset - diff : offset
+              offset > -CORRECT_NOTE_BORDER_VALUE ? offset - diff : offset
           )
           .updateIn(
-            ['bass', 'successOffset'],
+            ['bass', 'correctOffset'],
             offset =>
-              offset > -SUCCESS_NOTE_BORDER_VALUE ? offset - diff : offset
+              offset > -CORRECT_NOTE_BORDER_VALUE ? offset - diff : offset
           )
       )
       if (!shouldUpdate) {

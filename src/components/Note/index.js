@@ -119,37 +119,42 @@ const enhance = compose(
   })
 )
 
-const Note = enhance(({ offset, scale, cores = [], Line = {}, alpha = 1 }) => (
-  <Container x={offset} alpha={alpha}>
-    {cores.map(Core => (
-      <NoteElement
-        svg={Core.svg}
-        key={Core.offsetY}
-        x={Core.offsetX || 0}
-        y={Core.offsetY}
-        height={Core.height}
-        width={Core.width}
-      />
-    ))}
-    {Line.svg && (
-      <NoteElement
-        svg={Line.svg}
-        y={Line.offsetY}
-        x={Line.offsetX}
-        height={Line.height}
-        width={Line.width}
-      />
-    )}
-    {Line.hook && (
-      <NoteElement
-        svg={Line.hook}
-        y={Line.hookY}
-        x={Line.hookX}
-        width={16 * scale}
-        skew={new PIXI.Point(Line.hookRotate, Line.hookRotate)}
-      />
-    )}
-  </Container>
-))
+const Note = enhance(
+  ({ offset, scale, color, cores = [], Line = {}, alpha = 1 }) => (
+    <Container x={offset} alpha={alpha}>
+      {cores.map(Core => (
+        <NoteElement
+          color={color}
+          svg={Core.svg}
+          key={Core.offsetY}
+          x={Core.offsetX || 0}
+          y={Core.offsetY}
+          height={Core.height}
+          width={Core.width}
+        />
+      ))}
+      {Line.svg && (
+        <NoteElement
+          color={color}
+          svg={Line.svg}
+          y={Line.offsetY}
+          x={Line.offsetX}
+          height={Line.height}
+          width={Line.width}
+        />
+      )}
+      {Line.hook && (
+        <NoteElement
+          color={color}
+          svg={Line.hook}
+          y={Line.hookY}
+          x={Line.hookX}
+          width={16 * scale}
+          skew={new PIXI.Point(Line.hookRotate, Line.hookRotate)}
+        />
+      )}
+    </Container>
+  )
+)
 
 export default Note

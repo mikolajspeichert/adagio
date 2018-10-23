@@ -28,8 +28,8 @@ const pauseHeights = {
   128: 135,
 }
 
-const NoteElement = ({ svg, ...props }) => (
-  <Sprite texture={PIXI.Texture.fromImage(svg)} {...props} />
+const NoteElement = ({ svg, color = 0x000000, ...props }) => (
+  <Sprite texture={PIXI.Texture.fromImage(svg)} tint={color} {...props} />
 )
 
 const getStaffSpacing = scale => STAFF_LINE_SPACING * scale

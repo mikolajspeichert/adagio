@@ -1,36 +1,15 @@
 import React, { Fragment } from 'react'
-import { compose, withProps } from 'recompose'
-import { connect } from 'react-redux'
+import { compose } from 'recompose'
 
 import Note from 'components/Note'
 import EntryField from 'components/EntryField'
-import { getDistanceFromMiddleC } from 'enhancers/withTrack/utils'
 import {
   BASE_OFFSET,
   ENTRY_WIDTH,
-  SUCCESS_NOTE_BORDER_VALUE,
+  CORRECT_NOTE_BORDER_VALUE,
 } from 'util/constants'
-import { selectTrackKey } from 'enhancers/withTrack/selectors'
 
-const enhance = compose(
-  connect(selectTrackKey)
-  // withProps(({ clef, pressed, trackKey }) => {
-  //   if (pressed.length === 0) return
-  //   const isTreble = clef === 'treble'
-  //   const borderValue = isTreble ? 52 : 69
-  //   const predicate = ({ value }) =>
-  //     isTreble ? value > borderValue : value < borderValue
-  //   const pressedNote = { clef, dot: 0, offset: 0, size: 8 }
-  //   pressedNote.data = pressed.filter(predicate).map(({ value, correct }) => ({
-  //     position: getDistanceFromMiddleC(value, trackKey),
-  //     correct,
-  //   }))
-  //   pressedNote.correct = !pressedNote.data.some(({ correct }) => !correct)
-  //   return {
-  //     pressedNote,
-  //   }
-  // })
-)
+const enhance = compose()
 
 const Displayer = enhance(
   ({
@@ -39,17 +18,27 @@ const Displayer = enhance(
     offset = 0,
     scale,
     height,
-    successNote,
-    successOffset,
+    correctNote,
+    correctOffset,
+    wrongNote,
   }) => (
     /* input clef here */
     <Fragment>
-      {successNote && (
+      {correctNote && (
         <Note
-          offset={(BASE_OFFSET + successOffset) * scale}
-          alpha={1 - -successOffset / SUCCESS_NOTE_BORDER_VALUE}
+          offset={(BASE_OFFSET + correctOffset) * scale}
+          alpha={1 - -correctOffset / CORRECT_NOTE_BORDER_VALUE}
           scale={scale}
-          data={successNote}
+          color={0x008000}
+          data={correctNote}
+        />
+      )}
+      {wrongNote && (
+        <Note
+          offset={BASE_OFFSET * scale}
+          scale={scale}
+          color={0xff0000}
+          data={wrongNote}
         />
       )}
       <EntryField

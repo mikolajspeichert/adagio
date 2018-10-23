@@ -6,7 +6,6 @@ import withMIDI from 'enhancers/withMIDI'
 
 import Staff from 'components/Staff'
 import Displayer from 'containers/Displayer'
-import { Pressed } from 'containers/PianoProvider'
 import { Container } from 'react-pixi-fiber'
 
 const enhance = compose(
@@ -14,15 +13,16 @@ const enhance = compose(
   withMIDI
 )
 
-const Player = enhance(({ notes, clefs, scaled, successNotes }) => (
+const Player = enhance(({ notes, clefs, scaled, correctNotes, wrongNotes }) => (
   <Fragment>
     <Container>
       <Staff {...scaled} />
       <Displayer
         clef="treble"
         data={notes?.treble}
-        successNote={successNotes.get('treble')}
-        successOffset={clefs.getIn(['treble', 'successOffset'])}
+        correctNote={correctNotes.get('treble')}
+        wrongNote={wrongNotes.get('treble')}
+        correctOffset={clefs.getIn(['treble', 'correctOffset'])}
         offset={clefs.getIn(['treble', 'offset'])}
         {...scaled}
       />
@@ -32,8 +32,9 @@ const Player = enhance(({ notes, clefs, scaled, successNotes }) => (
       <Displayer
         clef="bass"
         data={notes?.bass}
-        successNote={successNotes.get('bass')}
-        successOffset={clefs.getIn(['bass', 'successOffset'])}
+        correctNote={correctNotes.get('bass')}
+        wrongNote={wrongNotes.get('bass')}
+        correctOffset={clefs.getIn(['bass', 'correctOffset'])}
         offset={clefs.getIn(['bass', 'offset'])}
         {...scaled}
       />
