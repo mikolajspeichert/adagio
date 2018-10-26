@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { compose, withPropsOnChange } from 'recompose'
 import { Sprite, Container } from 'react-pixi-fiber'
 import * as PIXI from 'pixi.js'
@@ -16,8 +16,10 @@ import {
   getCore,
   getPause,
   getHook,
+  getLedger,
   getOffset,
   getSubPauseOffset,
+  getLedgerPositions,
   shouldBeFacingBottom,
   getNoteWidth,
   getPauseWidth,
@@ -29,17 +31,17 @@ import { c } from './stub'
 const BASE_LINE_HEIGHT = 70
 
 const enhance = compose(
-  withPropsOnChange(['scale', 'data'], ({ data: note, scale }) => {
+  withPropsOnChange(['scale'], ({ data: note, scale }) => {
     if (!note) return
     const { clef, size, data } = note
     const middleC = getMiddleC(clef, scale)
-
     // Line phase
     const offsets = {
       top: BASE_HEIGHT,
       bottom: 0,
     }
-    let cores = []
+    let Cores = []
+    let Ledgers = []
     data
       .sort((a, b) => {
         if (a.type === b.type) return 0
@@ -49,7 +51,7 @@ const enhance = compose(
       .forEach(({ type, position, size: coreSize }) => {
         const Core = {}
         if (type === 'pause') {
-          Core.svg = getPause(coreSize)
+          Core.texture = getPause(coreSize)
           if (note.data.length === 1) {
             const pPosition = clef === 'treble' ? 6 : -6
             Core.offsetY = getOffset({ middleC, position: pPosition, scale })
@@ -59,7 +61,7 @@ const enhance = compose(
           Core.width = getPauseWidth(coreSize) * scale
           Core.height = pauseHeights[coreSize] * scale
         } else {
-          Core.svg = getCore(coreSize)
+          Core.texture = getCore(coreSize)
           Core.offsetY = getOffset({ middleC, position, scale })
           if (Core.offsetY > offsets.bottom) offsets.bottom = Core.offsetY
           if (Core.offsetY < offsets.top) offsets.top = Core.offsetY
@@ -71,13 +73,28 @@ const enhance = compose(
             Core.offsetX = Core.width
           }
           Core.height = STAFF_LINE_SPACING * scale
+
+          getLedgerPositions(clef, position).forEach(ledgerPosition => {
+            if (Ledgers.some(({ index }) => index === ledgerPosition)) return
+            const Ledger = {}
+            Ledger.texture = getLedger()
+            Ledger.index = ledgerPosition
+            Ledger.width = (BASE_NOTE_WIDTH / 2) * scale
+            Ledger.height = STAFF_LINE_THICKNESS(scale)
+            Ledger.x = Ledger.height + 1 - Core.width / 2 // We have to consider note line width
+            Ledger.y =
+              getOffset({ middleC, position: ledgerPosition, scale }) +
+              Core.height / 2 -
+              Ledger.height / 2
+            Ledgers.push(Ledger)
+          })
         }
 
-        cores.push(Core)
+        Cores.push(Core)
       })
     const Line = {}
     if (note.type !== 'pause') {
-      Line.svg = size > 1 && NoteLine
+      Line.texture = size > 1 && NoteLine
       if (note.type === 'mixed') {
         let hookSize = data.filter(
           subNote => subNote.type === 'note' || subNote.type === 'tied'
@@ -113,19 +130,39 @@ const enhance = compose(
       }
     }
     return {
-      cores,
+      Cores,
       Line,
+      Ledgers,
     }
   })
 )
 
 const Note = enhance(
-  ({ offset, scale, color, cores = [], Line = {}, alpha = 1 }) => (
+  ({
+    offset,
+    scale,
+    color,
+    Cores = [],
+    Ledgers = [],
+    Line = {},
+    alpha = 1,
+  }) => (
     <Container x={offset} alpha={alpha}>
-      {cores.map(Core => (
+      {Ledgers.map(Ledger => (
         <NoteElement
           color={color}
-          svg={Core.svg}
+          texture={Ledger.texture}
+          key={Ledger.index}
+          height={Ledger.height}
+          width={Ledger.width}
+          x={Ledger.x || 0}
+          y={Ledger.y}
+        />
+      ))}
+      {Cores.map(Core => (
+        <NoteElement
+          color={color}
+          texture={Core.texture}
           key={Core.offsetY}
           x={Core.offsetX || 0}
           y={Core.offsetY}
@@ -133,10 +170,11 @@ const Note = enhance(
           width={Core.width}
         />
       ))}
-      {Line.svg && (
+
+      {Line.texture && (
         <NoteElement
           color={color}
-          svg={Line.svg}
+          texture={Line.texture}
           y={Line.offsetY}
           x={Line.offsetX}
           height={Line.height}
@@ -146,7 +184,7 @@ const Note = enhance(
       {Line.hook && (
         <NoteElement
           color={color}
-          svg={Line.hook}
+          texture={Line.hook}
           y={Line.hookY}
           x={Line.hookX}
           width={16 * scale}

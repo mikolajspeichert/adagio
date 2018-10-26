@@ -43,7 +43,8 @@ const memoizeNotes = () => {
         note.offset = extractOffset(note)
         return note
       })
-      .map(note => {
+      .map((note, internalIndex) => {
+        note.index = internalIndex + index // TO AVOID RERENDERING WHILE CHANGING INDEX
         let temporaryOffset = note.offset
         note.offset = previousOffsets
         previousOffsets += temporaryOffset

@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 import { Map } from 'immutable'
 import keys from 'lodash/keys'
 import difference from 'lodash/difference'
+import uniq from 'lodash/uniq'
 
 import { getDistanceFromMiddleC } from 'enhancers/withTrack/utils'
 import { selectTrackKey } from 'enhancers/withTrack/selectors'
@@ -57,6 +58,7 @@ const withMIDI = compose(
       // data = [event type, note number, volume]
       if (eventType < 0x80 || eventType > 0x9f) return
       let newKeys = []
+      let correctNotePressed = false
       const required = extractMIDIs(midis)
 
       if (eventType >= 0x90 && eventType <= 0x9f) {
@@ -67,30 +69,33 @@ const withMIDI = compose(
             newKeys.every(key => required[clef].indexOf(key) > -1)
           ) {
             bumpIndex(clef)
+            correctNotePressed = true
           }
         })
-
         console.log('key start', value)
       } else {
         newKeys = pressedKeys.filter(parsedKey => parsedKey !== value)
         console.log('key stop', value)
       }
-      let newWrongNotes = Map({})
-      keys(required).forEach(clef => {
-        let predicate
-        if (clef === 'treble') predicate = val => val > 48
-        else predicate = val => val < 72
-        const data = difference(newKeys.filter(predicate), required[clef]).map(
-          val => ({
-            position: getDistanceFromMiddleC(val, trackKey),
-          })
-        )
-        if (!data.length) return
-        const wrongNote = { clef, dot: 0, offset: 0, size: 8, data }
-        newWrongNotes = newWrongNotes.set(clef, wrongNote)
-      })
 
-      setWrongNotes(newWrongNotes)
+      if (!correctNotePressed) {
+        let newWrongNotes = Map({})
+        keys(required).forEach(clef => {
+          let predicate
+          if (clef === 'treble') predicate = val => val > 48
+          else predicate = val => val < 72
+          const data = uniq(
+            difference(newKeys.filter(predicate), required[clef])
+          ).map(val => ({
+            position: getDistanceFromMiddleC(val, trackKey),
+          }))
+          if (!data.length) return
+          const wrongNote = { clef, dot: 0, offset: 0, size: 8, data }
+          newWrongNotes = newWrongNotes.set(clef, wrongNote)
+        })
+
+        setWrongNotes(newWrongNotes)
+      }
       setPressedKeys(newKeys)
     },
   }),
@@ -107,13 +112,20 @@ const withMIDI = compose(
             console.log('No MIDI device. Trying again')
           })
       }),
-    handleTestingKey: ({ handleInput }) => event => {
+    handleTestingKey: ({ handleInput }) => (event, isDown) => {
+      const dir = isDown ? 0x90 : 0x80
       switch (event.key) {
         case 'a':
-          handleInput({ data: [0x90, 40, 60] })
+          handleInput({ data: [dir, 40, 60] })
+          break
+        case 'b':
+          handleInput({ data: [dir, 60, 60] })
+          break
+        case 'c':
+          handleInput({ data: [dir, 64, 60] })
           break
         default:
-          handleInput({ data: [0x80, 40, 60] })
+          break
       }
     },
   }),
@@ -121,11 +133,13 @@ const withMIDI = compose(
     componentDidMount() {
       const { connectMIDI, handleTestingKey } = this.props
       connectMIDI()
-      document.addEventListener('keydown', handleTestingKey)
+      document.addEventListener('keydown', e => handleTestingKey(e, true))
+      document.addEventListener('keyup', e => handleTestingKey(e, false))
     },
     componentWillUnmount() {
       const { handleTestingKey } = this.props
       document.removeEventListener('keydown', handleTestingKey)
+      document.removeEventListener('keyup', handleTestingKey)
     },
   })
 )

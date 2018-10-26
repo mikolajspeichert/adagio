@@ -2,8 +2,7 @@ import React, { Fragment } from 'react'
 import { Sprite } from 'react-pixi-fiber'
 import * as PIXI from 'pixi.js'
 import { STAFF_LINE_SPACING, STAFF_LINE_THICKNESS } from 'util/constants'
-
-const staff = require('assets/notes/svgs/staff.svg')
+import { StaffLine as StaffSvg } from 'assets/notes'
 
 const StaffLine = ({ height, order, scale, ...props }) => {
   const lineThickness = STAFF_LINE_THICKNESS(scale)
@@ -12,7 +11,7 @@ const StaffLine = ({ height, order, scale, ...props }) => {
   return (
     <Sprite
       height={lineThickness}
-      texture={PIXI.Texture.fromImage(staff)}
+      texture={PIXI.Texture.fromImage(StaffSvg)}
       y={y}
       {...props}
     />

@@ -26,6 +26,7 @@ const Displayer = enhance(
     <Fragment>
       {correctNote && (
         <Note
+          key={correctNote.size + correctNote.data[0].position}
           offset={(BASE_OFFSET + correctOffset) * scale}
           alpha={1 - -correctOffset / CORRECT_NOTE_BORDER_VALUE}
           scale={scale}
@@ -35,6 +36,7 @@ const Displayer = enhance(
       )}
       {wrongNote && (
         <Note
+          key={wrongNote.size + wrongNote.data[0].position}
           offset={BASE_OFFSET * scale}
           scale={scale}
           color={0xff0000}
@@ -49,7 +51,7 @@ const Displayer = enhance(
       />
       {data.map(note => (
         <Note
-          key={note.offset}
+          key={note.index}
           offset={(BASE_OFFSET + offset + note.offset) * scale}
           scale={scale}
           data={note}

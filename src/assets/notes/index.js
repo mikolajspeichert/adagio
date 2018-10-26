@@ -1,4 +1,6 @@
 export const NoteLine = require('./svgs/note_line.svg')
+export const StaffLine = require('./svgs/staff.svg')
+export const LedgerLine = require('./svgs/ledger.svg')
 
 export const bodies = {
   1: require('./svgs/body1.svg'),

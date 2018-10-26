@@ -1,4 +1,4 @@
-import { bodies, hooks, pauses } from 'assets/notes'
+import { bodies, hooks, pauses, LedgerLine } from 'assets/notes'
 import {
   BASE_HEIGHT,
   STAFF_LINE_SPACING,
@@ -28,8 +28,8 @@ const pauseHeights = {
   128: 135,
 }
 
-const NoteElement = ({ svg, color = 0x000000, ...props }) => (
-  <Sprite texture={PIXI.Texture.fromImage(svg)} tint={color} {...props} />
+const NoteElement = ({ texture, color = 0x000000, ...props }) => (
+  <Sprite texture={PIXI.Texture.fromImage(texture)} tint={color} {...props} />
 )
 
 const getStaffSpacing = scale => STAFF_LINE_SPACING * scale
@@ -79,6 +79,37 @@ const getHook = size => (size < 8 ? null : hooks[size])
 
 const getPause = size => pauses[size]
 
+const getLedger = () => LedgerLine
+
+const clefLedgerBorders = {
+  bass: {
+    top: -1,
+    bottom: -11,
+  },
+  treble: {
+    top: 11,
+    bottom: 1,
+  },
+}
+
+const getLedgerPositions = (clef, corePosition) => {
+  const positions = []
+  if (corePosition > clefLedgerBorders[clef].top) {
+    let ledger = clefLedgerBorders[clef].top + 1
+    while (ledger <= corePosition) {
+      positions.push(ledger)
+      ledger += 2
+    }
+  } else if (corePosition < clefLedgerBorders[clef].bottom) {
+    let ledger = clefLedgerBorders[clef].bottom - 1
+    while (ledger >= corePosition) {
+      positions.push(ledger)
+      ledger -= 2
+    }
+  }
+  return positions
+}
+
 const getCore = size => (size < 4 ? bodies[size] : bodies[4])
 
 const getOffset = ({ middleC, position, scale }) =>
@@ -96,8 +127,10 @@ export {
   getCore,
   getHook,
   getPause,
+  getLedger,
   getOffset,
   getSubPauseOffset,
+  getLedgerPositions,
   isTreble,
   getNoteWidth,
   getPauseWidth,
