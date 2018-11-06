@@ -11,6 +11,7 @@ import keys from 'lodash/keys'
 import difference from 'lodash/difference'
 import uniq from 'lodash/uniq'
 
+import { TYPES } from 'util/constants'
 import { getDistanceFromMiddleC } from 'enhancers/withTrack/utils'
 import { selectTrackKey } from 'enhancers/withTrack/selectors'
 import { awaitingMIDISelector } from './selectors'
@@ -21,10 +22,10 @@ const requestAccess = () =>
 const extractMIDIs = midis => {
   const result = {}
   result.bass = midis.bass
-    ?.filter(({ type }) => type === 'note')
+    ?.filter(({ type }) => type === TYPES.NOTE)
     .map(note => note.midi)
   result.treble = midis.treble
-    ?.filter(({ type }) => type === 'note')
+    ?.filter(({ type }) => type === TYPES.NOTE)
     .map(note => note.midi)
   return result
 }

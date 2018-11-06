@@ -8,6 +8,7 @@ import {
   BASE_HEIGHT,
   STAFF_LINE_SPACING,
   STAFF_LINE_THICKNESS,
+  TYPES,
 } from 'util/constants'
 import { NoteLine } from 'assets/notes'
 import {
@@ -45,12 +46,12 @@ const enhance = compose(
     data
       .sort((a, b) => {
         if (a.type === b.type) return 0
-        if (a.type === 'pause') return 1
+        if (a.type === TYPES.PAUSE) return 1
         return -1
       })
       .forEach(({ type, position, size: coreSize }) => {
         const Core = {}
-        if (type === 'pause') {
+        if (type === TYPES.PAUSE) {
           Core.texture = getPause(coreSize)
           if (note.data.length === 1) {
             const pPosition = clef === 'treble' ? 6 : -6
@@ -93,11 +94,11 @@ const enhance = compose(
         Cores.push(Core)
       })
     const Line = {}
-    if (note.type !== 'pause') {
+    if (note.type !== TYPES.PAUSE) {
       Line.texture = size > 1 && NoteLine
-      if (note.type === 'mixed') {
+      if (note.type === TYPES.MIXED) {
         let hookSize = data.filter(
-          subNote => subNote.type === 'note' || subNote.type === 'tied'
+          subNote => subNote.type === TYPES.NOTE || subNote.type === TYPES.TIED
         )[0].size
         Line.hook = hookSize > 4 && getHook(hookSize)
       } else {

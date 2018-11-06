@@ -1,6 +1,7 @@
 import { createSelectorCreator, defaultMemoize } from 'reselect'
 
-import { getDistanceFromMiddleC } from './utils'
+import { TYPES } from 'util/constants'
+import { getDistanceFromMiddleC, destructureNoteData } from './utils'
 
 const createTrackSelector = createSelectorCreator(
   defaultMemoize,
@@ -8,25 +9,27 @@ const createTrackSelector = createSelectorCreator(
 )
 
 const transformClefData = (data, clef, key) =>
-  data.map(step => {
+  data.map(structuredStep => {
+    const step = structuredStep.map(destructureNoteData)
     const accumulator = {
       clef,
-      type: 'note',
+      type: TYPES.NOTE,
       size: step[0].size,
       data: [],
     }
     return step.reduce((acc, note) => {
-      if (note.type === 'pause') {
-        acc.type = 'pause'
+      if (note.type === TYPES.PAUSE) {
+        acc.type = TYPES.PAUSE
         acc.data.push(note)
-      } else if (note.type === 'tied') {
-        acc.type = 'tied'
+      } else if (note.type === TYPES.TIED) {
+        acc.type = TYPES.TIED
         acc.data.push({
           position: getDistanceFromMiddleC(note.midi, key, note.accidental),
           ...note,
         })
       } else {
-        if (acc.type === 'pause' || acc.type === 'tied') acc.type = 'mixed'
+        if (acc.type === TYPES.PAUSE || acc.type === TYPES.TIED)
+          acc.type = TYPES.MIXED
         if (note.dot) acc.dot = note.dot
         acc.data.push({
           position: getDistanceFromMiddleC(note.midi, key, note.accidental),

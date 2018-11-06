@@ -1,4 +1,4 @@
 export default {
-  moonlight: import('./moonlight'),
-  prelude: import('./prelude'),
+  // moonlight: import('./moonlight'),
+  prelude: import('./prelude.json'),
 }
