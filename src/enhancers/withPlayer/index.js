@@ -9,9 +9,7 @@ import {
 import { Map } from 'immutable'
 import Animator from 'util/Animator'
 import {
-  BASE_NOTE_WIDTH,
-  ENTRY_WIDTH,
-  CORRECT_NOTE_BORDER_VALUE,
+  BASE_NOTE_WIDTH, ENTRY_WIDTH, CORRECT_NOTE_BORDER_VALUE, TYPES,
 } from 'util/constants'
 import withTrack from '../withTrack'
 
@@ -153,7 +151,7 @@ const withPlayer = compose(
         clefTypes.forEach(clef => {
           const { type } = notes[clef][0]
           if (
-            (type === 'pause' || type === 'tied') &&
+            (type === TYPES.PAUSE || type === TYPES.TIED) &&
             clefs.getIn([clef, 'offset']) <= 0
           ) {
             bumpIndex(clef)
