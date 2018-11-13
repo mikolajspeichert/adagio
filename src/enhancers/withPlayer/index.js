@@ -9,7 +9,10 @@ import {
 import { Map } from 'immutable'
 import Animator from 'util/Animator'
 import {
-  BASE_NOTE_WIDTH, ENTRY_WIDTH, CORRECT_NOTE_BORDER_VALUE, TYPES,
+  BASE_NOTE_WIDTH,
+  ENTRY_WIDTH,
+  CORRECT_NOTE_BORDER_VALUE,
+  TYPES,
 } from 'util/constants'
 import withTrack from '../withTrack'
 
@@ -118,7 +121,14 @@ const withPlayer = compose(
     },
   }),
   withHandlers({
-    calculate: ({ clefs, updateClefs, notes, bumpIndex }) => interval => {
+    calculate: ({
+      clefs,
+      updateClefs,
+      notes,
+      bumpIndex,
+      stopped,
+    }) => interval => {
+      if (stopped) return
       if (isNaN(interval)) interval = 0 // eslint-disable-line
       const diff = 0.12 * interval
       const shouldUpdate =

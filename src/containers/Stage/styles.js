@@ -9,6 +9,10 @@ const ScreenWrapper = styled.div`
   position: relative;
 `
 
+const Button = styled.button`
+  
+`
+
 const Paper = styled.div`
   background-color: ${colors.paper};
   height: ${({ height: x }) => Math.floor(x)}px;
@@ -21,4 +25,4 @@ const StageOptions = {
   backgroundColor: 0xf7f4ef,
 }
 
-export { ScreenWrapper, Paper, StageOptions }
+export { ScreenWrapper, Paper, StageOptions, Button }
