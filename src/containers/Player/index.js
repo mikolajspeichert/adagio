@@ -3,18 +3,21 @@ import { compose } from 'recompose'
 import withPlayer from 'enhancers/withPlayer'
 import withConsumer from 'enhancers/withConsumer'
 import withMIDI from 'enhancers/withMIDI'
-
+import { Stage as PixiStage, Container } from 'pixi-in-react'
 import Staff from 'components/Staff'
 import Displayer from 'containers/Displayer'
-import { Container } from 'react-pixi-fiber'
+import { Paper, ScreenWrapper } from 'containers/Stage/styles'
 
 const enhance = compose(
   withPlayer,
   withMIDI
 )
+const StageOptions = {
+  backgroundColor: 0xf7f4ef,
+}
 
 const Player = enhance(({ notes, clefs, scaled, correctNotes, wrongNotes }) => (
-  <Fragment>
+  <PixiStage width={scaled.width} height={scaled.height} options={StageOptions}>
     <Container>
       <Staff {...scaled} />
       <Displayer
@@ -39,7 +42,7 @@ const Player = enhance(({ notes, clefs, scaled, correctNotes, wrongNotes }) => (
         {...scaled}
       />
     </Container>
-  </Fragment>
+  </PixiStage>
 ))
 
 export default Player

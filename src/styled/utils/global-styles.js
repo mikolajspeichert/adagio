@@ -1,7 +1,7 @@
-import { injectGlobal } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import { colors } from '../themes'
 /* eslint no-unused-expressions: 0 */
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
   html,
   body {
     height: 100%;
@@ -10,3 +10,5 @@ injectGlobal`
     background-color: ${colors.background};
   }
 `
+
+export default GlobalStyles

@@ -1,16 +1,22 @@
-// components/Rectangle.js
-import { CustomPIXIComponent } from 'react-pixi-fiber'
-import * as PIXI from 'pixi.js'
+import React from 'react'
+import { Custom } from 'pixi-in-react'
 
-const TYPE = 'Rectangle'
-export const behavior = {
-  customDisplayObject: props => new PIXI.Graphics(),
-  customApplyProps(instance, oldProps, newProps) {
-    const { x, y, width, height } = newProps
-    instance.clear()
-    instance.beginFill(0x343434, 0.15)
-    instance.drawRect(x, y, width, height)
-    instance.endFill()
-  },
+const EntryField = props => {
+  console.log(props)
+  return (
+    <Custom
+      type="Graphics"
+      {...props}
+      behavior={{
+        applyProps: (instance, { x, y, width, height }) => {
+          instance.clear()
+          instance.beginFill(0x343434, 0.15)
+          instance.drawRect(x, y, width, height)
+          instance.endFill()
+        },
+      }}
+    />
+  )
 }
-export default CustomPIXIComponent(behavior, TYPE)
+
+export default EntryField

@@ -5,7 +5,7 @@ import {
   STAFF_LINE_THICKNESS,
   DEFAULT_PAUSE_SPACING,
 } from 'util/constants'
-import { Sprite } from 'react-pixi-fiber'
+import { Sprite } from 'pixi-in-react'
 import * as PIXI from 'pixi.js'
 import React from 'react'
 
@@ -28,9 +28,11 @@ const pauseHeights = {
   128: 135,
 }
 
-const NoteElement = ({ texture, color = 0x000000, ...props }) => (
-  <Sprite texture={PIXI.Texture.fromImage(texture)} tint={color} {...props} />
-)
+const NoteElement = ({ texture, color = 0x000000, ...props }) => {
+  return (
+    <Sprite texture={PIXI.Texture.fromImage(texture)} tint={color} {...props} />
+  )
+}
 
 const getStaffSpacing = scale => STAFF_LINE_SPACING * scale
 

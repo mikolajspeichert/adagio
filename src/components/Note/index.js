@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { compose, withPropsOnChange } from 'recompose'
-import { Sprite, Container } from 'react-pixi-fiber'
+import { Sprite, Container } from 'pixi-in-react'
 import * as PIXI from 'pixi.js'
 
 import {

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Sprite } from 'react-pixi-fiber'
+import { Sprite } from 'pixi-in-react'
 import * as PIXI from 'pixi.js'
 import { STAFF_LINE_SPACING, STAFF_LINE_THICKNESS } from 'util/constants'
 import { StaffLine as StaffSvg } from 'assets/notes'

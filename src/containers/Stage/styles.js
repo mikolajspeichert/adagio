@@ -21,8 +21,6 @@ const Paper = styled.div`
   transform: translate(${({ offsets: { x, y } }) => `${x}px, ${y}px`});
 `
 
-const StageOptions = {
-  backgroundColor: 0xf7f4ef,
-}
 
-export { ScreenWrapper, Paper, StageOptions, Button }
+
+export { ScreenWrapper, Paper, Button }

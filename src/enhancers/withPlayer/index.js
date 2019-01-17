@@ -39,7 +39,7 @@ const memoizeNotes = () => {
     cacheIndex[clef] = index
     let previousOffsets = 0
     cacheValue[clef] = raw
-      .slice(index, index + 30)
+      .slice(index, index + 15)
       .map(note => {
         note.offset = extractOffset(note)
         return note
@@ -74,7 +74,6 @@ const withPlayer = compose(
       treble: initialClefValues,
     })
   ),
-  withState('stop', 'setStop', false),
   withState(
     'correctNotes',
     'setcorrectNote',
