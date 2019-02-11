@@ -9,10 +9,6 @@ const ScreenWrapper = styled.div`
   position: relative;
 `
 
-const Button = styled.button`
-  
-`
-
 const Paper = styled.div`
   background-color: ${colors.paper};
   height: ${({ height: x }) => Math.floor(x)}px;
@@ -21,6 +17,4 @@ const Paper = styled.div`
   transform: translate(${({ offsets: { x, y } }) => `${x}px, ${y}px`});
 `
 
-
-
-export { ScreenWrapper, Paper, Button }
+export { ScreenWrapper, Paper }

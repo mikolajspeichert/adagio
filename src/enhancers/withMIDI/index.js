@@ -1,9 +1,5 @@
 import {
-  compose,
-  withHandlers,
-  withState,
-  lifecycle,
-  withProps,
+  compose, withHandlers, withState, lifecycle, withProps, setDisplayName,
 } from 'recompose'
 import { connect } from 'react-redux'
 import { Map } from 'immutable'
@@ -13,7 +9,6 @@ import uniq from 'lodash/uniq'
 
 import { TYPES } from 'util/constants'
 import { getDistanceFromMiddleC } from 'enhancers/withTrack/utils'
-import { selectTrackKey } from 'enhancers/withTrack/selectors'
 import { awaitingMIDISelector } from './selectors'
 
 const requestAccess = () =>
@@ -38,11 +33,11 @@ const handleDevicesState = (access, handler) => {
 }
 
 const withMIDI = compose(
+  setDisplayName('withMIDI'),
   withState('deviceConnected', 'setDeviceConnected', false),
   withState('pressedKeys', 'setPressedKeys', []),
   withState('wrongNotes', 'setWrongNotes', Map({})),
   connect(awaitingMIDISelector),
-  connect(selectTrackKey),
   withHandlers({
     handleInput: ({
       midis,
@@ -51,13 +46,14 @@ const withMIDI = compose(
       bumpIndex,
       wrongNotes,
       setWrongNotes,
-      trackKey,
+      track: { key: trackKey },
     }) => event => {
       const eventType = event.data[0]
       const value = event.data[1]
       const keyVelocity = event.data[2] // === volume
       // data = [event type, note number, volume]
       if (eventType < 0x80 || eventType > 0x9f) return
+
       let newKeys = []
       let correctNotePressed = false
       const required = extractMIDIs(midis)

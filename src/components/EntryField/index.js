@@ -2,7 +2,6 @@ import React from 'react'
 import { Custom } from 'pixi-in-react'
 
 const EntryField = props => {
-  console.log(props)
   return (
     <Custom
       type="Graphics"

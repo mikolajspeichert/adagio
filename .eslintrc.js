@@ -35,6 +35,8 @@ module.exports = {
         semi: false,
 
         jsxBracketSameLine: true,
+
+        printWidth: 120,
       },
     ],
 

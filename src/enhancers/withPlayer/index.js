@@ -76,7 +76,7 @@ const withPlayer = compose(
   ),
   withState(
     'correctNotes',
-    'setcorrectNote',
+    'setCorrectNote',
     Map({
       bass: null,
       treble: null,
@@ -92,7 +92,6 @@ const withPlayer = compose(
       ),
       bass: prepareNotes(track.bass, clefs.getIn(['bass', 'index']), 'bass'),
     }
-    // console.log(notes)
     return {
       notes,
     }
@@ -103,12 +102,12 @@ const withPlayer = compose(
       updateClefs,
       notes,
       correctNotes,
-      setcorrectNote,
+      setCorrectNote,
     }) => clef => {
       let currentOffset = clefs.getIn([clef, 'offset'])
       if (currentOffset > ENTRY_WIDTH) return
       let correctNote = notes[clef][0]
-      setcorrectNote(correctNotes.setIn([clef], correctNote))
+      setCorrectNote(correctNotes.setIn([clef], correctNote))
       const newClefsData = clefs
         .setIn([clef, 'correctOffset'], currentOffset)
         .updateIn([clef, 'index'], index => index + 1)
@@ -169,6 +168,7 @@ const withPlayer = compose(
       }
     },
   }),
+  setDisplayName('playerLifecycle'),
   lifecycle({
     componentDidMount() {
       const { calculate } = this.props
